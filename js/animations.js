@@ -34,7 +34,11 @@
     '.post-cta-inline',
     '.post-author',
     '.post-faq',
-    '.post-related'
+    '.post-related',
+    '.stat-item',
+    '.manifesto__text',
+    '.manifesto__eyebrow',
+    '.pain-statement'
   ].join(', ')));
 
   // Exclude anything already inside the hero (those have CSS keyframe animations)
@@ -53,7 +57,7 @@
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
   targets.forEach(function (el) {
     el.classList.add('reveal');
