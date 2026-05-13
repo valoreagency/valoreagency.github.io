@@ -1,51 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Core pages -->
   <url>
     <loc>https://valore.agency/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Valore: Fractional Brand Managers</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://valore.agency/about/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/services/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://valore.agency/process/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/blog/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Blog posts — ordered by publish date -->
   <url>
-    <loc>https://valore.agency/blog/visibility-without-noise/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://valore.agency/blog/referral-ceiling/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Word of Mouth Has a Limit and What to Do When You Hit It</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-vs-marketing-tactics/</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Brand Strategy and Marketing Tactics Are Not the Same Thing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/hidden-cost-referral-dependence/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Hidden Cost of Depending on Referrals</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/referrals-wrong-clients/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Referrals Keep Bringing You the Wrong Clients</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/why-best-clients-not-referring/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Best Clients Are Not Referring You</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-between-referrals/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What Your Brand Should Be Doing Between Referrals</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/get-more-referrals/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Get More Referrals Without Asking for Them</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/beyond-word-of-mouth-local/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How Local Service Businesses Grow Beyond Word of Mouth</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/referral-program-myth/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Referral Program Myth: Why Most Referral Programs Fail</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/what-is-brand-positioning/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What Brand Positioning Actually Means and Why It Matters</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/what-the-brand-looks-like/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What Your Brand Actually Looks Like to Someone Who Does Not Know You</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/google-business-profile/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Google Business Profile Is Your Most Underused Marketing Asset</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/hiring-marketing-manager-mistake/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Hiring a Marketing Manager Before You Have Direction Is a Costly Mistake</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/stop-competing-on-price/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Stop Competing on Price and Start Winning on Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/raise-prices-without-losing-clients/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Raise Your Prices Without Losing Clients</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/business-vs-brand/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Difference Between a Business and a Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/good-work-not-enough/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Doing Good Work Is Not Enough to Grow Your Business</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/what-fractional-brand-manager-does/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What a Fractional Brand Manager Actually Does Day to Day</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://valore.agency/blog/brand-promise/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What Is a Brand Promise and Why Does It Matter?</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://valore.agency/blog/referral-ceiling/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://valore.agency/blog/visibility-without-noise/</loc>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Build Visibility Without Adding to the Noise</image:title>
+    </image:image>
   </url>
+
 </urlset>

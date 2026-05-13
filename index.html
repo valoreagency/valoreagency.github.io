@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valore: Fractional Brand Managers for Premium Service Businesses</title>
-    <meta name="description" content="Valore helps premium service businesses build clear positioning, real visibility, and a practical growth roadmap to become THE BRAND in their market. Book a 30-minute discovery call.">
-    <meta name="keywords" content="fractional brand manager, fractional brand management, brand strategy consultant, brand leadership, brand clarity, outsourced brand director, service business marketing, brand roadmap">
+    <title>Fractional Brand Manager &amp; Brand Strategy Consultant | Valore</title>
+    <meta name="description" content="Valore is a fractional brand management consultancy for premium service businesses. Clear positioning, real visibility, and a growth roadmap to become THE BRAND in your market. Book a discovery call.">
+    <meta name="keywords" content="fractional brand manager, fractional brand management, brand strategy consultant, brand clarity consultant, outsourced brand director, brand leadership consulting, service business marketing, grow beyond referrals, fractional CMO service business">
     <link rel="canonical" href="https://valore.agency/">
 
     <meta property="og:title" content="Valore: Fractional Brand Managers for Premium Service Businesses">
@@ -16,8 +16,9 @@
     <meta property="og:site_name" content="Valore">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Valore: Fractional Brand Managers">
-    <meta name="twitter:description" content="Strategic brand leadership for premium service businesses. Become THE BRAND in your market.">
+    <meta name="twitter:title" content="Fractional Brand Manager &amp; Brand Strategy Consultant | Valore">
+    <meta name="twitter:description" content="Fractional brand management for premium service businesses. Build clear positioning, real visibility, and become THE BRAND in your market.">
+    <meta name="twitter:image" content="https://valore.agency/assets/og-image.jpg">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -30,24 +31,35 @@
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://valore.agency/#organization",
       "name": "Valore",
       "alternateName": "Valore Agency",
-      "description": "Fractional brand management and brand leadership consultancy helping premium service businesses become THE BRAND in their market.",
+      "description": "Fractional brand management and brand strategy consulting for premium service businesses. We help you build clear positioning, real visibility, and become THE BRAND in your market.",
       "url": "https://valore.agency",
-      "logo": "https://valore.agency/assets/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://valore.agency/assets/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
       "image": "https://valore.agency/assets/og-image.jpg",
+      "sameAs": [
+        "https://share.google/4kB5kOwHt2hurgPtm"
+      ],
       "founder": {
         "@type": "Person",
+        "@id": "https://valore.agency/about/#derek-burbidge",
         "name": "Derek Burbidge",
         "jobTitle": "Founder",
-        "description": "Founder of Valore and Cardero Clothing. Brand strategist with experience building premium brands and supporting seven and eight-figure businesses."
+        "url": "https://valore.agency/about/",
+        "description": "Brand strategy consultant and founder of Valore. Built Cardero Clothing into a leading premium menswear brand. Now helps service businesses grow through fractional brand leadership."
       },
       "serviceType": [
         "Fractional Brand Management",
-        "Brand Strategy",
+        "Brand Strategy Consulting",
         "Brand Leadership Consulting",
         "Brand Clarity",
-        "Growth Roadmap",
+        "Outsourced Brand Director",
         "Vendor Oversight"
       ],
       "areaServed": {
@@ -56,7 +68,7 @@
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Valore Services",
+        "name": "Valore Brand Management Services",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -88,7 +100,21 @@
         "@type": "ContactPoint",
         "contactType": "sales",
         "url": "https://cal.com/derek-burbidge-msgkca/30brand",
-        "description": "Book a 30-minute discovery call"
+        "description": "Book a 30-minute brand strategy discovery call"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://valore.agency/#website",
+      "name": "Valore",
+      "url": "https://valore.agency",
+      "description": "Fractional brand management and brand strategy consulting for premium service businesses.",
+      "publisher": {
+        "@id": "https://valore.agency/#organization"
       }
     }
     </script>
@@ -140,6 +166,24 @@
         }
       ]
     }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM2E95TD4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6HM2E95TD4');
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="cal.com"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'discovery_call_click', {
+              event_category: 'cta',
+              event_label: document.title
+            });
+          });
+        });
+      });
     </script>
 </head>
 <body>

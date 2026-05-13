@@ -10,11 +10,32 @@
     <meta property="og:description" content="Brand clarity. In writing. Ideas on strategy, visibility, and becoming THE BRAND in your market.">
     <meta property="og:url" content="https://valore.agency/blog/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://valore.agency/assets/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://valore.agency/assets/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM2E95TD4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6HM2E95TD4');
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="cal.com"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'discovery_call_click', {
+              event_category: 'cta',
+              event_label: document.title
+            });
+          });
+        });
+      });
+    </script>
 </head>
 <body>
 
