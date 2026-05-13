@@ -151,9 +151,18 @@
                 <span class="nav__logo-name">Valore</span>
                 <span class="nav__logo-sub">Fractional Brand Managers</span>
             </a>
-            <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="nav__cta" target="_blank" rel="noopener noreferrer">
-                Book a Discovery Call
-            </a>
+            <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+                <a href="/about/" class="nav__link">About</a>
+                <a href="/services/" class="nav__link">Services</a>
+                <a href="/process/" class="nav__link">Process</a>
+                <a href="/blog/" class="nav__link">Blog</a>
+            </nav>
+            <div class="nav__actions">
+                <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="nav__cta" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+                <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -349,5 +358,14 @@
         </div>
     </footer>
 
+    <script>
+        const t = document.getElementById('navToggle');
+        const l = document.getElementById('navLinks');
+        t.addEventListener('click', function() {
+            const open = l.classList.toggle('is-open');
+            t.setAttribute('aria-expanded', open);
+            t.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>
