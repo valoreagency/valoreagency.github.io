@@ -1340,3 +1340,130 @@ img { display: block; max-width: 100%; }
     .post-toc { padding: 1.5rem 1.25rem; }
     .post-takeaways { padding: 1.5rem 1.5rem; }
 }
+
+/* ============================================================
+   LUXURY INTERACTIONS & ANIMATIONS
+============================================================ */
+
+:root {
+    --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Hero entrance (homepage) ---- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
+}
+.hero .label        { animation: fadeUp 0.85s var(--ease-expo) 0.05s both; }
+.hero__headline     { animation: fadeUp 0.95s var(--ease-expo) 0.18s both; }
+.hero__body         { animation: fadeUp 0.95s var(--ease-expo) 0.32s both; }
+.hero__actions      { animation: fadeUp 0.9s  var(--ease-expo) 0.46s both; }
+
+/* ---- Page hero entrance (inner pages) ---- */
+.page-hero__label    { animation: fadeUp 0.85s var(--ease-expo) 0.05s both; }
+.page-hero__headline { animation: fadeUp 0.95s var(--ease-expo) 0.18s both; }
+.page-hero__body     { animation: fadeUp 0.95s var(--ease-expo) 0.32s both; }
+
+/* ---- Scroll reveal ---- */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.8s var(--ease-expo), transform 0.8s var(--ease-expo);
+    will-change: opacity, transform;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Stagger delays for card grids */
+.blog-grid      .reveal:nth-child(2),
+.packages-grid  .reveal:nth-child(2),
+.services-grid  .reveal:nth-child(2) { transition-delay: 0.1s; }
+
+.blog-grid      .reveal:nth-child(3),
+.packages-grid  .reveal:nth-child(3),
+.services-grid  .reveal:nth-child(3) { transition-delay: 0.2s; }
+
+.services-grid  .reveal:nth-child(4) { transition-delay: 0.3s; }
+
+/* ---- Enhanced buttons ---- */
+.btn {
+    transition: background 0.28s var(--ease-smooth),
+                color       0.28s var(--ease-smooth),
+                transform   0.28s var(--ease-expo),
+                box-shadow  0.28s var(--ease-smooth);
+}
+.btn:hover  { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,38,100,0.15); }
+.btn:active { transform: translateY(0);    box-shadow: none; transition-duration: 0.08s; }
+.btn--cream:hover { background: var(--cream-dark); }
+.btn--navy:hover  { background: var(--navy-dark); }
+
+/* ---- Enhanced blog cards ---- */
+.blog-card {
+    transition: border-color 0.3s ease,
+                transform   0.45s var(--ease-expo),
+                box-shadow  0.45s ease;
+}
+.blog-card:hover {
+    border-color: var(--navy);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,38,100,0.07);
+}
+
+/* ---- Enhanced packages ---- */
+.package {
+    transition: transform  0.45s var(--ease-expo),
+                box-shadow 0.45s ease;
+}
+.package:hover          { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(0,38,100,0.08); }
+.package--featured:hover{ box-shadow: 0 20px 48px rgba(0,38,100,0.3); }
+
+/* ---- Nav scroll shadow ---- */
+.nav { transition: box-shadow 0.4s ease; }
+.nav--scrolled { box-shadow: 0 2px 32px rgba(0,22,64,0.28); }
+
+/* ---- Process step hover ---- */
+.process-step {
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+.process-step:hover { background: var(--off-white); box-shadow: inset 3px 0 0 var(--navy); }
+.process-step__num { transition: color 0.5s ease; }
+.process-step:hover .process-step__num { color: var(--navy); opacity: 0.35; }
+
+/* ---- Service block number accent ---- */
+.service-block__num {
+    display: inline-block;
+    transition: opacity 0.3s ease, letter-spacing 0.5s var(--ease-expo);
+}
+.service-block:hover .service-block__num { opacity: 0.7; letter-spacing: 0.14em; }
+
+/* ---- FAQ hover ---- */
+.faq-item {
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding-left 0.35s var(--ease-expo);
+}
+.faq-item:hover {
+    background: var(--off-white);
+    box-shadow: inset 2px 0 0 var(--navy);
+    padding-left: 1.25rem;
+}
+
+/* ---- Related post cards (live links vs coming-soon divs) ---- */
+a.post-related__card {
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.45s var(--ease-expo),
+                box-shadow 0.45s ease,
+                border-color 0.3s ease;
+}
+a.post-related__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,38,100,0.08);
+    border-color: var(--navy);
+}
+
+/* ---- Nav CTA enhanced transition ---- */
+.nav__cta { transition: color 0.25s ease, opacity 0.25s ease; }
+.nav__link { transition: color 0.25s ease; }
