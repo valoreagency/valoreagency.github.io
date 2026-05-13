@@ -56,7 +56,7 @@ img { display: block; max-width: 100%; }
     margin: 0 auto;
     padding: 0 2rem;
 }
-.section { padding: 6rem 0; }
+.section { padding: 7.5rem 0; }
 
 /* ---- Section Variants ---- */
 .section--cream {
@@ -106,7 +106,7 @@ img { display: block; max-width: 100%; }
     color: var(--gray);
     line-height: 1.78;
     margin-bottom: 1.25rem;
-    max-width: 620px;
+    max-width: 540px;
 }
 .section__body--light { color: rgba(255, 255, 255, 0.62); max-width: none; }
 
@@ -145,10 +145,19 @@ img { display: block; max-width: 100%; }
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 200;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid transparent;
+    transition: background 0.5s ease, backdrop-filter 0.5s ease,
+                border-color 0.5s ease, box-shadow 0.5s ease;
+}
+.nav--scrolled {
     background: rgba(0, 38, 100, 0.97);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 2px 32px rgba(0,22,64,0.28);
 }
 .nav__inner {
     max-width: var(--max-w);
@@ -199,16 +208,18 @@ img { display: block; max-width: 100%; }
 .hero {
     min-height: 100vh;
     background-color: var(--navy);
-    background-image: var(--chevron-light);
+    background-image:
+        radial-gradient(ellipse at 68% 38%, rgba(0, 60, 150, 0.5) 0%, transparent 62%),
+        var(--chevron-light);
     display: flex;
     align-items: center;
-    padding: 10rem 0 7rem;
+    padding: 12rem 0 8rem;
 }
 .hero .container { width: 100%; }
 
 .hero__headline {
     font-family: var(--serif);
-    font-size: clamp(3.25rem, 7.5vw, 5.75rem);
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
     font-weight: 300;
     color: var(--white);
     line-height: 1.07;
@@ -479,7 +490,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 768px) {
-    .section { padding: 4rem 0; }
+    .section { padding: 5rem 0; }
 
     .hero {
         padding: 8.5rem 0 5rem;
@@ -1420,9 +1431,7 @@ img { display: block; max-width: 100%; }
 .package:hover          { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(0,38,100,0.08); }
 .package--featured:hover{ box-shadow: 0 20px 48px rgba(0,38,100,0.3); }
 
-/* ---- Nav scroll shadow ---- */
-.nav { transition: box-shadow 0.4s ease; }
-.nav--scrolled { box-shadow: 0 2px 32px rgba(0,22,64,0.28); }
+/* ---- Nav scroll shadow — handled in base .nav / .nav--scrolled rules above ---- */
 
 /* ---- Process step hover ---- */
 .process-step {
@@ -1467,3 +1476,48 @@ a.post-related__card:hover {
 /* ---- Nav CTA enhanced transition ---- */
 .nav__cta { transition: color 0.25s ease, opacity 0.25s ease; }
 .nav__link { transition: color 0.25s ease; }
+
+/* ---- Ghost button (hero + dark bg CTAs) ---- */
+.btn--ghost {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(255, 244, 202, 0.55);
+}
+.btn--ghost:hover {
+    background: var(--cream);
+    color: var(--navy);
+    border-color: var(--cream);
+    box-shadow: 0 8px 28px rgba(0,38,100,0.2);
+}
+
+/* ---- Label hairline divider ---- */
+.label::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.2;
+    margin-top: 0.875rem;
+}
+.label--light::after { opacity: 0.25; }
+
+/* ---- Pain statements (replaces bullet list) ---- */
+.pain-statements {
+    margin-top: 3rem;
+}
+.pain-statement {
+    font-family: var(--serif);
+    font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.45;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    max-width: 640px;
+}
+.pain-statement:first-child { border-top: 1px solid var(--gray-light); }
+
+/* ---- Package top border accent ---- */
+.package { border-top: 2px solid var(--gray-light); }
+.package--featured { border-top: 2px solid var(--cream); }

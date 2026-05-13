@@ -1,12 +1,17 @@
 (function () {
   'use strict';
 
-  // Nav scroll shadow
+  // Nav: transparent over dark hero, immediately solid on pages without one
   var nav = document.querySelector('.nav');
+  var hasDarkHero = document.querySelector('.hero, .page-hero');
   if (nav) {
-    window.addEventListener('scroll', function () {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 48);
-    }, { passive: true });
+    if (!hasDarkHero) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('nav--scrolled', window.scrollY > 56);
+      }, { passive: true });
+    }
   }
 
   // Scroll-reveal: elements to animate in as they enter the viewport
