@@ -1724,7 +1724,7 @@ a.post-related__card:hover {
 }
 
 .form-input::placeholder,
-.form-textarea::placeholder { color: var(--gray-light); }
+.form-textarea::placeholder { color: #999; }
 
 .form-input:focus,
 .form-select:focus,
