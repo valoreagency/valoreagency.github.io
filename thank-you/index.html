@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Received | Valore</title>
+    <meta name="description" content="Your inquiry has been received. We will be in touch within one business day.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM2E95TD4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6HM2E95TD4');
+    </script>
+</head>
+<body>
+
+    <header class="nav" id="mainNav">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo">
+                <span class="nav__logo-name">Valore</span>
+                <span class="nav__logo-sub">Fractional Brand Managers</span>
+            </a>
+            <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+                <a href="/about/" class="nav__link">About</a>
+                <a href="/services/" class="nav__link">Services</a>
+                <a href="/process/" class="nav__link">Process</a>
+                <a href="/blog/" class="nav__link">Blog</a>
+                <a href="/contact/" class="nav__link">Contact</a>
+            </nav>
+            <div class="nav__actions">
+                <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="nav__cta" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+                <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO — Confirmation -->
+    <section class="page-hero">
+        <div class="container container--narrow">
+            <div class="thankyou-marks">
+                <div class="thankyou-mark"></div>
+                <span class="thankyou-check">Received.</span>
+                <div class="thankyou-mark"></div>
+            </div>
+            <span class="page-hero__label">Your inquiry is in</span>
+            <h1 class="page-hero__headline">We will be<br>in touch.</h1>
+            <p class="page-hero__body">Derek reviews every inquiry personally. You will hear back within one business day — not from an assistant, not from a template. From Derek.</p>
+        </div>
+    </section>
+
+    <!-- WHO YOU ARE WORKING WITH -->
+    <section class="section section--light">
+        <div class="container container--narrow">
+            <p class="label reveal">Who You Are Working With</p>
+            <h2 class="section__headline reveal">Built by someone<br>who has been there.</h2>
+            <p class="section__body reveal">Valore is not a marketing agency. It is fractional brand leadership from someone who has built a high-end luxury brand from the ground up — and spent the last decade working alongside premium service businesses and luxury companies across North America.</p>
+            <p class="section__body reveal">We do not work with everyone. We work with businesses that are serious about becoming the brand in their market — and that understand the difference between tactics and strategy.</p>
+
+            <div class="thankyou-credentials reveal">
+                <div class="thankyou-credential">
+                    <span class="thankyou-credential__num">01</span>
+                    <p class="thankyou-credential__text">Founded on a decade of building and growing a premium custom menswear brand from scratch — no shortcuts, no outside funding, no playbook.</p>
+                </div>
+                <div class="thankyou-credential">
+                    <span class="thankyou-credential__num">02</span>
+                    <p class="thankyou-credential__text">Work exclusively with high-end service businesses and luxury brands across North America who are ready to grow beyond referrals.</p>
+                </div>
+                <div class="thankyou-credential">
+                    <span class="thankyou-credential__num">03</span>
+                    <p class="thankyou-credential__text">You work directly with Derek. No account managers, no junior strategists, no handoffs. One partner who knows your brand as well as you do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHILE YOU WAIT -->
+    <section class="section">
+        <div class="container container--narrow">
+            <p class="label reveal">While You Wait</p>
+            <h2 class="section__headline reveal">Prefer to move<br>faster?</h2>
+            <p class="section__body reveal">If you would rather skip the email and talk directly, book a 30-minute discovery call. Derek reviews your business beforehand. You walk away with at least one clear direction — regardless of whether you move forward with Valore.</p>
+            <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="btn btn--navy reveal" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+            <p class="cta-note" style="color:var(--gray-light);margin-top:1rem;">30 minutes. No pitch. Real clarity.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="footer__name">Valore</p>
+                    <p class="footer__tagline">Fractional Brand Managers</p>
+                </div>
+                <p class="footer__copy">&copy; 2026 Valore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        const t = document.getElementById('navToggle');
+        const l = document.getElementById('navLinks');
+        t.addEventListener('click', function() {
+            const open = l.classList.toggle('is-open');
+            t.setAttribute('aria-expanded', open);
+            t.classList.toggle('is-active');
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>
