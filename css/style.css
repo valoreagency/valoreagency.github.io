@@ -301,7 +301,7 @@ img { display: block; max-width: 100%; }
 ============================================================ */
 .packages-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
     margin-bottom: 2.75rem;
@@ -372,6 +372,20 @@ img { display: block; max-width: 100%; }
 }
 .package--featured .package__list li { color: rgba(255, 255, 255, 0.68); }
 .package--featured .package__list li::before { color: var(--cream); }
+
+.package__price {
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    color: var(--navy);
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-light);
+    letter-spacing: 0.01em;
+}
+.package--featured .package__price {
+    color: var(--cream);
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
 
 .packages-note {
     font-size: 0.9375rem;
