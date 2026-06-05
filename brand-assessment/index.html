@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Your Brand Ready to Grow? Free Brand Assessment | Valore</title>
+    <meta name="description" content="A free 2-minute self-assessment for premium service business owners. Find out exactly where your brand stands, what is holding your growth back, and what to address first.">
+    <link rel="canonical" href="https://valore.agency/brand-assessment/">
+    <meta property="og:title" content="Is Your Brand Ready to Grow? Free Brand Assessment | Valore">
+    <meta property="og:description" content="A free 2-minute self-assessment for service business owners. Find out where your brand stands and what to fix first.">
+    <meta property="og:url" content="https://valore.agency/brand-assessment/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://valore.agency/assets/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://valore.agency/assets/og-image.jpg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Brand Growth Assessment",
+      "description": "A free self-assessment for premium service business owners to find out where their brand stands and what to address first.",
+      "url": "https://valore.agency/brand-assessment/",
+      "isPartOf": { "@id": "https://valore.agency/#website" },
+      "publisher": { "@id": "https://valore.agency/#organization" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valore.agency/" },
+        { "@type": "ListItem", "position": 2, "name": "Brand Assessment", "item": "https://valore.agency/brand-assessment/" }
+      ]
+    }
+    </script>
+
+    <style>
+      /* Scoped styles for the assessment. Reuses site tokens (navy #002664, cream). */
+      .quiz { max-width: 760px; margin: 0 auto; }
+      .quiz__q { border-top: 1px solid #e6e3dc; padding: 2rem 0; margin: 0; }
+      .quiz__q:first-of-type { border-top: none; }
+      .quiz__legend { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1.3; color: #002664; margin-bottom: 1.1rem; padding: 0; }
+      .quiz__num { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9a9486; display: block; margin-bottom: 0.5rem; }
+      .quiz__opts { display: flex; flex-direction: column; gap: 0.6rem; }
+      .quiz__opt { display: flex; align-items: flex-start; gap: 0.7rem; border: 1px solid #ddd8cf; border-radius: 6px; padding: 0.85rem 1rem; cursor: pointer; transition: border-color .15s, background .15s; font-size: 0.98rem; color: #2c2c2c; }
+      .quiz__opt:hover { border-color: #002664; }
+      .quiz__opt input { margin-top: 0.2rem; accent-color: #002664; flex: 0 0 auto; }
+      .quiz__opt--checked { border-color: #002664; background: #f5f3ee; }
+      .quiz__error { color: #9b2226; font-size: 0.9rem; margin-top: 1rem; display: none; }
+      .quiz__error.is-visible { display: block; }
+
+      .result { display: none; }
+      .result.is-visible { display: block; }
+      .result__score { font-family: 'Cormorant Garamond', serif; font-size: 4rem; line-height: 1; color: #002664; }
+      .result__of { font-size: 1.5rem; color: #9a9486; }
+      .result__band { font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #002664; margin: 0.6rem 0 1.4rem; }
+      .result__weak { background: #f5f3ee; border-radius: 8px; padding: 1.5rem 1.6rem; margin: 1.8rem 0; }
+      .result__weak h3 { font-family: 'Cormorant Garamond', serif; color: #002664; font-size: 1.4rem; margin: 0 0 0.5rem; }
+      .capture { background: #002664; color: #f4f1ea; border-radius: 10px; padding: 2rem 1.8rem; margin-top: 2.2rem; }
+      .capture h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; margin: 0 0 0.4rem; color: #fff; }
+      .capture p { color: #cdd4e4; font-size: 0.98rem; margin: 0 0 1.2rem; }
+      .capture__row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+      .capture__row input { flex: 1 1 180px; padding: 0.8rem 1rem; border: none; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.95rem; }
+      .capture__note { font-size: 0.78rem; color: #9aa6c2; margin-top: 0.9rem; }
+      .capture__ok { display: none; font-size: 1rem; color: #fff; }
+      .capture__ok.is-visible { display: block; }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM2E95TD4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6HM2E95TD4');
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="cal.com"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'discovery_call_click', { event_category: 'cta', event_label: document.title });
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo">
+                <span class="nav__logo-name">Valore</span>
+                <span class="nav__logo-sub">Fractional Brand Managers</span>
+            </a>
+            <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+                <a href="/about/" class="nav__link">About</a>
+                <a href="/services/" class="nav__link">Services</a>
+                <a href="/process/" class="nav__link">Process</a>
+                <a href="/case-study/" class="nav__link">Case Study</a>
+                <a href="/blog/" class="nav__link">Blog</a>
+            </nav>
+            <div class="nav__actions">
+                <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="nav__cta" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+                <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="page-hero__label">Free Brand Assessment</span>
+            <h1 class="page-hero__headline">Is your brand<br>ready to grow?</h1>
+            <p class="page-hero__body">Eight questions, about two minutes. You will get an honest read on where your brand stands today, the one area holding your growth back, and what to address first. No email required to see your result.</p>
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section">
+        <div class="container">
+            <form class="quiz" id="quizForm" novalidate>
+                <div id="questions"></div>
+                <p class="quiz__error" id="quizError">Please answer every question to see your result.</p>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <button type="submit" class="btn btn--navy">See My Result</button>
+                </div>
+            </form>
+
+            <!-- RESULT -->
+            <div class="quiz" style="margin-top: 1rem;">
+                <div class="result" id="result" tabindex="-1" aria-live="polite">
+                    <p class="label">Your Result</p>
+                    <p class="result__score"><span id="scoreNum"></span><span class="result__of"> / 16</span></p>
+                    <p class="result__band" id="resultBand"></p>
+                    <p class="section__body" id="resultBody"></p>
+
+                    <div class="result__weak">
+                        <h3 id="weakTitle"></h3>
+                        <p class="section__body" id="weakBody" style="margin-bottom: 0.8rem;"></p>
+                        <a id="weakRead" href="/blog/" class="nav__link" style="color:#002664; text-decoration: underline;">Recommended reading &rarr;</a>
+                    </div>
+
+                    <!-- EMAIL CAPTURE (optional) -->
+                    <div class="capture" id="capture">
+                        <h3>Want your full breakdown?</h3>
+                        <p>Get your result plus your prioritized next steps sent to your inbox. We will also flag the one move most likely to move the needle for a brand at your stage.</p>
+                        <form id="captureForm" class="capture__row">
+                            <input type="text" id="leadName" name="firstName" placeholder="First name" autocomplete="given-name" required>
+                            <input type="email" id="leadEmail" name="email" placeholder="Email address" autocomplete="email" required>
+                            <button type="submit" class="btn btn--cream" style="flex: 0 0 auto;">Send It</button>
+                        </form>
+                        <p class="capture__ok" id="captureOk">Done. Check your inbox shortly. Redirecting you now&hellip;</p>
+                        <p class="capture__note">No spam. Your result, and nothing you did not ask for.</p>
+                    </div>
+
+                    <!-- PRIMARY CTA -->
+                    <div class="post-cta-inline" style="margin-top: 2.5rem;">
+                        <h3>Want a human read instead of a score?</h3>
+                        <p>Book a free 30-minute discovery call. Derek reviews your brand beforehand and gives you at least one clear direction, whether or not you ever work with Valore.</p>
+                        <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="btn btn--navy" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="footer__name">Valore</p>
+                    <p class="footer__tagline">Fractional Brand Managers</p>
+                </div>
+                <p class="footer__copy">&copy; 2026 Valore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile nav ---
+        const t = document.getElementById('navToggle');
+        const l = document.getElementById('navLinks');
+        t.addEventListener('click', function() {
+            const open = l.classList.toggle('is-open');
+            t.setAttribute('aria-expanded', open);
+            t.classList.toggle('is-active');
+        });
+
+        // ================== BRAND ASSESSMENT ==================
+        // To capture leads into GHL, create an Inbound Webhook trigger in a GHL
+        // workflow and paste its URL below. Until then, the assessment still works
+        // end to end (instant result + booking CTA); only email capture is paused.
+        const GHL_WEBHOOK_URL = ""; // <-- paste GHL inbound webhook URL here
+
+        // Four themes, two questions each. Each option scores 0 / 1 / 2.
+        const QUESTIONS = [
+          { theme: "Positioning", text: "Can you state, in one sentence, exactly who you are the best choice for and why?", opts: [
+            ["Yes, and it is the same everywhere we show up", 2],
+            ["Roughly, but it is not written down or consistent", 1],
+            ["Not really, we serve whoever comes to us", 0] ] },
+          { theme: "Positioning", text: "When it comes to price, which sounds most like your business?", opts: [
+            ["Clients rarely push back, our value is understood", 2],
+            ["Some negotiation, but we hold our ground", 1],
+            ["We often compete on or justify price", 0] ] },
+          { theme: "Visibility", text: "If someone who has never heard of you searched for what you do, would they find you?", opts: [
+            ["Yes, we show up clearly and look credible", 2],
+            ["Maybe, our presence is thin or inconsistent", 1],
+            ["No, we are basically invisible to strangers", 0] ] },
+          { theme: "Visibility", text: "Where does most of your new business come from?", opts: [
+            ["A few different channels working together", 2],
+            ["Mostly referrals, with a little else", 1],
+            ["Almost entirely word of mouth", 0] ] },
+          { theme: "Experience", text: "Is your client experience intentional and consistent from first contact to delivery?", opts: [
+            ["Yes, every touchpoint is designed", 2],
+            ["The core is good, the edges are inconsistent", 1],
+            ["It varies, it depends who and when", 0] ] },
+          { theme: "Experience", text: "Do clients describe and refer you in the words you would choose yourself?", opts: [
+            ["Yes, the message carries accurately", 2],
+            ["Sometimes, but it gets muddled", 1],
+            ["No, I am often surprised how we are described", 0] ] },
+          { theme: "Leadership", text: "Is one person accountable for your whole brand direction?", opts: [
+            ["Yes, someone owns the full picture", 2],
+            ["Sort of, but it is split across vendors", 1],
+            ["No, everyone does their own thing", 0] ] },
+          { theme: "Leadership", text: "Does your marketing feel planned, or reactive?", opts: [
+            ["Planned against a clear roadmap", 2],
+            ["A mix of planned and last-minute", 1],
+            ["Mostly reactive, random acts of marketing", 0] ] }
+        ];
+
+        const THEME_INFO = {
+          Positioning: { read: "/blog/what-is-brand-positioning/",
+            body: "Your growth starts with clarity. Until who you serve and why you are the right choice is sharp and consistent, every other channel works harder than it should." },
+          Visibility: { read: "/blog/visibility-without-noise/",
+            body: "You are relying on people who already know you. The next stage is building presence that reaches people who have never heard your name, without just making more noise." },
+          Experience: { read: "/blog/what-the-brand-looks-like/",
+            body: "The brand is what people experience, not what you advertise. Tightening the journey from first contact to delivery is what turns clients into a referral engine." },
+          Leadership: { read: "/blog/what-fractional-brand-manager-does/",
+            body: "Nobody is steering the whole picture, so the brand drifts. One clear direction, held across every vendor and channel, is the difference between activity and growth." }
+        };
+
+        const BANDS = [
+          { min: 0, max: 6, name: "Stage 1 — Referral-Dependent",
+            body: "Your business is real and your clients are happy, but the brand is doing very little of the work. Growth depends almost entirely on other people's conversations. The opportunity here is enormous, because a little structure goes a long way." },
+          { min: 7, max: 11, name: "Stage 2 — Traction, Scattered",
+            body: "You have momentum and some visibility, but the pieces are not pulling in one direction. This is the most common, and most frustrating, stage: working hard with results that do not match the effort. Alignment is what unlocks the next level." },
+          { min: 12, max: 16, name: "Stage 3 — Ready to Anchor",
+            body: "Your brand is strong and intentional. You are in the small group of businesses positioned to dominate their market rather than just compete in it. The work now is consistency, oversight, and pushing from a position of strength." }
+        ];
+
+        // --- Render questions ---
+        const qWrap = document.getElementById('questions');
+        QUESTIONS.forEach((q, i) => {
+          const fs = document.createElement('fieldset');
+          fs.className = 'quiz__q';
+          fs.style.border = 'none'; fs.style.padding = fs.style.margin = '';
+          fs.innerHTML = `<legend class="quiz__legend"><span class="quiz__num">Question ${i+1} of ${QUESTIONS.length}</span>${q.text}</legend>`;
+          const opts = document.createElement('div');
+          opts.className = 'quiz__opts';
+          q.opts.forEach(([label, val], j) => {
+            const id = `q${i}_${j}`;
+            const lbl = document.createElement('label');
+            lbl.className = 'quiz__opt';
+            lbl.setAttribute('for', id);
+            lbl.innerHTML = `<input type="radio" id="${id}" name="q${i}" value="${val}"><span>${label}</span>`;
+            opts.appendChild(lbl);
+          });
+          fs.appendChild(opts);
+          qWrap.appendChild(fs);
+        });
+
+        // Highlight selected option card
+        qWrap.addEventListener('change', e => {
+          if (e.target.type !== 'radio') return;
+          document.getElementsByName(e.target.name).forEach(r =>
+            r.closest('.quiz__opt').classList.toggle('quiz__opt--checked', r.checked));
+        });
+
+        // --- Score + render result ---
+        let lastResult = null;
+        document.getElementById('quizForm').addEventListener('submit', e => {
+          e.preventDefault();
+          const themeScores = { Positioning: 0, Visibility: 0, Experience: 0, Leadership: 0 };
+          let total = 0, answered = 0;
+          QUESTIONS.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            if (sel) { answered++; const v = +sel.value; total += v; themeScores[q.theme] += v; }
+          });
+          if (answered < QUESTIONS.length) {
+            document.getElementById('quizError').classList.add('is-visible');
+            return;
+          }
+          document.getElementById('quizError').classList.remove('is-visible');
+
+          const band = BANDS.find(b => total >= b.min && total <= b.max);
+          // weakest theme (lowest score; first in fixed order on ties)
+          const order = ["Positioning", "Visibility", "Experience", "Leadership"];
+          let weak = order[0];
+          order.forEach(t => { if (themeScores[t] < themeScores[weak]) weak = t; });
+
+          document.getElementById('scoreNum').textContent = total;
+          document.getElementById('resultBand').textContent = band.name;
+          document.getElementById('resultBody').textContent = band.body;
+          document.getElementById('weakTitle').textContent = `Start here: ${weak}`;
+          document.getElementById('weakBody').textContent = THEME_INFO[weak].body;
+          document.getElementById('weakRead').href = THEME_INFO[weak].read;
+
+          lastResult = { total, band: band.name, weakestArea: weak, themeScores };
+          gtag('event', 'brand_assessment_complete', { event_category: 'lead_magnet', event_label: band.name, value: total });
+
+          const r = document.getElementById('result');
+          r.classList.add('is-visible');
+          r.focus();
+          r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        // --- Email capture ---
+        document.getElementById('captureForm').addEventListener('submit', e => {
+          e.preventDefault();
+          const payload = {
+            firstName: document.getElementById('leadName').value.trim(),
+            email: document.getElementById('leadEmail').value.trim(),
+            source: 'brand-assessment',
+            score: lastResult ? lastResult.total : null,
+            maxScore: 16,
+            band: lastResult ? lastResult.band : null,
+            weakestArea: lastResult ? lastResult.weakestArea : null
+          };
+          gtag('event', 'brand_assessment_lead', { event_category: 'lead_magnet', event_label: payload.band });
+          if (GHL_WEBHOOK_URL) {
+            fetch(GHL_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => {});
+          }
+          document.getElementById('captureForm').style.display = 'none';
+          document.getElementById('captureOk').classList.add('is-visible');
+          setTimeout(() => { window.location.href = '/thank-you/'; }, 1600);
+        });
+    </script>
+</body>
+</html>
