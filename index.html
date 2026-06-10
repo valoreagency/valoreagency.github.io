@@ -243,8 +243,8 @@
 
     <!-- POSITIONING PAYOFF -->
     <section class="section section--cream">
-        <div class="container container--narrow">
-            <p class="section__body" style="font-size: 1.35rem; line-height: 1.55; text-align: center; color: #002664; margin: 0;">Premium is not really about price. It changes who you attract: clients who trust you on sight, who have the budget and the will to spend, and who cause fewer headaches. That builds a higher-margin business, one that holds its value when the market tightens.</p>
+        <div class="container">
+            <p class="lead-statement">Premium is not really about price. It changes who you attract: clients who trust you on sight, who have the budget and the will to spend, and who cause fewer headaches. That builds a higher-margin business, <strong>one that holds its value when the market tightens.</strong></p>
         </div>
     </section>
 
@@ -322,6 +322,58 @@
                     <h3 class="service-item__title">Client Experience</h3>
                     <p class="service-item__body">We audit the full client journey from first contact through delivery. The brand has to be consistent in what it shows, says, and delivers, not just in what it advertises.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROWTH GRAPH -->
+    <section class="section section--navy growth">
+        <div class="container">
+            <div class="growth__intro">
+                <p class="label label--light">The Pattern</p>
+                <h2 class="section__headline section__headline--light">What changes when the brand leads.</h2>
+                <p class="section__body section__body--light">Referrals grow a business to a ceiling, then flatten. A brand that is positioned, visible, and consistent keeps compounding after word of mouth runs out. That second curve is the work.</p>
+            </div>
+
+            <div class="growth-graph" role="img" aria-label="Line graph showing referral-led growth flattening into a plateau while brand-led growth keeps rising.">
+                <svg viewBox="0 0 760 360">
+                    <defs>
+                        <linearGradient id="growthFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#fff4ca" stop-opacity="0.22"/>
+                            <stop offset="100%" stop-color="#fff4ca" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <g class="growth-grid">
+                        <line x1="70" y1="250" x2="700" y2="250"/>
+                        <line x1="70" y1="180" x2="700" y2="180"/>
+                        <line x1="70" y1="110" x2="700" y2="110"/>
+                    </g>
+                    <line class="growth-baseline" x1="70" y1="320" x2="700" y2="320"/>
+
+                    <path class="growth-area" fill="url(#growthFill)" d="M70,300 C150,297 240,294 320,290 C400,285 450,232 520,182 C585,135 640,98 700,62 L700,320 L70,320 Z"/>
+                    <path class="growth-line" d="M70,300 C150,297 240,294 320,290 C400,285 450,232 520,182 C585,135 640,98 700,62"/>
+
+                    <g class="growth-dot">
+                        <circle class="growth-pulse" cx="700" cy="62" r="6"/>
+                        <circle cx="700" cy="62" r="6"/>
+                    </g>
+
+                    <g class="growth-anno growth-anno--1">
+                        <circle cx="300" cy="290" r="3.5"/>
+                        <text x="158" y="278" text-anchor="middle">Referrals plateau</text>
+                    </g>
+                    <g class="growth-anno growth-anno--2">
+                        <circle cx="610" cy="108" r="3.5"/>
+                        <text x="470" y="120" text-anchor="middle">Brand-led growth</text>
+                    </g>
+
+                    <g class="growth-axis">
+                        <text x="70" y="346" text-anchor="start">Now</text>
+                        <text x="385" y="346" text-anchor="middle">Year 2</text>
+                        <text x="700" y="346" text-anchor="end">Year 3</text>
+                    </g>
+                </svg>
             </div>
         </div>
     </section>
