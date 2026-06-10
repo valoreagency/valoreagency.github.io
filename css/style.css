@@ -1895,10 +1895,11 @@ a.post-related__card:hover {
 .milestone.is-on { opacity: 1; }
 .milestone circle { fill: #002664; stroke: #fff4ca; stroke-width: 2; }
 .milestone text {
-    fill: rgba(255, 244, 202, 0.9);
+    fill: #fff4ca;
     font-family: var(--sans);
-    font-size: 14px;
-    letter-spacing: 0.1em;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     text-anchor: middle;
 }
