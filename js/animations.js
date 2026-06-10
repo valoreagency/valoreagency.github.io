@@ -14,24 +14,27 @@
     }
   }
 
-  // Growth graph: scroll-linked draw — the line scales up from zero as the section scrolls through
+  // Growth graph: sticky scroll-track. Progress is the section's travel through
+  // the viewport, so the line and the tip ride the curve as you scroll.
+  var growthSection = document.querySelector('.growth');
   var growthWrap = document.querySelector('.growth-graph');
-  if (growthWrap) {
+  if (growthSection && growthWrap) {
     var growthPath = growthWrap.querySelector('.growth-line');
     var growthTip = growthWrap.querySelector('.growth-tip');
     if (growthPath && growthPath.getTotalLength) {
       var glen = growthPath.getTotalLength();
       growthPath.style.strokeDasharray = glen;
-      var growthReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var drawGrowth = function (p) {
+        p = Math.max(0, Math.min(1, p));
         growthPath.style.strokeDashoffset = glen * (1 - p);
         if (growthTip) {
           var pt = growthPath.getPointAtLength(glen * p);
           growthTip.setAttribute('cx', pt.x);
           growthTip.setAttribute('cy', pt.y);
-          growthTip.style.opacity = p > 0.03 ? '1' : '0';
+          growthTip.style.opacity = p > 0.02 ? '1' : '0';
         }
       };
+      var growthReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (growthReduced) {
         drawGrowth(1);
       } else {
@@ -40,10 +43,13 @@
           if (gTick) { return; }
           gTick = true;
           requestAnimationFrame(function () {
-            var rect = growthWrap.getBoundingClientRect();
+            var rect = growthSection.getBoundingClientRect();
             var vh = window.innerHeight || document.documentElement.clientHeight;
-            var p = (vh * 0.9 - rect.top) / (vh * 0.6);
-            drawGrowth(Math.max(0, Math.min(1, p)));
+            var scrollable = growthSection.offsetHeight - vh;
+            var p = scrollable > 80
+              ? (-rect.top) / scrollable
+              : (vh * 0.85 - rect.top) / (vh * 0.6);
+            drawGrowth(p);
             gTick = false;
           });
         };

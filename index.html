@@ -328,26 +328,28 @@
     </section>
 
     <!-- GROWTH GRAPH -->
-    <section class="section section--navy growth">
-        <div class="container">
-            <div class="growth__intro">
-                <p class="label label--light">The Pattern</p>
-                <h2 class="section__headline section__headline--light">What growth looks like when the brand leads.</h2>
-                <p class="section__body section__body--light">Referrals move in a straight line. A brand that is positioned, visible, and consistent compounds, and once it takes hold, it scales faster than most owners expect.</p>
-            </div>
+    <section class="section--navy growth">
+        <div class="growth-sticky">
+            <div class="container">
+                <div class="growth__intro">
+                    <p class="label label--light">The Pattern</p>
+                    <h2 class="section__headline section__headline--light">What growth looks like when the brand leads.</h2>
+                    <p class="section__body section__body--light">Referrals move in a straight line. A brand that is positioned, visible, and consistent compounds, and once it takes hold, it scales faster than most owners expect.</p>
+                </div>
 
-            <div class="growth-graph" role="img" aria-label="A growth curve that starts near zero and scales up quickly.">
-                <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
-                    <defs>
-                        <filter id="growthGlow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur stdDeviation="3.5" result="b"/>
-                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                        </filter>
-                    </defs>
-                    <line class="growth-baseline" x1="60" y1="360" x2="960" y2="360"/>
-                    <path class="growth-line" filter="url(#growthGlow)" d="M60,356 C200,354 300,352 380,348 C480,343 540,315 610,270 C700,212 850,120 960,36"/>
-                    <circle class="growth-tip" filter="url(#growthGlow)" r="6" cx="60" cy="356"/>
-                </svg>
+                <div class="growth-graph" role="img" aria-label="A growth curve that starts near zero and scales up quickly.">
+                    <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <filter id="growthGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3.5" result="b"/>
+                                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        <line class="growth-baseline" x1="60" y1="360" x2="960" y2="360"/>
+                        <path class="growth-line" filter="url(#growthGlow)" d="M60,356 C200,354 300,352 380,348 C480,343 540,315 610,270 C700,212 850,120 960,36"/>
+                        <circle class="growth-tip" filter="url(#growthGlow)" r="7" cx="60" cy="356"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
