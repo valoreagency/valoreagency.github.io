@@ -317,7 +317,7 @@ img { display: block; max-width: 100%; }
     border-color: var(--navy);
 }
 .package__num {
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: 0.875rem;
     letter-spacing: 0.06em;
     color: var(--navy);
@@ -652,7 +652,7 @@ img { display: block; max-width: 100%; }
 .service-block:last-of-type { border-bottom: none; }
 .service-block__num {
     display: block;
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: 0.875rem;
     letter-spacing: 0.06em;
     color: var(--navy);
@@ -780,7 +780,7 @@ img { display: block; max-width: 100%; }
 }
 .process-step:first-child { border-top: 1px solid var(--gray-light); }
 .process-step__num {
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: 3.5rem;
     font-weight: 300;
     color: var(--gray-light);
@@ -1655,7 +1655,7 @@ a.post-related__card:hover {
 }
 .stat-item__num {
     display: block;
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: clamp(4.5rem, 9vw, 7.5rem);
     font-weight: 300;
     color: var(--navy);
