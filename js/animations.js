@@ -14,18 +14,44 @@
     }
   }
 
-  // Growth graph: draw the line as it scrolls into view
-  var graphs = Array.prototype.slice.call(document.querySelectorAll('.growth-graph'));
-  if (graphs.length) {
-    if ('IntersectionObserver' in window) {
-      var gio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) { entry.target.classList.add('is-drawn'); gio.unobserve(entry.target); }
-        });
-      }, { threshold: 0.3 });
-      graphs.forEach(function (g) { gio.observe(g); });
-    } else {
-      graphs.forEach(function (g) { g.classList.add('is-drawn'); });
+  // Growth graph: scroll-linked draw — the line scales up from zero as the section scrolls through
+  var growthWrap = document.querySelector('.growth-graph');
+  if (growthWrap) {
+    var growthPath = growthWrap.querySelector('.growth-line');
+    var growthTip = growthWrap.querySelector('.growth-tip');
+    if (growthPath && growthPath.getTotalLength) {
+      var glen = growthPath.getTotalLength();
+      growthPath.style.strokeDasharray = glen;
+      var growthReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var drawGrowth = function (p) {
+        growthPath.style.strokeDashoffset = glen * (1 - p);
+        if (growthTip) {
+          var pt = growthPath.getPointAtLength(glen * p);
+          growthTip.setAttribute('cx', pt.x);
+          growthTip.setAttribute('cy', pt.y);
+          growthTip.style.opacity = p > 0.03 ? '1' : '0';
+        }
+      };
+      if (growthReduced) {
+        drawGrowth(1);
+      } else {
+        var gTick = false;
+        var onGrowthScroll = function () {
+          if (gTick) { return; }
+          gTick = true;
+          requestAnimationFrame(function () {
+            var rect = growthWrap.getBoundingClientRect();
+            var vh = window.innerHeight || document.documentElement.clientHeight;
+            var p = (vh * 0.9 - rect.top) / (vh * 0.6);
+            drawGrowth(Math.max(0, Math.min(1, p)));
+            gTick = false;
+          });
+        };
+        window.addEventListener('scroll', onGrowthScroll, { passive: true });
+        window.addEventListener('resize', onGrowthScroll, { passive: true });
+        drawGrowth(0);
+        onGrowthScroll();
+      }
     }
   }
 
