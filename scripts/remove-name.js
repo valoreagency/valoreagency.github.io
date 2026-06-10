@@ -54,8 +54,9 @@ function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, e.name);
     if (e.isDirectory()) {
-      // Policy: the founder's name stays in the blog; remove only from conversion pages
-      if (['scripts', '.git', 'assets', 'css', 'js', 'blog'].includes(e.name)) continue;
+      // Policy: the founder's name stays on the About page and the blog;
+      // remove only from the other conversion pages.
+      if (['scripts', '.git', 'assets', 'css', 'js', 'blog', 'about'].includes(e.name)) continue;
       out = out.concat(walk(full));
     } else if (e.name.endsWith('.html')) {
       out.push(full);
