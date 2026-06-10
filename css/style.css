@@ -1891,4 +1891,15 @@ a.post-related__card:hover {
     stroke-dashoffset: 2200;
 }
 .growth-tip { fill: #fff4ca; opacity: 0; }
+.milestone { opacity: 0; transition: opacity 0.45s ease; }
+.milestone.is-on { opacity: 1; }
+.milestone circle { fill: #002664; stroke: #fff4ca; stroke-width: 2; }
+.milestone text {
+    fill: rgba(255, 244, 202, 0.9);
+    font-family: var(--sans);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-anchor: middle;
+}
 @media (max-width: 768px) { .growth { min-height: 180vh; } }

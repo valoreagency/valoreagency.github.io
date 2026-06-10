@@ -24,6 +24,17 @@
     if (growthPath && growthPath.getTotalLength) {
       var glen = growthPath.getTotalLength();
       growthPath.style.strokeDasharray = glen;
+
+      // Position the Standard / Premium / THE BRAND points on the curve
+      var milestones = Array.prototype.slice.call(growthWrap.querySelectorAll('.milestone'));
+      milestones.forEach(function (m) {
+        var pt = growthPath.getPointAtLength(glen * parseFloat(m.getAttribute('data-frac')));
+        var c = m.querySelector('circle');
+        var t = m.querySelector('text');
+        if (c) { c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y); }
+        if (t) { t.setAttribute('x', pt.x); t.setAttribute('y', pt.y + 30); }
+      });
+
       var drawGrowth = function (p) {
         p = Math.max(0, Math.min(1, p));
         growthPath.style.strokeDashoffset = glen * (1 - p);
@@ -33,6 +44,9 @@
           growthTip.setAttribute('cy', pt.y);
           growthTip.style.opacity = p > 0.02 ? '1' : '0';
         }
+        milestones.forEach(function (m) {
+          m.classList.toggle('is-on', p >= parseFloat(m.getAttribute('data-frac')) - 0.01);
+        });
       };
       var growthReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (growthReduced) {
