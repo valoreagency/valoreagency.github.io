@@ -23,19 +23,16 @@
     var growthTip = growthWrap.querySelector('.growth-tip');
     if (growthPath && growthPath.getTotalLength) {
       var glen = growthPath.getTotalLength();
-      growthPath.style.strokeDasharray = glen;
-
-      // Position the Standard / Premium / THE BRAND points on the curve
+      if (glen > 1) { growthPath.style.strokeDasharray = glen; }
       var milestones = Array.prototype.slice.call(growthWrap.querySelectorAll('.milestone'));
-      milestones.forEach(function (m) {
-        var pt = growthPath.getPointAtLength(glen * parseFloat(m.getAttribute('data-frac')));
-        var c = m.querySelector('circle');
-        var t = m.querySelector('text');
-        if (c) { c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y); }
-        if (t) { t.setAttribute('x', pt.x); t.setAttribute('y', pt.y + 30); }
-      });
 
       var drawGrowth = function (p) {
+        // getTotalLength can read 0 before layout settles; retry until it is real
+        if (glen <= 1) {
+          glen = growthPath.getTotalLength();
+          if (glen <= 1) { return; }
+          growthPath.style.strokeDasharray = glen;
+        }
         p = Math.max(0, Math.min(1, p));
         growthPath.style.strokeDashoffset = glen * (1 - p);
         if (growthTip) {
