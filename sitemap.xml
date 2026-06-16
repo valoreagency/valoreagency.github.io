@@ -74,7 +74,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog posts — 25 total, newest first -->
+  <!-- Blog posts — 30 total, newest first -->
   <url>
     <loc>https://valore.agency/blog/brand-clarity-premium-pricing/</loc>
     <lastmod>2026-06-15</lastmod>
@@ -83,6 +83,56 @@
     <image:image>
       <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
       <image:title>How Brand Clarity Lets You Charge Premium Prices</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/hiring-marketing-vendor/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Hire a Marketing Vendor Without Wasting Money</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/how-to-brief-an-agency/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Brief a Marketing Agency So You Actually Get Results</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/marketing-agency-not-problem/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Your Marketing Agency Probably Is Not the Problem</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/professional-services-underinvest-brand/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Professional Services Firms Underinvest in Their Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/social-media-manager-needs-direction/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Social Media Manager Needs Direction, Not Just Content</image:title>
     </image:image>
   </url>
   <url>
