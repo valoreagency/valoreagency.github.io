@@ -495,6 +495,30 @@ img { display: block; max-width: 100%; }
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.28);
 }
+.footer__tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.footer__tools-label {
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+.footer__tools a {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+.footer__tools a:hover {
+    color: var(--cream, #fff4ca);
+}
 
 /* ============================================================
    RESPONSIVE

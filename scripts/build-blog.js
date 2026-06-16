@@ -53,6 +53,8 @@ const corePages = [
   { loc: `${BASE}/case-study/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/case-study/b2b-virtual-services/`, freq: 'monthly', pri: '0.7' },
   { loc: `${BASE}/brand-assessment/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/marketing-cost-calculator/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/pricing-readiness/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/contact/`, freq: 'monthly', pri: '0.6' },
   { loc: `${BASE}/blog/`, freq: 'weekly', pri: '0.7' },
 ];
@@ -147,6 +149,35 @@ ${itemList}
     </script>
 `;
 fs.writeFileSync(path.join(__dirname, 'blog-schema.html'), blogSchema, 'utf8');
+
+// ---- 3b. inject the grid + schema straight into blog/index.html ----
+// blog/index.html carries the rendered grid and JSON-LD inline, so refresh
+// both in place every build. This keeps the daily workflow to one command:
+// add posts, run this script, commit.
+const indexPath = path.join(BLOG, 'index.html');
+if (fs.existsSync(indexPath)) {
+  let index = fs.readFileSync(indexPath, 'utf8');
+  let injected = 0;
+
+  // Grid: replace the inner cards (cards contain no <div>, so the first
+  // </div> after the opener is the grid's own close).
+  const gridRe = /<div class="blog-grid">[\s\S]*?<\/div>/;
+  if (gridRe.test(index)) {
+    index = index.replace(gridRe, `<div class="blog-grid">\n${cards}\n            </div>`);
+    injected++;
+  }
+
+  // Schema: the JSON-LD block sits between the stylesheet link and the gtag
+  // comment. Swap it for the freshly built Blog + ItemList + Breadcrumb.
+  const schemaRe = /(<link rel="stylesheet" href="\/css\/style\.css">\r?\n)[\s\S]*?(\r?\n {4}<!-- Google tag)/;
+  if (schemaRe.test(index)) {
+    index = index.replace(schemaRe, `$1\n${blogSchema.trimEnd()}\n$2`);
+    injected++;
+  }
+
+  fs.writeFileSync(indexPath, index, 'utf8');
+  console.log(`Injected into blog/index.html (${injected}/2 regions updated).`);
+}
 
 // ---- 4. feed.xml (RSS 2.0 — newest first, for Medium import / readers / automation) ----
 const rfc822 = d => d ? new Date(`${d}T12:00:00Z`).toUTCString() : new Date().toUTCString();
