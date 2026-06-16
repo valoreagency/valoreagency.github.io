@@ -14,7 +14,7 @@ const ROOT = path.resolve(__dirname, '..');
 const ANCHOR = '            <div class="footer__inner">';
 const BLOCK =
 `            <nav class="footer__tools" aria-label="Free tools">
-                <span class="footer__tools-label">Free Tools</span>
+                <span class="footer__tools-label">Tools</span>
                 <a href="/brand-assessment/">Brand Assessment</a>
                 <a href="/marketing-cost-calculator/">Marketing Cost Calculator</a>
                 <a href="/pricing-readiness/">Pricing Scorecard</a>
@@ -24,7 +24,7 @@ const BLOCK =
 // Minified (single-line) footer, as used on most generated blog posts.
 const MIN_ANCHOR = '<div class="footer__inner">';
 const MIN_BLOCK =
-'<nav class="footer__tools" aria-label="Free tools"><span class="footer__tools-label">Free Tools</span>' +
+'<nav class="footer__tools" aria-label="Free tools"><span class="footer__tools-label">Tools</span>' +
 '<a href="/brand-assessment/">Brand Assessment</a>' +
 '<a href="/marketing-cost-calculator/">Marketing Cost Calculator</a>' +
 '<a href="/pricing-readiness/">Pricing Scorecard</a></nav>';
