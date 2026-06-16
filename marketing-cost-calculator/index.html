@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Cost Calculator: A Manager vs. a Fractional Brand Partner | Valore</title>
-    <meta name="description" content="See what a full-time marketing manager really costs once you load benefits and overhead, what you would save with a fractional brand partner, and how that freed budget turns into more reach, more leads, and higher client value.">
+    <title>Marketing Cost Calculator: How Much Could You Diversify? | Valore</title>
+    <meta name="description" content="See how much you would free up every month by trading a full-time marketing manager for a fractional brand partner, and what that extra budget could fund: more channels, more clients, more revenue, more lifetime value.">
     <link rel="canonical" href="https://valore.agency/marketing-cost-calculator/">
-    <meta property="og:title" content="What Does Your Marketing Really Cost? | Valore">
-    <meta property="og:description" content="Compare the true cost of a marketing manager against a fractional brand partner, and see where the savings can go: more specialists, more reach, more leads.">
+    <meta property="og:title" content="How Much Could You Diversify Your Marketing? | Valore">
+    <meta property="og:description" content="See how much you would free up each month by trading a marketing manager for a fractional brand partner, and what that extra budget could fund.">
     <meta property="og:url" content="https://valore.agency/marketing-cost-calculator/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://valore.agency/assets/og-image.jpg">
@@ -24,7 +24,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Marketing Cost Calculator",
-      "description": "A free calculator for premium business owners to compare the true cost of a marketing manager against a fractional brand partner and see where the savings can be redeployed.",
+      "description": "A free calculator for premium business owners to see how much they would free up each month by trading a marketing manager for a fractional brand partner, and what that budget could fund.",
       "url": "https://valore.agency/marketing-cost-calculator/",
       "isPartOf": { "@id": "https://valore.agency/#website" },
       "publisher": { "@id": "https://valore.agency/#organization" }
@@ -43,59 +43,48 @@
 
     <style>
       /* Scoped styles for the calculator. Reuses site tokens (navy #002664, cream). */
-      .calc { max-width: 820px; margin: 0 auto; }
-      .calc__group { border-top: 1px solid #e6e3dc; padding: 1.8rem 0; }
+      .calc { max-width: 720px; margin: 0 auto; }
+      .calc__group { border-top: 1px solid #e6e3dc; padding: 1.6rem 0; }
       .calc__group:first-of-type { border-top: none; padding-top: 0.5rem; }
-      .calc__group-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #002664; margin: 0 0 0.4rem; }
-      .calc__group-note { font-size: 0.9rem; color: #6f6a60; margin: 0 0 1.3rem; }
-      .calc__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.55rem 0; }
-      .calc__label { font-size: 0.98rem; color: #2c2c2c; flex: 1 1 auto; }
-      .calc__label small { display: block; color: #9a9486; font-size: 0.82rem; margin-top: 0.1rem; }
+      .calc__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; }
+      .calc__label { font-size: 1rem; color: #2c2c2c; flex: 1 1 auto; }
+      .calc__label small { display: block; color: #9a9486; font-size: 0.84rem; margin-top: 0.15rem; }
       .calc__field { position: relative; flex: 0 0 auto; }
       .calc__prefix { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: #9a9486; font-size: 0.95rem; pointer-events: none; }
-      .calc__input { width: 150px; padding: 0.7rem 0.9rem 0.7rem 1.7rem; border: 1px solid #ddd8cf; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.98rem; color: #002664; text-align: right; }
+      .calc__input { width: 160px; padding: 0.75rem 0.9rem 0.75rem 1.7rem; border: 1px solid #ddd8cf; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem; color: #002664; text-align: right; }
       .calc__input--plain { padding-left: 0.9rem; }
       .calc__input:focus { outline: none; border-color: #002664; }
-      .calc__channels .calc__row { border-bottom: 1px dashed #ece9e1; }
-      .calc__channels .calc__row:last-child { border-bottom: none; }
-      .calc__total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #002664; }
-      .calc__total-label { font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; color: #002664; }
-      .calc__total-val { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #002664; }
 
       .result { display: none; scroll-margin-top: 90px; }
       .result.is-visible { display: block; }
       .result__hero { background: #002664; color: #f4f1ea; border-radius: 12px; padding: 2.6rem 2rem; text-align: center; margin-bottom: 2rem; }
       .result__hero-label { font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #9aa6c2; margin: 0 0 0.7rem; }
       .result__hero-num { font-family: 'Cormorant Garamond', serif; font-size: 4.2rem; line-height: 1; color: #fff4ca; margin: 0; }
-      .result__hero-sub { color: #cdd4e4; font-size: 1.02rem; margin: 0.9rem auto 0; max-width: 460px; }
+      .result__hero-unit { font-size: 1.4rem; color: #9aa6c2; }
+      .result__hero-sub { color: #cdd4e4; font-size: 1.02rem; margin: 0.9rem auto 0; max-width: 470px; line-height: 1.6; }
 
-      .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
-      .compare__card { border: 1px solid #ddd8cf; border-radius: 10px; padding: 1.6rem 1.5rem; }
+      .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.6rem; }
+      .compare__card { border: 1px solid #ddd8cf; border-radius: 10px; padding: 1.5rem 1.5rem; text-align: center; }
       .compare__card--valore { border-color: #002664; background: #f5f3ee; }
-      .compare__head { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #9a9486; margin: 0 0 0.5rem; }
-      .compare__big { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #002664; margin: 0 0 0.9rem; line-height: 1; }
-      .compare__line { display: flex; justify-content: space-between; font-size: 0.9rem; color: #545454; padding: 0.28rem 0; border-top: 1px dashed #e6e3dc; }
-      .compare__line:first-of-type { border-top: none; }
+      .compare__head { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #9a9486; margin: 0 0 0.6rem; }
+      .compare__big { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #002664; margin: 0; line-height: 1; }
+      .compare__sub { font-size: 0.85rem; color: #6f6a60; margin: 0.5rem 0 0; }
 
-      .reallocate { background: #f5f3ee; border-radius: 10px; padding: 1.8rem; margin-bottom: 2rem; }
+      .budget { background: #f5f3ee; border-radius: 10px; padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; text-align: center; }
+      .budget p { margin: 0; font-size: 1.02rem; color: #545454; line-height: 1.6; }
+      .budget b { color: #002664; }
+      .budget .budget__big { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; }
+
       .reallocate h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #002664; margin: 0 0 0.3rem; }
-      .reallocate p.lead { color: #545454; font-size: 0.98rem; margin: 0 0 1.4rem; }
-      .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-      .stat { text-align: center; padding: 1.1rem 0.6rem; background: #fff; border-radius: 8px; }
+      .reallocate p.lead { color: #545454; font-size: 0.98rem; margin: 0 0 1.3rem; line-height: 1.6; }
+      .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.6rem; }
+      .stat { text-align: center; padding: 1.2rem 0.6rem; background: #fff; border: 1px solid #ece9e1; border-radius: 8px; }
       .stat__num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #002664; line-height: 1; }
-      .stat__cap { font-size: 0.82rem; color: #6f6a60; margin-top: 0.45rem; }
+      .stat__cap { font-size: 0.82rem; color: #6f6a60; margin-top: 0.5rem; line-height: 1.4; }
+      .diversify { font-size: 0.92rem; color: #6f6a60; line-height: 1.7; margin: 0 0 0.5rem; }
+      .diversify b { color: #002664; }
 
-      .bars { margin: 1.6rem 0 0.4rem; }
-      .bars__row { margin-bottom: 1rem; }
-      .bars__head { display: flex; justify-content: space-between; font-size: 0.88rem; color: #545454; margin-bottom: 0.35rem; }
-      .bars__track { height: 26px; background: #ece9e1; border-radius: 5px; display: flex; overflow: hidden; }
-      .bars__seg { height: 100%; display: flex; align-items: center; padding-left: 0.5rem; font-size: 0.72rem; color: #fff; white-space: nowrap; }
-      .bars__seg--overhead { background: #9a9486; }
-      .bars__seg--working { background: #002664; }
-      .bars__legend { font-size: 0.8rem; color: #6f6a60; margin-top: 0.3rem; }
-      .bars__legend b { color: #002664; }
-
-      .capture { background: #002664; color: #f4f1ea; border-radius: 10px; padding: 2rem 1.8rem; margin-top: 1.5rem; }
+      .capture { background: #002664; color: #f4f1ea; border-radius: 10px; padding: 2rem 1.8rem; margin-top: 1.6rem; }
       .capture h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; margin: 0 0 0.4rem; color: #fff; }
       .capture p { color: #cdd4e4; font-size: 0.98rem; margin: 0 0 1.2rem; }
       .capture__row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
@@ -105,9 +94,8 @@
       .capture__ok.is-visible { display: block; }
       .calc__assumptions { font-size: 0.82rem; color: #9a9486; margin-top: 1.4rem; line-height: 1.6; }
 
-      @media (max-width: 640px) {
+      @media (max-width: 600px) {
         .compare, .stats { grid-template-columns: 1fr; }
-        .calc__input { width: 120px; }
         .result__hero-num { font-size: 3.2rem; }
       }
     </style>
@@ -156,8 +144,8 @@
     <section class="page-hero">
         <div class="container">
             <span class="page-hero__label">Marketing Cost Calculator</span>
-            <h1 class="page-hero__headline">What does your<br>marketing really cost?</h1>
-            <p class="page-hero__body">Most owners weighing a marketing manager only count the salary. Add the channels you already pay for and your real numbers below. You will see what that hire actually costs once benefits and overhead are loaded, what a fractional brand partner would cost instead, and where the difference can go: more specialists, more reach, more leads. No email required to see your result.</p>
+            <h1 class="page-hero__headline">How much could you<br>diversify your marketing?</h1>
+            <p class="page-hero__body">A full-time marketing manager is one salary, usually expert in one or two channels. Enter what that hire would cost and what you already spend. You will see how much you would free up every month with a fractional brand partner instead, and what that extra budget could fund: more channels, more clients, more revenue. No email required to see your result.</p>
         </div>
     </section>
 
@@ -167,40 +155,16 @@
             <form class="calc" id="calcForm" novalidate>
 
                 <div class="calc__group">
-                    <p class="calc__group-title">The hire you are weighing</p>
-                    <p class="calc__group-note">The salary a full-time marketing manager would cost you. We load benefits, payroll tax, equipment, paid time off, and ramp on top automatically.</p>
                     <div class="calc__row">
-                        <span class="calc__label">Marketing manager salary<small>Base salary, before benefits and overhead</small></span>
+                        <span class="calc__label">Marketing manager salary<small>What you would pay a full-time hire, before benefits and overhead</small></span>
                         <span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input" id="salary" type="text" inputmode="numeric" value="85,000"></span>
                     </div>
-                </div>
-
-                <div class="calc__group">
-                    <p class="calc__group-title">What you spend on marketing now</p>
-                    <p class="calc__group-note">Monthly spend across the channels you actually use. Leave anything at zero if it does not apply. This is the working budget that buys you reach.</p>
-                    <div class="calc__channels">
-                        <div class="calc__row"><span class="calc__label">SEO &amp; local search</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Google Ads (paid search)</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Paid social (Meta, LinkedIn)</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Social media management &amp; content</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Email marketing &amp; CRM</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Website &amp; landing pages</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Branding, design &amp; creative</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Photography &amp; video</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">PR, events &amp; sponsorships</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                        <div class="calc__row"><span class="calc__label">Print, direct mail &amp; offline</span><span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input chan" type="text" inputmode="numeric" value="0"></span></div>
-                    </div>
-                    <div class="calc__total">
-                        <span class="calc__total-label">Your monthly marketing spend</span>
-                        <span class="calc__total-val" id="monthlyTotal">$0</span>
-                    </div>
-                </div>
-
-                <div class="calc__group">
-                    <p class="calc__group-title">Your numbers</p>
-                    <p class="calc__group-note">These turn the savings into something concrete: more clients, more revenue, more lifetime value. Estimates are fine.</p>
                     <div class="calc__row">
-                        <span class="calc__label">New clients you win per month<small>From all marketing combined, on average</small></span>
+                        <span class="calc__label">Your marketing spend now<small>Roughly what you put toward marketing each month</small></span>
+                        <span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input" id="spend" type="text" inputmode="numeric" value="3,000"></span>
+                    </div>
+                    <div class="calc__row">
+                        <span class="calc__label">New clients you win per month<small>From all your marketing combined, on average</small></span>
                         <span class="calc__field"><input class="calc__input calc__input--plain" id="clients" type="text" inputmode="numeric" value="4"></span>
                     </div>
                     <div class="calc__row">
@@ -213,8 +177,8 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 2rem; text-align: center;">
-                    <button type="submit" class="btn btn--navy">Calculate My Numbers</button>
+                <div style="margin-top: 1.8rem; text-align: center;">
+                    <button type="submit" class="btn btn--navy">Show Me the Numbers</button>
                 </div>
             </form>
 
@@ -223,56 +187,43 @@
                 <div class="result" id="result" tabindex="-1" aria-live="polite">
 
                     <div class="result__hero">
-                        <p class="result__hero-label">You could redeploy, every year</p>
-                        <p class="result__hero-num" id="heroSavings">$0</p>
-                        <p class="result__hero-sub" id="heroSub">That is the gap between a loaded marketing manager and a fractional brand partner. The same money, pointed at reach instead of one salary.</p>
+                        <p class="result__hero-label">Extra budget to diversify with</p>
+                        <p class="result__hero-num" id="heroFreed">$0<span class="result__hero-unit"> / month</span></p>
+                        <p class="result__hero-sub">That is what trading a full-time manager for Valore frees up every month. The same money, pointed at reach instead of one salary.</p>
                     </div>
 
                     <div class="compare">
                         <div class="compare__card">
-                            <p class="compare__head">A full-time marketing manager</p>
-                            <p class="compare__big" id="mgrTotal">$0<span style="font-size:1rem;color:#9a9486;">/yr</span></p>
-                            <div class="compare__line"><span>Base salary</span><span id="mgrSalary">$0</span></div>
-                            <div class="compare__line"><span>Benefits, tax, overhead (~30%)</span><span id="mgrOverhead">$0</span></div>
-                            <div class="compare__line"><span>Expert in 1 to 2 channels</span><span>Limited</span></div>
+                            <p class="compare__head">Marketing manager</p>
+                            <p class="compare__big" id="mgrMonthly">$0</p>
+                            <p class="compare__sub">per month, loaded with benefits and overhead</p>
                         </div>
                         <div class="compare__card compare__card--valore">
-                            <p class="compare__head">Valore, fractional brand partner</p>
-                            <p class="compare__big" id="valTotal">$0<span style="font-size:1rem;color:#9a9486;">/yr</span></p>
-                            <div class="compare__line"><span>Brand Intelligence Sprint (once)</span><span>$4,500</span></div>
-                            <div class="compare__line"><span>Oversight retainer ($3,500/mo)</span><span>$42,000</span></div>
-                            <div class="compare__line"><span>Direction across all six layers</span><span>Full picture</span></div>
+                            <p class="compare__head">Valore</p>
+                            <p class="compare__big">$3,500</p>
+                            <p class="compare__sub">per month, plus a one-time $4,500 Sprint</p>
                         </div>
                     </div>
 
-                    <div class="reallocate">
-                        <h3>Where that money goes</h3>
-                        <p class="lead">Instead of one salary, the difference becomes working budget. Hired out to the right specialists at your current cost per client, here is what it buys.</p>
-                        <div class="stats">
-                            <div class="stat"><div class="stat__num" id="addClients">0</div><div class="stat__cap">more new clients a year, at your current cost per client</div></div>
-                            <div class="stat"><div class="stat__num" id="addRevenue">$0</div><div class="stat__cap">more first-sale revenue a year</div></div>
-                            <div class="stat"><div class="stat__num" id="addLtv">$0</div><div class="stat__cap">more lifetime value from those clients</div></div>
-                        </div>
+                    <div class="budget">
+                        <p>Your monthly marketing budget could grow from <b id="budgetNow">$0</b> to <b class="budget__big" id="budgetNew">$0</b> without spending a dollar more in total.</p>
+                    </div>
 
-                        <div class="bars">
-                            <div class="bars__row">
-                                <div class="bars__head"><span>With a marketing manager</span><span id="beforeTotal">$0 total</span></div>
-                                <div class="bars__track" id="beforeTrack"></div>
-                                <p class="bars__legend">Working budget that buys reach: <b id="beforeWorking">$0</b></p>
-                            </div>
-                            <div class="bars__row">
-                                <div class="bars__head"><span>With Valore</span><span id="afterTotal">$0 total</span></div>
-                                <div class="bars__track" id="afterTrack"></div>
-                                <p class="bars__legend">Working budget that buys reach: <b id="afterWorking">$0</b></p>
-                            </div>
-                            <p class="bars__legend" style="margin-top:0.8rem;">Same total investment. Your <b>cost per client</b> today is roughly <b id="cpaOut">$0</b>. Move the overhead into working budget and the brand reaches further without spending a dollar more.</p>
+                    <div class="reallocate">
+                        <h3>What that extra budget could do</h3>
+                        <p class="lead">Put the freed budget to work with the right specialists at your current cost per client, and the numbers compound across the year.</p>
+                        <div class="stats">
+                            <div class="stat"><div class="stat__num" id="addClients">0</div><div class="stat__cap">more new clients a year</div></div>
+                            <div class="stat"><div class="stat__num" id="addRevenue">$0</div><div class="stat__cap">more revenue a year (AOV)</div></div>
+                            <div class="stat"><div class="stat__num" id="addLtv">$0</div><div class="stat__cap">more lifetime value (LTV)</div></div>
                         </div>
+                        <p class="diversify">Your current cost per client is about <b id="cpaOut">$0</b>. Instead of one generalist salary, that freed budget can diversify across the channels a single hire rarely covers well: <b>SEO, paid search, paid social, email, content, PR, and referrals</b>, each one another way for the right clients to find you.</p>
                     </div>
 
                     <!-- EMAIL CAPTURE (gated full breakdown) -->
                     <div class="capture" id="capture">
                         <h3>Want the full breakdown sent to you?</h3>
-                        <p>Get your numbers as a one-page summary, plus the specific roles we would put your freed budget toward first, for a brand at your stage. We will also flag the one channel most likely to move the needle for you.</p>
+                        <p>Get your numbers as a one-page summary, plus where we would put the freed budget first for a brand at your stage, and the one channel most likely to move the needle for you.</p>
                         <form id="captureForm" class="capture__row">
                             <input type="text" id="leadName" name="firstName" placeholder="First name" autocomplete="given-name" required>
                             <input type="email" id="leadEmail" name="email" placeholder="Email address" autocomplete="email" required>
@@ -289,7 +240,7 @@
                         <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="btn btn--navy" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
                     </div>
 
-                    <p class="calc__assumptions">How this is calculated: a full-time hire is loaded at 1.3x base salary to account for benefits, payroll tax, equipment, paid time off, and ramp, which is a conservative industry estimate. Valore is the $4,500 one-time Brand Intelligence Sprint plus the $3,500 per month oversight retainer ($42,000 a year). Redeployable budget is the annual difference between the two. Additional clients are that budget divided by your current cost per client (your monthly marketing spend divided by new clients per month). Lifetime value uses your average revenue per client times the number of times a client buys. These are planning estimates, not a guarantee. The point is the shape of the decision, not a promise of results.</p>
+                    <p class="calc__assumptions">How this is calculated: a full-time hire is loaded at 1.3x base salary to cover benefits, payroll tax, equipment, paid time off, and ramp, which is a conservative industry estimate. Valore is $3,500 per month, plus a one-time $4,500 Brand Intelligence Sprint in the first year. The monthly amount freed is the loaded manager cost per month minus the Valore retainer. Additional clients are the freed annual budget divided by your current cost per client (your monthly spend divided by new clients per month). Revenue uses your average revenue per client; lifetime value multiplies that by how many times a client buys. These are planning estimates, not a guarantee. The point is the shape of the decision, not a promise of results.</p>
                 </div>
             </div>
         </div>
@@ -324,64 +275,49 @@
         });
 
         // ================== MARKETING COST CALCULATOR ==================
-        // Lead capture target. Valore runs on its own stack (no GHL); leads land in
-        // ClickUp. Point this at a Valore-built endpoint that creates a ClickUp task
-        // from the JSON payload below, then wire the follow-up email there. Until it
-        // is set, the calculator still works end to end (result + booking CTA); only
-        // capture is paused.
-        const LEAD_ENDPOINT = ""; // <-- Valore backend URL that writes the lead to ClickUp
+        // Leads land in ClickUp via the Valore backend (/api/lead), which also
+        // emails the prospect their result. See routes/lead.js in the backend.
+        const LEAD_ENDPOINT = "https://profound-wholeness-production-fcc5.up.railway.app/api/lead";
 
-        const SPRINT = 4500;
-        const RETAINER_ANNUAL = 42000; // $3,500 x 12
-        const VALORE_ANNUAL = SPRINT + RETAINER_ANNUAL; // year-one all-in
+        const RETAINER_MONTHLY = 3500;
         const LOAD_FACTOR = 1.3; // benefits, tax, overhead, PTO, ramp
 
         const num = v => { const n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isNaN(n) ? 0 : n; };
         const money = n => '$' + Math.round(n).toLocaleString('en-US');
-        const commas = el => { const n = num(el.value); el.value = n ? n.toLocaleString('en-US') : el.value; };
 
-        // Live monthly total + comma formatting on blur
-        const chans = [...document.querySelectorAll('.chan')];
-        function monthlySpend() { return chans.reduce((s, el) => s + num(el.value), 0); }
-        function refreshTotal() { document.getElementById('monthlyTotal').textContent = money(monthlySpend()); }
-        chans.forEach(el => { el.addEventListener('input', refreshTotal); el.addEventListener('blur', () => { commas(el); refreshTotal(); }); });
-        ['salary', 'aov'].forEach(id => document.getElementById(id).addEventListener('blur', e => commas(e.target)));
-        refreshTotal();
+        // Comma formatting on blur for dollar inputs
+        ['salary', 'spend', 'aov'].forEach(id => {
+            const el = document.getElementById(id);
+            el.addEventListener('blur', () => { const n = num(el.value); if (n) el.value = n.toLocaleString('en-US'); });
+        });
 
         let lastResult = null;
         document.getElementById('calcForm').addEventListener('submit', e => {
             e.preventDefault();
 
             const salary = num(document.getElementById('salary').value);
-            const monthly = monthlySpend();
-            const annualSpend = monthly * 12;
+            const monthlySpend = num(document.getElementById('spend').value);
             const clientsPerMonth = Math.max(num(document.getElementById('clients').value), 0);
             const aov = num(document.getElementById('aov').value);
             const lifetime = Math.max(num(document.getElementById('lifetime').value), 1);
 
-            const mgrLoaded = salary * LOAD_FACTOR;
-            const mgrOverhead = mgrLoaded - salary;
-            const savings = Math.max(mgrLoaded - VALORE_ANNUAL, 0);
+            const mgrMonthly = (salary * LOAD_FACTOR) / 12;
+            const freedMonthly = Math.max(mgrMonthly - RETAINER_MONTHLY, 0);
+            const freedAnnual = freedMonthly * 12;
+            const newBudget = monthlySpend + freedMonthly;
 
             // cost per client from current working budget
             const clientsPerYear = clientsPerMonth * 12;
-            const cpa = clientsPerYear > 0 ? annualSpend / clientsPerYear : 0;
-            const addClients = cpa > 0 ? savings / cpa : 0;
+            const cpa = clientsPerYear > 0 ? (monthlySpend * 12) / clientsPerYear : 0;
+            const addClients = cpa > 0 ? freedAnnual / cpa : 0;
             const addRevenue = addClients * aov;
             const addLtv = addClients * aov * lifetime;
 
-            // before/after working budget (same total investment)
-            const totalInvestment = mgrLoaded + annualSpend; // manager + working budget
-            const beforeWorking = annualSpend;
-            const afterValore = VALORE_ANNUAL;
-            const afterWorking = Math.max(totalInvestment - afterValore, 0);
-
             // --- paint ---
-            document.getElementById('heroSavings').textContent = money(savings);
-            document.getElementById('mgrTotal').innerHTML = money(mgrLoaded) + '<span style="font-size:1rem;color:#9a9486;">/yr</span>';
-            document.getElementById('mgrSalary').textContent = money(salary);
-            document.getElementById('mgrOverhead').textContent = money(mgrOverhead);
-            document.getElementById('valTotal').innerHTML = money(VALORE_ANNUAL) + '<span style="font-size:1rem;color:#9a9486;">/yr</span>';
+            document.getElementById('heroFreed').innerHTML = money(freedMonthly) + '<span class="result__hero-unit"> / month</span>';
+            document.getElementById('mgrMonthly').textContent = money(mgrMonthly);
+            document.getElementById('budgetNow').textContent = money(monthlySpend) + '/mo';
+            document.getElementById('budgetNew').textContent = money(newBudget) + '/mo';
 
             const haveNumbers = cpa > 0;
             document.getElementById('addClients').textContent = haveNumbers ? '+' + Math.round(addClients) : '—';
@@ -389,24 +325,13 @@
             document.getElementById('addLtv').textContent = haveNumbers ? money(addLtv) : '—';
             document.getElementById('cpaOut').textContent = haveNumbers ? money(cpa) : 'not enough data';
 
-            // bars
-            const seg = (cls, val, total, label) => {
-                const pct = total > 0 ? Math.max((val / total) * 100, 0) : 0;
-                return `<div class="bars__seg ${cls}" style="width:${pct}%">${pct > 12 ? label : ''}</div>`;
+            lastResult = {
+                salary, monthly: monthlySpend,
+                savings: Math.round(freedAnnual), freedMonthly: Math.round(freedMonthly),
+                cpa: Math.round(cpa), addClients: Math.round(addClients),
+                addRevenue: Math.round(addRevenue), addLtv: Math.round(addLtv)
             };
-            document.getElementById('beforeTotal').textContent = money(totalInvestment) + ' total';
-            document.getElementById('afterTotal').textContent = money(totalInvestment) + ' total';
-            document.getElementById('beforeTrack').innerHTML =
-                seg('bars__seg--overhead', mgrLoaded, totalInvestment, 'Manager') +
-                seg('bars__seg--working', beforeWorking, totalInvestment, 'Working budget');
-            document.getElementById('afterTrack').innerHTML =
-                seg('bars__seg--overhead', afterValore, totalInvestment, 'Valore') +
-                seg('bars__seg--working', afterWorking, totalInvestment, 'Working budget');
-            document.getElementById('beforeWorking').textContent = money(beforeWorking);
-            document.getElementById('afterWorking').textContent = money(afterWorking);
-
-            lastResult = { salary, monthly, savings: Math.round(savings), cpa: Math.round(cpa), addClients: Math.round(addClients), addRevenue: Math.round(addRevenue), addLtv: Math.round(addLtv) };
-            gtag('event', 'cost_calculator_complete', { event_category: 'lead_magnet', event_label: 'savings', value: Math.round(savings) });
+            gtag('event', 'cost_calculator_complete', { event_category: 'lead_magnet', event_label: 'freed_monthly', value: Math.round(freedMonthly) });
 
             const r = document.getElementById('result');
             r.classList.add('is-visible');
