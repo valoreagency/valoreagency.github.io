@@ -161,7 +161,7 @@
                     </div>
                     <div class="calc__row">
                         <span class="calc__label">Your marketing spend now<small>Roughly what you put toward marketing each month</small></span>
-                        <span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input" id="spend" type="text" inputmode="numeric" value="3,000"></span>
+                        <span class="calc__field"><span class="calc__prefix">$</span><input class="calc__input" id="spend" type="text" inputmode="numeric" value="5,000"></span>
                     </div>
                     <div class="calc__row">
                         <span class="calc__label">New clients you win per month<small>From all your marketing combined, on average</small></span>
@@ -309,7 +309,9 @@
             // cost per client from current working budget
             const clientsPerYear = clientsPerMonth * 12;
             const cpa = clientsPerYear > 0 ? (monthlySpend * 12) / clientsPerYear : 0;
-            const addClients = cpa > 0 ? freedAnnual / cpa : 0;
+            // Round clients to a whole number first so revenue and LTV tie out
+            // exactly when a visitor checks the math (55 clients x AOV, not 54.8).
+            const addClients = cpa > 0 ? Math.round(freedAnnual / cpa) : 0;
             const addRevenue = addClients * aov;
             const addLtv = addClients * aov * lifetime;
 
