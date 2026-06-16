@@ -223,8 +223,17 @@ img { display: block; max-width: 100%; }
     font-weight: 300;
     color: var(--white);
     line-height: 1.07;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
     max-width: 860px;
+}
+.hero__lead {
+    font-family: var(--serif);
+    font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.4;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
 }
 .hero__body {
     font-size: 1.125rem;
@@ -1415,6 +1424,7 @@ img { display: block; max-width: 100%; }
 }
 .hero .label        { animation: fadeUp 0.85s var(--ease-expo) 0.05s both; }
 .hero__headline     { animation: fadeUp 0.95s var(--ease-expo) 0.18s both; }
+.hero__lead         { animation: fadeUp 0.95s var(--ease-expo) 0.25s both; }
 .hero__body         { animation: fadeUp 0.95s var(--ease-expo) 0.32s both; }
 .hero__actions      { animation: fadeUp 0.9s  var(--ease-expo) 0.46s both; }
 
