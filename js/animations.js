@@ -149,3 +149,90 @@
     io.observe(el);
   });
 }());
+
+// ── Exit-intent: invite the visitor into the Marketing Cost Calculator ──────────
+// Tasteful, value-first, easy to dismiss. Desktop only (mouse toward the top),
+// at most once every 7 days per visitor. Skips the calculator itself and the
+// other lead/conversion pages.
+(function () {
+  'use strict';
+  var path = location.pathname;
+  var SKIP = ['/marketing-cost-calculator', '/brand-assessment', '/pricing-readiness', '/thank-you', '/contact'];
+  for (var i = 0; i < SKIP.length; i++) { if (path.indexOf(SKIP[i]) === 0) return; }
+
+  // Desktop only — exit intent does not translate to touch
+  if (!(window.matchMedia && window.matchMedia('(pointer: fine)').matches)) return;
+
+  // Frequency cap: once per 7 days
+  var KEY = 'valore_calc_exit';
+  try {
+    var last = parseInt(localStorage.getItem(KEY) || '0', 10);
+    if (last && (Date.now() - last) < 7 * 24 * 60 * 60 * 1000) return;
+  } catch (e) {}
+
+  var css = '' +
+    '.vx-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(0,22,64,0.55);opacity:0;transition:opacity .3s ease;}' +
+    '.vx-overlay.is-open{opacity:1;}' +
+    '.vx-modal{position:relative;max-width:460px;width:100%;background:#fff;border:1px solid #e6e3dc;border-radius:12px;padding:2.6rem 2.4rem 2.2rem;text-align:center;box-shadow:0 30px 80px rgba(0,22,64,0.28);transform:translateY(12px);transition:transform .3s ease;font-family:Inter,Arial,sans-serif;}' +
+    '.vx-overlay.is-open .vx-modal{transform:none;}' +
+    '.vx-eyebrow{display:block;font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:#9a9486;margin-bottom:0.9rem;}' +
+    '.vx-title{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:1.95rem;line-height:1.2;color:#002664;margin:0 0 0.9rem;}' +
+    '.vx-body{font-size:1rem;line-height:1.6;color:#545454;margin:0 0 1.6rem;}' +
+    '.vx-cta{display:inline-block;background:#002664;color:#fff;font-size:0.95rem;letter-spacing:0.04em;padding:0.95rem 2rem;border-radius:6px;text-decoration:none;transition:background .2s ease;}' +
+    '.vx-cta:hover{background:#001a4a;}' +
+    '.vx-dismiss{display:block;margin:1.1rem auto 0;background:none;border:none;color:#9a9486;font-size:0.9rem;cursor:pointer;font-family:inherit;}' +
+    '.vx-dismiss:hover{color:#545454;}' +
+    '.vx-close{position:absolute;top:0.9rem;right:1.1rem;background:none;border:none;font-size:1.6rem;line-height:1;color:#bdb8ad;cursor:pointer;}' +
+    '.vx-close:hover{color:#545454;}';
+  var style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  var overlay = document.createElement('div');
+  overlay.className = 'vx-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'vxTitle');
+  overlay.hidden = true;
+  overlay.innerHTML = '' +
+    '<div class="vx-modal">' +
+      '<button class="vx-close" type="button" aria-label="Close">&times;</button>' +
+      '<span class="vx-eyebrow">Before you go</span>' +
+      '<h2 class="vx-title" id="vxTitle">What is your marketing actually costing you?</h2>' +
+      '<p class="vx-body">A two-minute calculator shows what a full-time marketing manager really costs, and how much you could free up each month for the work that brings in clients.</p>' +
+      '<a class="vx-cta" href="/marketing-cost-calculator/">Run the Numbers</a>' +
+      '<button class="vx-dismiss" type="button">Not now</button>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  var shown = false;
+  function open() {
+    if (shown) return;
+    shown = true;
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+    overlay.hidden = false;
+    // next frame so the transition runs
+    requestAnimationFrame(function () { overlay.classList.add('is-open'); });
+    document.removeEventListener('mouseout', onMouseOut);
+    if (window.gtag) gtag('event', 'exit_intent_shown', { event_category: 'lead_magnet', event_label: 'cost_calculator' });
+  }
+  function close() {
+    overlay.classList.remove('is-open');
+    setTimeout(function () { overlay.hidden = true; }, 300);
+  }
+
+  function onMouseOut(e) {
+    if (e.clientY <= 0 && !e.relatedTarget) open();
+  }
+
+  overlay.querySelector('.vx-close').addEventListener('click', close);
+  overlay.querySelector('.vx-dismiss').addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) close(); });
+  overlay.querySelector('.vx-cta').addEventListener('click', function () {
+    if (window.gtag) gtag('event', 'exit_intent_calculator_click', { event_category: 'lead_magnet', event_label: 'cost_calculator' });
+  });
+
+  // Arm after a short delay so it never fires on an immediate bounce
+  setTimeout(function () { document.addEventListener('mouseout', onMouseOut); }, 5000);
+}());
