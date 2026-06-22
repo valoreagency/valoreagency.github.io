@@ -52,6 +52,7 @@ const corePages = [
   { loc: `${BASE}/process/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/case-study/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/case-study/b2b-virtual-services/`, freq: 'monthly', pri: '0.7' },
+  { loc: `${BASE}/menswear/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/brand-assessment/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/marketing-cost-calculator/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/pricing-readiness/`, freq: 'monthly', pri: '0.8' },
