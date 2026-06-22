@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: How a Premium Menswear Brand Was Built From Zero | Valore</title>
-    <meta name="description" content="How a premium menswear brand was built from nothing into a recognized name, and the brand strategy behind it. The thinking Valore brings to every engagement.">
+    <title>Case Studies: Standard to Premium, Two Markets | Valore</title>
+    <meta name="description" content="Two very different brands taken from standard to premium. A premium menswear brand (2x revenue, +$600 AOV, 60%+ margin) and a B2B virtual support brand (six to seven figures, then double revenue three years running).">
     <link rel="canonical" href="https://valore.agency/case-study/">
-    <meta property="og:title" content="Case Study: How a Premium Menswear Brand Was Built From Zero | Valore">
-    <meta property="og:description" content="The brand strategy that built a premium menswear brand from nothing into a recognized name. The same thinking Valore brings to every client.">
+    <meta property="og:title" content="Case Studies: Standard to Premium, Two Markets | Valore">
+    <meta property="og:description" content="Two brands, the same climb. The hard numbers behind taking a menswear brand and a B2B services brand from standard to premium.">
     <meta property="og:url" content="https://valore.agency/case-study/">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://valore.agency/assets/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://valore.agency/assets/og-image.jpg">
@@ -20,45 +20,37 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
-      .arc { max-width: 720px; margin: 0 auto; }
-      .arc-stage { padding: 2.1rem 0; border-top: 1px solid #e6e3dc; }
-      .arc-stage:first-child { border-top: none; padding-top: 0.5rem; }
-      .arc-stage__num { font-family: 'Inter', sans-serif; font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #9a9486; display: block; margin-bottom: 0.55rem; }
-      .arc-stage__title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; line-height: 1.15; color: #002664; margin: 0 0 0.7rem; }
-      .arc-stage p { color: #3a3a3a; font-size: 1.02rem; line-height: 1.6; margin: 0; }
-      .arc-arrow { text-align: center; color: #c9c2b4; font-size: 1.1rem; line-height: 1; padding: 0.2rem 0; }
+      .casehub-card { display: flex; flex-direction: column; }
+      .casehub-vertical { font-family: var(--sans); font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #9a9486; margin-bottom: 0.5rem; }
+      .casehub-stats { display: flex; flex-wrap: wrap; gap: 1.6rem; margin: 0.6rem 0 1.1rem; }
+      .casehub-stats span { font-family: var(--sans); font-size: 0.875rem; color: #545454; line-height: 1.2; }
+      .casehub-stats strong { font-family: var(--sans); font-size: 1.7rem; color: #002664; font-weight: 600; display: block; line-height: 1; margin-bottom: 0.2rem; }
+      .casehub-link { margin-top: auto; color: #002664; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(0,38,100,0.3); padding-bottom: 2px; align-self: flex-start; }
+      .casehub-link:hover { border-bottom-color: #002664; }
     </style>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "How a Premium Menswear Brand Was Built From Zero: A Brand Strategy Case Study",
-      "description": "How a premium menswear brand was built from nothing into a recognized name, and the brand strategy behind it.",
-      "author": {
-        "@type": "Organization",
-        "name": "Valore",
-        "url": "https://valore.agency/about/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Valore",
-        "url": "https://valore.agency",
-        "logo": { "@type": "ImageObject", "url": "https://valore.agency/favicon.svg" }
-      },
+      "@type": "CollectionPage",
+      "name": "Valore Case Studies",
+      "description": "Two brands taken from standard to premium: a premium menswear brand and a B2B virtual support brand.",
       "url": "https://valore.agency/case-study/",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://valore.agency/case-study/" },
-      "about": "Brand strategy, premium brand building, positioning, client experience"
+      "isPartOf": { "@id": "https://valore.agency/#website" },
+      "publisher": { "@id": "https://valore.agency/#organization" },
+      "hasPart": [
+        { "@type": "WebPage", "name": "Premium menswear brand case study", "url": "https://valore.agency/menswear/" },
+        { "@type": "WebPage", "name": "B2B virtual support brand case study", "url": "https://valore.agency/b2bservices/" }
+      ]
     }
     </script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valore.agency/" },
-        { "@type": "ListItem", "position": 2, "name": "Case Study", "item": "https://valore.agency/case-study/" }
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://valore.agency/case-study/" }
       ]
     }
     </script>
@@ -73,10 +65,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('a[href*="cal.com"]').forEach(function(el) {
           el.addEventListener('click', function() {
-            gtag('event', 'discovery_call_click', {
-              event_category: 'cta',
-              event_label: document.title
-            });
+            gtag('event', 'discovery_call_click', { event_category: 'cta', event_label: document.title });
           });
         });
       });
@@ -109,133 +98,59 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="container">
-            <span class="page-hero__label">Case Study</span>
-            <h1 class="page-hero__headline">From zero<br>to the first name<br>in the room.</h1>
-            <p class="page-hero__body">Valore is built on one decade-long proof of concept: a premium menswear brand taken from nothing to a business, to a brand, to a premium brand, to a name people reach for when they think about formal wear in its market. No investor. No agency. No playbook. Here is how that arc was built, and why the same thinking drives every Valore engagement.</p>
+            <span class="page-hero__label">Case Studies</span>
+            <h1 class="page-hero__headline">Two brands.<br>The same climb.</h1>
+            <p class="page-hero__body">The same playbook took two very different brands from standard to premium: a custom menswear label and a B2B virtual support company. Here are the hard numbers. The full story of each lives on its own page.</p>
         </div>
     </section>
 
-    <!-- CONTEXT -->
+    <!-- THE TWO CASES -->
     <section class="section">
-        <div class="container container--narrow">
-            <p class="label">The Starting Point</p>
-            <h2 class="section__headline">It started with nothing<br>but the work.</h2>
-            <p class="section__body">In 2015 there was no name, no following, and no shortcut. Just a point of view on how a man should be dressed and the skill to deliver it. Menswear is a trust business, and trust is slow. The obvious path was to compete on product and price and hope word of mouth did the rest.</p>
-            <p class="section__body">That path has a ceiling, and it is a low one. What followed was not a campaign or a lucky break. It was a deliberate climb through four stages, each one earned, none of them skipped.</p>
-        </div>
-    </section>
-
-    <!-- THE ARC -->
-    <section class="section section--cream">
-        <div class="container container--narrow">
-            <p class="label label--navy">The Arc</p>
-            <h2 class="section__headline">Four stages. One decade.<br>No step skipped.</h2>
-        </div>
-        <div class="container">
-            <div class="arc">
-                <div class="arc-stage">
-                    <span class="arc-stage__num">Stage 01 &middot; From nothing to a business</span>
-                    <h3 class="arc-stage__title">Earning the right to exist.</h3>
-                    <p>The work was real and the clients were happy, which is enough to earn a living and not enough to build anything that lasts. Outside the handful of people who had already bought, the business was invisible. A well-kept secret is not a brand. It is a ceiling waiting to be hit.</p>
-                </div>
-                <div class="arc-arrow" aria-hidden="true">&darr;</div>
-                <div class="arc-stage">
-                    <span class="arc-stage__num">Stage 02 &middot; From a business to a brand</span>
-                    <h3 class="arc-stage__title">Deciding what it stood for, and saying it the same way everywhere.</h3>
-                    <p>The turning point was clarity: a defined point of view on fit, service, and what a man should expect, expressed identically across every surface. A name people could repeat. An identity that looked like it meant it. The business stopped being a secret and started being recognized. Recognition is the first thing referrals alone can never manufacture.</p>
-                </div>
-                <div class="arc-arrow" aria-hidden="true">&darr;</div>
-                <div class="arc-stage">
-                    <span class="arc-stage__num">Stage 03 &middot; From a brand to a premium brand</span>
-                    <h3 class="arc-stage__title">Being chosen for what it is worth, not what it costs.</h3>
-                    <p>Recognition is not preference. The standard was raised until the experience became the product: appointment-only, considered, and memorable enough to be described to someone else. Pricing power followed, because price stops being the conversation when value is obvious. This is the stage most businesses reach for and few actually hold.</p>
-                </div>
-                <div class="arc-arrow" aria-hidden="true">&darr;</div>
-                <div class="arc-stage">
-                    <span class="arc-stage__num">Stage 04 &middot; From a premium brand to the first name in the room</span>
-                    <h3 class="arc-stage__title">Being in the conversation, every single time.</h3>
-                    <p>The destination most brands never reach is automatic recall: being the name that comes up without prompting. The goal now is exactly that. When someone in the region thinks about buying formal wear, the brand is already in the conversation, every time. Top of mind is not luck. It is the compounding payoff of holding one clear direction for ten years.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE ENGINE -->
-    <section class="section">
-        <div class="container container--narrow">
-            <p class="label">What Moved It Between Stages</p>
-            <h2 class="section__headline">Four levers, held without drift.</h2>
-            <p class="section__body">None of the leaps came from a clever campaign. Each one came from getting four things right and refusing to let them slip.</p>
-        </div>
         <div class="container">
             <div class="services-grid">
-                <div class="service-item">
-                    <h3 class="service-item__title">Positioning over price</h3>
-                    <p class="service-item__body">Never the cheapest option, and never trying to be. The brand stood for fit, service, and a standard most men had never experienced. That single decision shaped who it attracted and what it could charge.</p>
+
+                <div class="service-item casehub-card">
+                    <span class="casehub-vertical">Menswear</span>
+                    <h3 class="service-item__title">A premium menswear brand</h3>
+                    <div class="casehub-stats">
+                        <span><strong>2&times;</strong> revenue</span>
+                        <span><strong>+$600</strong> AOV</span>
+                        <span><strong>60%+</strong> margin</span>
+                    </div>
+                    <p class="service-item__body">Compared to entry-level brands when the product belonged a tier up. We named the premium positioning and leveled up every touchpoint to match it.</p>
+                    <a href="/menswear/" class="casehub-link">See the menswear story &rarr;</a>
                 </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">Experience as the product</h3>
-                    <p class="service-item__body">An appointment-only model turned a transaction into an occasion. Clients did not just buy clothes. They had an experience worth describing, which is the only kind that generates referrals on its own.</p>
+
+                <div class="service-item casehub-card">
+                    <span class="casehub-vertical">B2B Services</span>
+                    <h3 class="service-item__title">A B2B virtual support brand</h3>
+                    <div class="casehub-stats">
+                        <span><strong>6&rarr;7</strong> figures</span>
+                        <span><strong>2&times;</strong> YoY, 3 yrs</span>
+                        <span><strong>#1</strong> premium</span>
+                    </div>
+                    <p class="service-item__body">Referral-dependent and undersold. We repositioned it as the premium choice and built demand beyond word of mouth, then kept it compounding.</p>
+                    <a href="/b2bservices/" class="casehub-link">See the B2B story &rarr;</a>
                 </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">Visibility beyond word of mouth</h3>
-                    <p class="service-item__body">A consistent presence across search, social, and local listings meant that when someone finally went looking, the brand was already there, already credible, already the obvious choice.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">One direction, no contradictions</h3>
-                    <p class="service-item__body">Every touchpoint said the same thing: the website, the booking flow, the storefront, the follow-up. Nothing drifted, because one person was accountable for the whole picture.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- RESULT -->
-    <section class="section">
-        <div class="container container--narrow">
-            <p class="label">The Result</p>
-            <h2 class="section__headline">What premium positioning<br>was worth.</h2>
-            <p class="section__body">The turning point was an honest look at the market. The brand was being compared to entry-level names like Indochino and Men's Wearhouse, but the product, the fit, and the experience sat closer to Harry Rosen, and past Armani. Once that was clear, the work was simple to name: become, and look like, the premium brand it already was. The logo, the website, the messaging, the packaging, and every point of contact were leveled up to match.</p>
-            <p class="section__body">The market responded. Revenue doubled. Average order value rose by more than $600. Profit margin climbed from around 40 percent to over 60 percent. With two blog posts a day and daily social, more of the right clients started finding the brand through search and AI recommendations, and it became the expert name in its area.</p>
-
-            <div class="stats-grid" style="margin-top: 2.5rem;">
-                <div class="stat-item">
-                    <span class="stat-item__num">2&times;</span>
-                    <span class="stat-item__unit">Revenue</span>
-                    <p class="stat-item__label">Revenue doubled after the premium level-up</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-item__num">+$600</span>
-                    <span class="stat-item__unit">AOV</span>
-                    <p class="stat-item__label">Higher average order value per client</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-item__num">60%+</span>
-                    <span class="stat-item__unit">Margin</span>
-                    <p class="stat-item__label">Profit margin, up from around 40 percent</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE LESSON / BRIDGE -->
+    <!-- HOW (BOTH) -->
     <section class="section section--cream">
         <div class="container container--narrow">
-            <p class="label label--navy">Why This Matters For You</p>
-            <h2 class="section__headline">The method, not the menswear.</h2>
-            <p class="section__body">The product was clothing. The lesson is universal. Most premium service businesses already have the hard part: the skill, the standards, the happy clients. What they are missing is the brand layer that turns all of it into growth that does not depend on the next referral.</p>
-            <p class="section__body">Valore exists to bring that exact thinking to businesses that do not have ten years to figure it out by trial and error. The positioning, the experience, the visibility, the single clear direction. Compressed into a roadmap and delivered as fractional brand leadership. The same approach worked in a completely different industry: <a href="/case-study/b2b-virtual-services/">a North American B2B virtual services company that doubled its revenue two years running</a>.</p>
-            <blockquote class="about-quote">
-                <p>"I built one brand the slow way, learning every lesson the hard way. Valore is me handing those lessons over without the decade of mistakes attached."</p>
-                <cite>Founder, Valore</cite>
-            </blockquote>
+            <p class="label label--navy">How We Did It (Both)</p>
+            <h2 class="section__headline">Different markets.<br>The same four moves.</h2>
+            <p class="section__body">Menswear and B2B services have almost nothing in common, except the pattern that grows them. Name the premium positioning the business has already earned. Build more than one way for the right clients to find it. Put the right specialists on the right jobs. Then hold every touchpoint to one direction. That pattern is not industry-specific. It is what Valore brings to every engagement.</p>
         </div>
     </section>
 
     <!-- CTA -->
     <section class="section section--navy">
         <div class="container container--narrow">
-            <h2 class="section__headline section__headline--light">Want this thinking applied<br>to your business?</h2>
-            <p class="section__body section__body--light">Start the conversation. Valore will review your brand beforehand and come prepared with a specific read on where you are and what to build first.</p>
+            <h2 class="section__headline section__headline--light">Want this thinking<br>applied to your brand?</h2>
+            <p class="section__body section__body--light">Book a short call. No pitch. Valore will review your brand beforehand and come prepared with a specific read on where you are and what to build first.</p>
             <a href="https://cal.com/derek-burbidge-msgkca/30brand" class="btn btn--cream" target="_blank" rel="noopener noreferrer">Start the Conversation</a>
             <p class="cta-note">No pitch. No pressure. Real clarity.</p>
         </div>
@@ -243,12 +158,6 @@
 
     <footer class="footer">
         <div class="container">
-            <nav class="footer__tools" aria-label="Free tools">
-                <span class="footer__tools-label">Tools</span>
-                <a href="/brand-assessment/">Brand Assessment</a>
-                <a href="/marketing-cost-calculator/">Marketing Cost Calculator</a>
-                <a href="/pricing-readiness/">Pricing Scorecard</a>
-            </nav>
             <div class="footer__inner">
                 <div class="footer__brand">
                     <p class="footer__name">Valore</p>
