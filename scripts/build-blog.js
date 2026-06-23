@@ -30,7 +30,8 @@ const emptyStubs = fs.readdirSync(BLOG, { withFileTypes: true })
   .filter(d => d.isDirectory() && !fs.existsSync(path.join(BLOG, d.name, 'index.html')))
   .map(d => d.name);
 
-const posts = slugs.map(slug => {
+const TODAY_STR = new Date().toISOString().slice(0, 10);
+let posts = slugs.map(slug => {
   const html = fs.readFileSync(path.join(BLOG, slug, 'index.html'), 'utf8');
   const tag = grab(/<span class="post-header__tag">([\s\S]*?)<\/span>/, html);
   const title = grab(/<h1 class="post-header__title">([\s\S]*?)<\/h1>/, html);
@@ -42,7 +43,14 @@ const posts = slugs.map(slug => {
   const displayDate = metaItems[1] || '';
   const readTime = metaItems[2] || '';
   return { slug, tag, title, excerpt, date, ogTitle, displayDate, readTime };
-}).sort((a, b) => (b.date || '').localeCompare(a.date || '')); // newest first
+});
+// Drip: hold back posts whose published date is in the future. A daily GitHub
+// Action re-runs this build so each scheduled post enters the grid/sitemap/feed
+// on its own date.
+const scheduledPosts = posts.filter(p => p.date && p.date > TODAY_STR);
+posts = posts
+  .filter(p => !p.date || p.date <= TODAY_STR)
+  .sort((a, b) => (b.date || '').localeCompare(a.date || '')); // newest first
 
 // ---- 1. sitemap.xml ----
 const corePages = [
@@ -52,7 +60,9 @@ const corePages = [
   { loc: `${BASE}/process/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/case-study/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/menswear/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/menswear/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/b2bservices/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/b2bservices/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/brand-assessment/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/marketing-cost-calculator/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/pricing-readiness/`, freq: 'monthly', pri: '0.8' },
@@ -205,7 +215,12 @@ ${rssItems}
 `;
 fs.writeFileSync(path.join(ROOT, 'feed.xml'), feed, 'utf8');
 
-console.log(`Parsed ${posts.length} posts.`);
+console.log(`Parsed ${posts.length} live posts (as of ${TODAY_STR}).`);
+if (scheduledPosts.length) {
+  console.log(`Holding back ${scheduledPosts.length} future-dated posts (drip):`);
+  scheduledPosts.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+    .forEach(p => console.log(`  ${p.date}  ${p.slug}`));
+}
 console.log(`Wrote feed.xml (${posts.length} items).`);
 console.log(`Wrote sitemap.xml (${corePages.length} core + ${posts.length} posts).`);
 console.log(`Wrote scripts/blog-grid.html (${posts.length} cards).`);

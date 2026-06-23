@@ -1,0 +1,39 @@
+name: Blog drip (daily publish)
+
+# Re-runs the blog build every morning. build-blog.js holds back posts whose
+# article:published_time is in the future, so each scheduled post enters the
+# grid, sitemap, and feed on its own date. Posts go live 3/day this way.
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 14:00 UTC daily (~6-7am Pacific)
+  workflow_dispatch: {}     # allow manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-drip
+  cancel-in-progress: false
+
+jobs:
+  drip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Rebuild blog indexes (publishes any posts dated today or earlier)
+        run: node scripts/build-blog.js
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "valore-blog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml feed.xml blog/index.html scripts/blog-grid.html scripts/blog-schema.html
+          if git diff --cached --quiet; then
+            echo "Nothing to publish today."
+          else
+            git commit -m "Blog drip: refresh indexes for $(date -u +%Y-%m-%d)"
+            git push
+          fi
