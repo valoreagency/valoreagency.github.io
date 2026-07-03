@@ -528,6 +528,25 @@ img { display: block; max-width: 100%; }
 .footer__tools a:hover {
     color: var(--cream, #fff4ca);
 }
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+.footer__social a {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    line-height: 0;
+    transition: color 0.15s ease;
+}
+.footer__social a:hover {
+    color: var(--cream, #fff4ca);
+}
+.footer__social svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
 
 /* ============================================================
    RESPONSIVE
