@@ -1966,3 +1966,8 @@ a.post-related__card:hover {
     text-anchor: middle;
 }
 @media (max-width: 768px) { .growth { min-height: 180vh; } }
+
+/* In-body blog figure (branded concept visual) */
+.post-figure { margin: 2.6rem auto; max-width: 620px; text-align: center; }
+.post-figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.post-figure figcaption { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); opacity: 0.6; margin-top: 0.7rem; }

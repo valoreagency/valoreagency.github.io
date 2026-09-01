@@ -5,7 +5,7 @@
   <!-- Core pages -->
   <url>
     <loc>https://valore.agency/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,84 +15,704 @@
   </url>
   <url>
     <loc>https://valore.agency/about/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/services/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://valore.agency/process/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/case-study/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/menswear/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/menswear/premium-brand-guide/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/b2bservices/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/b2bservices/premium-brand-guide/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/brand-assessment/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/marketing-cost-calculator/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/pricing-readiness/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/contact/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://valore.agency/blog/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog posts — 57 total, newest first -->
+  <!-- Blog posts — 119 total, newest first -->
+  <url>
+    <loc>https://valore.agency/blog/brand-consistency-across-touchpoints/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Brand Must Be Consistent Everywhere</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/get-found-by-ai/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Get Your Business Found by AI Search</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/invest-in-brand-when-busy/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Invest in Your Brand When You Are Busy, Not When You Are Slow</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/b2b-first-impression/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The First Impression That Decides a B2B Sale</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/differentiate-b2b-service-firm/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Differentiate a B2B Service Firm That Looks Like the Rest</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/b2b-brand-not-just-leads/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why B2B Firms Should Build a Brand, Not Just Chase Leads</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/premium-b2b-proposal/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Write a Premium B2B Proposal That Wins</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/quiet-authority/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Case for Quiet Authority Over Loud Self-Promotion</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/ask-for-referrals-without-awkward/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Ask for Referrals Without It Being Awkward</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/make-referrals-predictable/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Make Referrals More Predictable</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/word-of-mouth-engine/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Building a Word-of-Mouth Engine, Not Just Hoping for It</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/premium-pricing-mindset/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Mindset Shift Behind Premium Pricing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/price-anchoring-premium/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How Price Anchoring Makes Premium Feel Reasonable</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/referral-quality-over-quantity/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Referral Quality Beats Referral Quantity</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/communicate-a-price-increase/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Communicate a Price Increase to Existing Clients</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-brand-mistakes/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Mistakes That Keep a Menswear Brand From Feeling Premium</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-word-of-mouth/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How Premium Menswear Brands Earn Word of Mouth</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-brand-consistency/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Consistency Makes a Menswear Brand Feel Premium</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-brand-vs-fashion/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Building a Menswear Brand vs Chasing Fashion</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/premium-menswear-target-customer/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Who Is Your Premium Menswear Brand Really For?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/social-media-without-strategy/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Social Media Without a Strategy Is Just Noise</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/when-to-rebrand/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>When Is It Actually Time to Rebrand?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-strategy-creative-professionals/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Brand Strategy for Creative Professionals</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/win-b2b-clients-without-being-pushy/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Win B2B Clients Without a Pushy Sales Process</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/your-brand-is-not-your-logo/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Your Brand Is Not Your Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/become-the-go-to-expert/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Become the Go-To Expert in Your Field</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/reputation-compounds/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Reputation Is the Slowest and Best Investment</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/second-growth-channel-after-referrals/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Choosing Your Second Growth Channel After Referrals</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/happy-clients-marketing-asset/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Your Happiest Clients Are Your Most Underused Marketing Asset</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/turn-clients-into-advocates/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Turn Clients Into Advocates</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/why-referrals-cannot-scale/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Referrals Alone Cannot Scale a Business</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/discounting-hurts-premium-brand/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Discounting Quietly Damages a Premium Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/how-to-present-your-price/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Present Your Price With Confidence</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/justify-premium-pricing/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Justify Premium Pricing Without Over-Explaining</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-brand-outlasts-product/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>In Menswear, the Brand Outlasts the Product</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-customer-loyalty/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How Premium Menswear Brands Build Real Loyalty</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/what-your-price-signals/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What Your Price Signals About Your Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-brand-story/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Menswear Brand Needs a Story, Not Just a Product</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/menswear-retail-experience/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The In-Store Experience Is Your Menswear Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/premium-menswear-photography/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Premium Menswear Lives or Dies on Its Photography</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/home-service-market-authority/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How a Home Service Business Becomes the Name People Trust</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/onboarding-is-branding/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Your Onboarding Is Part of Your Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/visible-without-being-everywhere/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Be Visible Without Being Everywhere</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/website-copy-costing-clients/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Is Your Website Copy Quietly Costing You Clients?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-strategy-coaches-consultants/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Brand Strategy for Coaches and Consultants Who Want Premium Clients</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/trades-contractors-premium-brands/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How Trades and Contractors Build a Premium Brand</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/why-blogging-works/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Blogging Still Works for Premium Businesses</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/discovery-call-convert/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Make a Discovery Call That Converts</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/linkedin-without-sounding-like-everyone/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Use LinkedIn Without Sounding Like Everyone Else</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/three-things-every-business-needs/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Three Things Every Established Business Needs to Grow</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-authority-long-game/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Brand Authority Is a Long Game, and That Is Exactly Why It Works</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/is-your-seo-working/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Is Your SEO Actually Working? How to Tell</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/website-not-converting/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Your Website Is Not Converting (and It Is Not the Design)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/attract-right-clients/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Attract the Right Clients (and Repel the Wrong Ones)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/brand-works-while-you-sleep/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What It Means to Have a Brand That Works While You Sleep</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/charge-more-without-losing-clients/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Charge More Without Losing Your Clients</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/win-crowded-market/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Win in a Crowded Market Without Being the Cheapest</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/how-to-ask-for-google-reviews/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Ask for Google Reviews Without Feeling Awkward</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/thought-leadership-without-big-following/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Build Thought Leadership Without a Big Following</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/why-book-you-not-competitor/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why Should a Client Book You and Not Your Competitor?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/b2b-brand-behind-the-service/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>The Brand Behind the Service: Why B2B Firms Underinvest in How They Look</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/one-discount-undo-premium-menswear/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>Why One Discount Can Undo a Premium Menswear Brand</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://valore.agency/blog/confidence-pricing-b2b/</loc>
     <lastmod>2026-07-02</lastmod>
