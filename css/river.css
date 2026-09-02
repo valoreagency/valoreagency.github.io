@@ -21,7 +21,7 @@
 --------------------------------------------------------------- */
 .water-bg{ position:fixed; inset:0; z-index:-2; pointer-events:none; overflow:hidden; background:var(--r-ground); }
 .water-video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-.water-tint{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(4,16,31,.60) 0%, rgba(4,16,31,.72) 55%, rgba(4,16,31,.86) 100%); }
+.water-tint{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(4,16,31,.70) 0%, rgba(4,16,31,.80) 55%, rgba(4,16,31,.90) 100%); }
 .water-fallback{ position:absolute; inset:0; background:radial-gradient(140% 80% at 50% -10%, #0e3b66 0%, rgba(14,59,102,0) 55%), linear-gradient(180deg,#04101f,#072a4d 48%,#04101f); }
 
 /* River spine — a single current that threads the whole page */

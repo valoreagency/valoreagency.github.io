@@ -140,14 +140,25 @@
     });
   }
 
-  // 5. Copy starter prompt
+  // 5. Copy starter prompt (also selects the text, so manual copy always works)
   var cp = document.getElementById('copyPrompt');
   if (cp) {
     cp.addEventListener('click', function () {
-      var t = document.getElementById('starterPrompt').textContent;
+      var pre = document.getElementById('starterPrompt');
+      if (!pre) return;
+      var t = pre.textContent;
+      try {
+        var range = document.createRange(); range.selectNodeContents(pre);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      } catch (e) {}
+      var done = function () { cp.textContent = 'Copied'; setTimeout(function () { cp.textContent = 'Copy'; }, 1800); };
+      var manual = function () { cp.textContent = 'Selected, press Ctrl+C'; setTimeout(function () { cp.textContent = 'Copy'; }, 2800); };
+      var tryExec = function () { try { return document.execCommand('copy'); } catch (e) { return false; } };
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(t).then(function () { cp.textContent = 'Copied'; setTimeout(function () { cp.textContent = 'Copy'; }, 1600); }).catch(function () { cp.textContent = 'Copy failed'; });
-      } else { cp.textContent = 'Select and copy'; }
+        navigator.clipboard.writeText(t).then(done).catch(function () { tryExec() ? done() : manual(); });
+      } else {
+        tryExec() ? done() : manual();
+      }
     });
   }
 
