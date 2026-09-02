@@ -342,7 +342,7 @@
 (function () {
   'use strict';
   var path = location.pathname;
-  var SKIP = ['/marketing-cost-calculator', '/brand-assessment', '/pricing-readiness', '/thank-you', '/contact'];
+  var SKIP = ['/brand-brain', '/start', '/marketing-cost-calculator', '/brand-assessment', '/pricing-readiness', '/thank-you', '/contact'];
   for (var i = 0; i < SKIP.length; i++) { if (path.indexOf(SKIP[i]) === 0) return; }
 
   // Desktop only — exit intent does not translate to touch
@@ -383,9 +383,9 @@
     '<div class="vx-modal">' +
       '<button class="vx-close" type="button" aria-label="Close">&times;</button>' +
       '<span class="vx-eyebrow">Before you go</span>' +
-      '<h2 class="vx-title" id="vxTitle">What is your marketing actually costing you?</h2>' +
-      '<p class="vx-body">A two-minute calculator shows what a full-time marketing manager really costs, and how much you could free up each month for the work that brings in clients.</p>' +
-      '<a class="vx-cta" href="/marketing-cost-calculator/">Run the Numbers</a>' +
+      '<h2 class="vx-title" id="vxTitle">Build your Brand Brain, complimentary.</h2>' +
+      '<p class="vx-body">The single source of truth that keeps everything on brand. We hand you the tools and the prompt, and you build it in a day, on your own computer. Yours to keep, whether or not we ever work together.</p>' +
+      '<a class="vx-cta" href="/brand-brain/">Get the Starter Kit</a>' +
       '<button class="vx-dismiss" type="button">Not now</button>' +
     '</div>';
   document.body.appendChild(overlay);
@@ -399,7 +399,7 @@
     // next frame so the transition runs
     requestAnimationFrame(function () { overlay.classList.add('is-open'); });
     document.removeEventListener('mouseout', onMouseOut);
-    if (window.gtag) gtag('event', 'exit_intent_shown', { event_category: 'lead_magnet', event_label: 'cost_calculator' });
+    if (window.gtag) gtag('event', 'exit_intent_shown', { event_category: 'lead_magnet', event_label: 'brand_brain' });
   }
   function close() {
     overlay.classList.remove('is-open');
@@ -415,7 +415,7 @@
   overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) close(); });
   overlay.querySelector('.vx-cta').addEventListener('click', function () {
-    if (window.gtag) gtag('event', 'exit_intent_calculator_click', { event_category: 'lead_magnet', event_label: 'cost_calculator' });
+    if (window.gtag) gtag('event', 'exit_intent_brand_brain_click', { event_category: 'lead_magnet', event_label: 'brand_brain' });
   });
 
   // Arm after a short delay so it never fires on an immediate bounce
