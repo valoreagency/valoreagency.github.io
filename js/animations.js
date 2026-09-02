@@ -1,9 +1,194 @@
+/* ── RIVER re-skin bootstrap — runs only on pages with <body class="river"> ──
+   Injects the living-water background + river spine, drives the night→day
+   glow-up, the sticky values, hero ripples, the Brand Brain gate, the starter
+   prompt copy, and the setup helper (wired to the Valore backend). Every other
+   behaviour below (nav state, count-ups, scroll-reveal, exit-intent) is shared
+   by all pages and left untouched. */
+(function () {
+  'use strict';
+  if (!document.body || !document.body.classList.contains('river')) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Reading pages (long-form articles, blog index) get a heavier overlay so
+  // text stays easy to read over the living-water background.
+  if (document.querySelector('.post-body, .blog-grid')) { document.body.classList.add('reading'); }
+  var API_BASE = 'https://valore-brand-builder-production.up.railway.app';
+  var PATH = 'M 500 0 C 500 250, 300 350, 300 600 S 680 950, 680 1200 S 340 1550, 340 1800 S 660 2150, 660 2400 S 420 2750, 420 3000 S 600 3350, 600 3600 S 360 3950, 360 4200 S 620 4550, 620 4800 S 480 5150, 480 5400 S 500 5750, 500 6000';
+
+  // 1. Living-water background (inject once, behind everything)
+  if (!document.querySelector('.water-bg')) {
+    var wb = document.createElement('div');
+    wb.className = 'water-bg'; wb.setAttribute('aria-hidden', 'true');
+    wb.innerHTML = '<div class="water-fallback"></div>' +
+      '<video class="water-video" autoplay muted loop playsinline preload="auto">' +
+      '<source src="/assets/river-bg.mp4" type="video/mp4"></video>' +
+      '<div class="water-tint"></div>';
+    document.body.insertBefore(wb, document.body.firstChild);
+    if (reduce) { var vv = wb.querySelector('video'); if (vv) { try { vv.pause(); } catch (e) {} } }
+  }
+  // River spine
+  if (!document.querySelector('.river-track')) {
+    var rt = document.createElement('div');
+    rt.className = 'river-track';
+    rt.innerHTML = '<svg class="river-svg" viewBox="0 0 1000 6000" preserveAspectRatio="none" aria-hidden="true">' +
+      '<path class="river-bed" d="' + PATH + '"/>' +
+      '<path class="river-glow" d="' + PATH + '"/>' +
+      '<path class="river-flow" id="riverFlow" d="' + PATH + '"/>' +
+      '<path class="river-current" d="' + PATH + '"/></svg>';
+    var anchor = document.querySelector('.water-bg');
+    document.body.insertBefore(rt, anchor ? anchor.nextSibling : document.body.firstChild);
+  }
+
+  var flow = document.getElementById('riverFlow');
+  var heroNight = document.getElementById('heroNight');
+  var LEN = 0, rTick = false, activeIdx = -1;
+  function initRiver() {
+    if (!flow) return;
+    LEN = flow.getTotalLength ? flow.getTotalLength() : 0;
+    if (!LEN || LEN <= 1) { requestAnimationFrame(initRiver); return; }
+    flow.style.strokeDasharray = LEN; flow.style.strokeDashoffset = LEN; onRiverScroll();
+  }
+  function setValue(idx) {
+    if (idx === activeIdx) return; activeIdx = idx;
+    document.querySelectorAll('.vw[data-i]').forEach(function (w) { w.classList.toggle('active', +w.dataset.i === idx); });
+    document.querySelectorAll('.vcap').forEach(function (c) { c.classList.toggle('show', +c.dataset.i === idx); });
+  }
+  function onRiverScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    if (heroNight && heroNight.offsetParent !== null) {
+      var np = Math.max(0, Math.min(1, y / (window.innerHeight * 0.92)));
+      heroNight.style.opacity = 1 - (np * np * (3 - 2 * np));
+    }
+    if (LEN > 1) {
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      var prog = docH > 0 ? Math.min(1, Math.max(0, y / docH)) : 0;
+      flow.style.strokeDashoffset = LEN * (1 - prog);
+    }
+    var vs = document.querySelector('.values');
+    if (vs) {
+      var r = vs.getBoundingClientRect();
+      var total = vs.offsetHeight - window.innerHeight;
+      var local = Math.min(1, Math.max(0, (-r.top) / (total || 1)));
+      if (r.top < window.innerHeight && r.bottom > 0) { setValue(local < 0.34 ? 0 : (local < 0.67 ? 1 : 2)); }
+    }
+    rTick = false;
+  }
+  function reqRiverScroll() { if (!rTick) { rTick = true; requestAnimationFrame(onRiverScroll); } }
+  window.addEventListener('scroll', reqRiverScroll, { passive: true });
+  window.addEventListener('resize', function () { initRiver(); }, { passive: true });
+
+  // 2. Hero water ripples (reactive canvas)
+  (function () {
+    var canvas = document.getElementById('heroRipple');
+    if (!canvas || reduce) return;
+    var ctx = canvas.getContext('2d'); var hero = canvas.parentElement;
+    var W = 0, H = 0, ripples = [], lastT = 0, amb = 0;
+    function resize() { var r = hero.getBoundingClientRect(); W = canvas.width = Math.max(1, Math.round(r.width)); H = canvas.height = Math.max(1, Math.round(r.height)); }
+    resize(); window.addEventListener('resize', resize, { passive: true });
+    function add(x, y, a, max) { ripples.push({ x: x, y: y, r: 5, max: max || (120 + Math.random() * 90), a: a || 0.5 }); if (ripples.length > 70) ripples.shift(); }
+    hero.addEventListener('pointermove', function (e) { var rc = canvas.getBoundingClientRect(); var now = performance.now(); if (now - lastT > 50) { add(e.clientX - rc.left, e.clientY - rc.top, 0.5); lastT = now; } });
+    hero.addEventListener('pointerdown', function (e) { var rc = canvas.getBoundingClientRect(); add(e.clientX - rc.left, e.clientY - rc.top, 0.85, 220); });
+    function frame(t) {
+      ctx.clearRect(0, 0, W, H);
+      if (t - amb > 1500) { add(Math.random() * W, H * (0.3 + Math.random() * 0.55), 0.3); amb = t; }
+      for (var i = ripples.length - 1; i >= 0; i--) {
+        var p = ripples[i]; p.r += 1.7; p.a *= 0.974;
+        if (p.a < 0.012 || p.r > p.max) { ripples.splice(i, 1); continue; }
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.strokeStyle = 'rgba(255,255,255,' + (p.a * 0.5) + ')'; ctx.lineWidth = 1.5; ctx.stroke();
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 0.68, 0, 6.2832); ctx.strokeStyle = 'rgba(156,240,236,' + (p.a * 0.32) + ')'; ctx.lineWidth = 1; ctx.stroke();
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  // 3. Reveal for authored .reveal elements (homepage / brand-brain)
+  if (!reduce && ('IntersectionObserver' in window)) {
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = e.target.dataset.d ? parseInt(e.target.dataset.d, 10) : 0;
+          e.target.style.transitionDelay = (d * 0.12) + 's';
+          e.target.classList.add('is-visible'); rio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.river .reveal').forEach(function (el) { rio.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // 4. Brand Brain gate → reveal setup + capture lead
+  var gf = document.getElementById('gateForm2');
+  if (gf) {
+    gf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var first = (gf.first.value || '').trim(), email = (gf.email.value || '').trim();
+      var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      var note = document.getElementById('gateNote2');
+      if (!first || !okEmail) { if (note) note.textContent = 'Please enter your first name and a valid email address.'; return; }
+      gf.style.display = 'none'; if (note) note.hidden = true;
+      var ok = document.getElementById('gateSuccess2'); if (ok) ok.hidden = false;
+      var setup = document.getElementById('bbSetup');
+      if (setup) { setup.hidden = false; setup.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (window.gtag) gtag('event', 'brand_brain_gate', { event_category: 'lead', event_label: 'brand_brain' });
+      try {
+        fetch(API_BASE + '/api/lead', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstName: first, email: email, tool: 'Brand Brain Starter Kit', source: 'brand-brain' })
+        }).catch(function () {});
+      } catch (e2) {}
+    });
+  }
+
+  // 5. Copy starter prompt
+  var cp = document.getElementById('copyPrompt');
+  if (cp) {
+    cp.addEventListener('click', function () {
+      var t = document.getElementById('starterPrompt').textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(function () { cp.textContent = 'Copied'; setTimeout(function () { cp.textContent = 'Copy'; }, 1600); }).catch(function () { cp.textContent = 'Copy failed'; });
+      } else { cp.textContent = 'Select and copy'; }
+    });
+  }
+
+  // 6. Brand Brain setup helper → Valore backend
+  (function () {
+    var form = document.getElementById('helperForm'); if (!form) return;
+    var log = document.getElementById('helperLog'), input = document.getElementById('helperInput');
+    var turns = [{ role: 'assistant', content: "Hi, we're here to get you set up and answer any questions. How can we help?" }];
+    var busy = false;
+    function bubble(role, text) { var d = document.createElement('div'); d.className = 'hb hb-' + role; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var msg = input.value.trim(); if (!msg || busy) return;
+      input.value = ''; busy = true;
+      bubble('user', msg); turns.push({ role: 'user', content: msg });
+      var out = bubble('bot', 'Thinking...');
+      try {
+        var res = await fetch(API_BASE + '/api/brand-brain-helper', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: turns.slice(-12) })
+        });
+        var data = await res.json();
+        if (!res.ok || !data.reply) { out.textContent = (data && data.error) ? data.error : 'The helper is unavailable right now. Email info@valore.agency and we will help.'; }
+        else { out.textContent = data.reply; turns.push({ role: 'assistant', content: data.reply }); }
+      } catch (err) {
+        out.textContent = 'Something went wrong. Try again, or email info@valore.agency.';
+      } finally { busy = false; }
+    });
+  })();
+
+  // boot
+  initRiver();
+  if (document.readyState !== 'complete') { window.addEventListener('load', initRiver); }
+})();
+
 (function () {
   'use strict';
 
   // Nav: transparent over dark hero, immediately solid on pages without one
   var nav = document.querySelector('.nav');
-  var hasDarkHero = document.querySelector('.hero, .page-hero');
+  var hasDarkHero = document.querySelector('.hero, .page-hero, .r-hero');
   if (nav) {
     if (!hasDarkHero) {
       nav.classList.add('nav--scrolled');
@@ -127,7 +312,7 @@
   ].join(', ')));
 
   // Exclude anything already inside the hero (those have CSS keyframe animations)
-  var heroEl = document.querySelector('.hero, .page-hero');
+  var heroEl = document.querySelector('.hero, .page-hero, .r-hero');
   if (heroEl) {
     targets = targets.filter(function (el) { return !heroEl.contains(el); });
   }

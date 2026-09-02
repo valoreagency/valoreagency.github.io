@@ -180,7 +180,7 @@ if (fs.existsSync(indexPath)) {
 
   // Schema: the JSON-LD block sits between the stylesheet link and the gtag
   // comment. Swap it for the freshly built Blog + ItemList + Breadcrumb.
-  const schemaRe = /(<link rel="stylesheet" href="\/css\/style\.css">\r?\n)[\s\S]*?(\r?\n {4}<!-- Google tag)/;
+  const schemaRe = /(<link rel="stylesheet" href="\/css\/style\.css">\r?\n(?:\s*<link rel="stylesheet" href="\/css\/river\.css">\r?\n)?)[\s\S]*?(\r?\n {4}<!-- Google tag)/;
   if (schemaRe.test(index)) {
     index = index.replace(schemaRe, `$1\n${blogSchema.trimEnd()}\n$2`);
     injected++;

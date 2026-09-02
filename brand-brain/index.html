@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Brand Brain | Valore</title>
-    <meta name="description" content="Everything that makes your business good is stuck in your head, which is why your website undersells you and AI writes like your competitors. Valore gets it out, writes it down, and hands you a twelve month plan.">
+    <meta name="description" content="Your brand lives in a dozen heads and a hundred files. The Brand Brain puts it in one place, so nothing drifts off course. Build yours in a day, on your own computer, with the tools and the prompt we hand you. Complimentary.">
     <link rel="canonical" href="https://valore.agency/brand-brain/">
     <meta property="og:title" content="The Brand Brain | Valore">
-    <meta property="og:description" content="Your brand does not reflect the business behind it. That is a documentation problem, not a talent problem, and it is fixable.">
+    <meta property="og:description" content="The single source of truth that keeps everything on brand. Built privately on your own computer, in a day. Yours to keep.">
     <meta property="og:url" content="https://valore.agency/brand-brain/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://valore.agency/assets/og-image.jpg">
@@ -16,24 +16,49 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/river.css">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "The Brand Brain",
-      "description": "Everything that makes a business good usually lives only in the owner's head. Valore gets it out, writes it down as a brand brain, and delivers a twelve month plan for what to do with it.",
+      "description": "The Brand Brain is the single source of truth for a business's brand: who it is and is not, its voice, its content rules, and where it is going. Valore hands you the tools and the prompt to build yours privately on your own computer in a day.",
       "url": "https://valore.agency/brand-brain/",
       "publisher": {"@type": "Organization", "@id": "https://valore.agency/#organization", "name": "Valore"},
       "mainEntity": {
         "@type": "Service",
-        "name": "Brand Intelligence",
-        "description": "A structured interview and full brand review that produces a written brand foundation covering positioning, customer, offers, proof and voice, plus a twelve month strategic plan delivered as a live task list. Scoped to each business.",
+        "name": "The Brand Brain",
+        "description": "A guided build that produces a written brand foundation covering positioning, customer, offers, proof, voice and content rules. Built privately on the owner's own computer with tools and a starter prompt provided by Valore. The complimentary way into working with Valore.",
         "serviceType": "Brand Strategy",
         "provider": {"@type": "Organization", "name": "Valore", "url": "https://valore.agency"}
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Brand Brain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A Brand Brain is a single source of truth for your brand. It captures who you are and who you are not, your voice, your content rules and guidelines, the templates you build from, and where you are going. Once it exists, every tool, teammate, and vendor works from the same page, in your voice, at your level."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Brand Brain really complimentary?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is the complimentary way into working with Valore. We hand you the tools, the prompts, and the guiding rails, and you build it yourself in about a day. It is created privately on your own computer and stays yours, whether or not we go on to work together."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you see my Brand Brain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. The Brand Brain is built privately on your own computer, powered by AI you run yourself. Valore never sees it. The setup helper on this page is only for getting you set up and answering questions. You build the brain in your own app, not in that window."}
+        }
+      ]
     }
     </script>
 
@@ -44,20 +69,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-6HM2E95TD4');
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href*="/start/"]').forEach(function(el) {
-          el.addEventListener('click', function() {
-            gtag('event', 'discovery_call_click', {
-              event_category: 'cta',
-              event_label: document.title
-            });
-          });
-        });
-      });
     </script>
 </head>
-<body>
+<body class="river">
 
+    <!-- NAV -->
     <header class="nav">
         <div class="nav__inner">
             <a href="/" class="nav__logo">
@@ -67,9 +83,9 @@
             <nav class="nav__links" id="navLinks" aria-label="Main navigation">
                 <a href="/about/" class="nav__link">About</a>
                 <a href="/services/" class="nav__link">Services</a>
-                <a href="/process/" class="nav__link">Process</a>
+                <a href="/brand-brain/" class="nav__link">Brand Brain</a>
                 <a href="/case-study/" class="nav__link">Case Study</a>
-                <a href="/blog/" class="nav__link">Blog</a>
+                <a href="/blog/" class="nav__link">Journal</a>
             </nav>
             <div class="nav__actions">
                 <a href="/start/" class="nav__cta" target="_blank" rel="noopener noreferrer">Start the Conversation</a>
@@ -83,260 +99,158 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="container">
-            <span class="page-hero__label">Brand Intelligence</span>
-            <h1 class="page-hero__headline">Everything that makes your business good<br>is stuck inside your head.</h1>
-            <p class="page-hero__body">You know why clients choose you, what you would never do for money, and how to describe the work in a way that lands. None of it is written down anywhere. So your website undersells you, every freelancer needs the same long explanation, and the AI tools everyone is excited about hand you writing that sounds like your competitors.</p>
+            <span class="page-hero__label">The Brand Brain</span>
+            <h1 class="page-hero__headline">The piece that keeps<br><em>everything on brand.</em></h1>
+            <p class="page-hero__body">Most businesses keep their brand in a dozen heads and a hundred files. The Brand Brain puts it in one place, so nothing drifts off course.</p>
         </div>
     </section>
 
-    <!-- THE PROBLEM -->
+    <!-- WHAT IT IS -->
     <section class="section">
         <div class="container container--narrow">
-            <p class="label label--navy">Does this sound familiar</p>
-            <h2 class="section__headline">Your brand does not reflect the business behind it.</h2>
-            <p class="section__body">This is almost never a talent problem. It is a documentation problem. The business is good. The thing that explains the business does not exist.</p>
+            <p class="label label--navy">What it is</p>
+            <h2 class="section__headline">A single source of truth for your brand.</h2>
+            <p class="section__body">It captures who you are and who you are not, your voice, your content rules and guidelines, the templates you build from, and where you are going. And a good deal more. Once it exists, every tool, every teammate, and every vendor works from the same page, in your voice, at your level.</p>
         </div>
         <div class="container">
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3 class="service-item__title">Your marketing sounds like everyone else</h3>
-                    <p class="service-item__body">Whoever wrote it, a freelancer or an AI tool, had nothing to work from except your competitors. They guessed, and it shows.</p>
+            <div class="cols" style="margin-top:1rem;">
+                <div class="col reveal">
+                    <h3>What it holds</h3>
+                    <ul>
+                        <li>Who you are, and who you are not</li>
+                        <li>Your voice, how you sound and look</li>
+                        <li>Your content rules and guidelines</li>
+                        <li>The templates you build from</li>
+                        <li>Where you are going, and why</li>
+                    </ul>
                 </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">You are the bottleneck for every decision</h3>
-                    <p class="service-item__body">Nobody can write, design, or answer a client properly without asking you first, because you are the only place the answers live.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">You have a list, not a plan</h3>
-                    <p class="service-item__body">A dozen things you know you should probably do, no clear order, and no way to tell which one actually moves anything.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">Every hire starts from zero</h3>
-                    <p class="service-item__body">Each new freelancer, agency or staff member needs the same two hour explanation before they can produce anything usable.</p>
+                <div class="col reveal" data-d="1">
+                    <h3>What it does</h3>
+                    <ul>
+                        <li>Keeps every touchpoint on brand</li>
+                        <li>Stops the drift as you grow</li>
+                        <li>Briefs any vendor in minutes</li>
+                        <li>Becomes the spine of your roadmap</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHAT A BRAND BRAIN IS -->
+    <!-- WHAT IT DID FOR US -->
     <section class="section section--cream">
         <div class="container container--narrow">
-            <p class="label label--navy">The fix</p>
-            <h2 class="section__headline">A brand brain.</h2>
-            <p class="section__body">A plain set of documents holding everything about your business that currently only exists in your head. What you sell and to whom. What you believe that your competitors do not. What you refuse to do. How you actually talk, captured from your own writing rather than invented.</p>
-            <p class="section__body">It is not a brand guideline document that lives in a drawer. It is a working file. Every person and every tool you use reads it before they start, so the work sounds like you the first time, and nobody has to interrupt you to ask a question you have already answered.</p>
+            <p class="label label--navy">What it did for our own brand</p>
+            <h2 class="section__headline">It made us <em>faster,</em><br>and it made us consistent.</h2>
+            <p class="section__body">Before the Brand Brain, everything we put out started from scratch. Every post, every page, every vendor brief meant re-deciding who we were and how we sound. The Brand Brain became the hub we lean on for all of it: one place to pull from, so we moved faster and everything we published finally pulled in the same direction.</p>
         </div>
     </section>
 
-    <!-- WHY LET US DO IT -->
+    <!-- HOW YOU'LL USE IT -->
     <section class="section">
         <div class="container container--narrow">
-            <p class="label label--navy">Why hand it over</p>
-            <h2 class="section__headline">You could build this yourself.<br>Here is what you get if you do not.</h2>
-            <p class="section__body">Doing it alone takes three to five days of your own work, spread over a few weeks, and most people stall halfway. Handing it over costs you about two hours and gets you things you would not have thought to build.</p>
-        </div>
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3 class="service-item__title">You get your week back</h3>
-                    <p class="service-item__body">Your part is one conversation of roughly ninety minutes. We do the rest. The three to five days you would have spent stay in your business, which is where they earn more than they would have saved.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">It gets done properly the first time</h3>
-                    <p class="service-item__body">The interview is the whole job, and it is harder than it looks. Almost everyone doing it alone stops around question eight, when it starts feeling repetitive. The answers worth having are the ones after that, and getting to them takes someone whose job is to keep pushing.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">A content plan, not a blank calendar</h3>
-                    <p class="service-item__body">You leave knowing what to publish, in what order, and why each piece exists. Built from what your customers actually search for and the questions you already answer every week, rather than whatever seemed like a good idea on Sunday night.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">Search strategy built in, not bolted on</h3>
-                    <p class="service-item__body">We work out what people type when they need what you sell, where you currently rank for it, and what has to change. That includes how AI assistants describe you, which is quickly becoming the first place people look.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">A website built to be found</h3>
-                    <p class="service-item__body">If we build your site, it is fast, clean, and structured so search engines and AI tools can read it properly, with real pages answering real questions rather than thin ones. We did exactly this to our own menswear brand: four times the search impressions and eleven positions gained inside a year.</p>
-                </div>
-                <div class="service-item">
-                    <h3 class="service-item__title">Quick wins you can deploy in week one</h3>
-                    <p class="service-item__body">Every engagement surfaces a handful of things that take an hour each and should have been fixed years ago. A profile nobody claimed, a page that never loaded properly, a form that quietly stopped sending. You get those first, while the bigger work is still underway.</p>
-                </div>
-            </div>
+            <p class="label label--navy">How you'll use it</p>
+            <h2 class="section__headline">One place to <em>pull from.</em></h2>
+            <p class="section__body">Writing a post, briefing a designer, building a page, launching an offer? You start from your Brand Brain. It gives every tool and every person the same answer for who you are and how you show up, so everything you put out is on brand, and faster to make.</p>
         </div>
     </section>
 
-    <!-- HOW TO WORK WITH US -->
+    <!-- GATE -->
     <section class="section section--cream">
-        <div class="container container--narrow">
-            <p class="label label--navy">Two ways to work with us</p>
-            <h2 class="section__headline">One is ongoing.<br>One is a single piece of work.</h2>
-            <p class="section__body">Valore is a fractional brand partner, not an agency that writes your posts and runs your ads. We work out what your brand should be, write it down, and either stay with you while it gets built or hand it over for you to run.</p>
-        </div>
-        <div class="container">
-
-            <div class="service-block">
-                <span class="service-block__num">01</span>
-                <h2 class="service-block__name">Brand Oversight Retainer</h2>
-                <p class="service-block__for">For owners who want somebody senior in the room every month, holding the plan to account. This is the one we recommend, and the one most of what we do sits inside.</p>
-                <div class="service-block__grid">
-                    <div>
-                        <span class="service-block__col-label">What you get</span>
-                        <ul class="service-block__list">
-                            <li>Your brand brain built properly, and kept current as the business changes</li>
-                            <li>A rolling plan of what to do next, in order, with quick wins pulled forward</li>
-                            <li>A monthly strategy session, and access between them when a decision cannot wait</li>
-                            <li>Content and search strategy that keeps moving instead of stalling in month three</li>
-                            <li>Suppliers sourced, briefed and held to the standard, so you stop managing freelancers</li>
-                            <li>An honest read every month on what is working and what is not</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <span class="service-block__col-label">What it fixes</span>
-                        <ul class="service-block__list">
-                            <li>Plans that stall because nobody is accountable to them</li>
-                            <li>Being the only person in your business making brand decisions</li>
-                            <li>Vendors doing their own thing with nothing to align to</li>
-                            <li>Momentum that only exists while you personally push it</li>
-                            <li>Never quite knowing whether the money is working</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-block__outcome">
-                    <span class="service-block__outcome-label">Availability</span>
-                    <p>We hold two of these at a time, and no more. It is the only way the attention is real rather than a line on a schedule. If both are taken we will tell you straight away and give you a date.</p>
-                </div>
-            </div>
-
-            <div class="service-block">
-                <span class="service-block__num">02</span>
-                <h2 class="service-block__name">Your brand brain, done for you</h2>
-                <p class="service-block__for">For owners who want the foundation built properly and are happy to run with it themselves afterwards. One conversation from you, the finished thing back from us.</p>
-                <div class="service-block__grid">
-                    <div>
-                        <span class="service-block__col-label">What is included</span>
-                        <ul class="service-block__list">
-                            <li>A ninety minute recorded interview, run properly, where we do not let a vague answer pass</li>
-                            <li>Your positioning, your customer, your offers and your proof, written up as working files</li>
-                            <li>Your voice captured from what you have actually written, quoted rather than invented</li>
-                            <li>The rules that stop everything you publish sounding like it came out of a machine</li>
-                            <li>A handover call showing you how to run it, so it keeps paying off without us</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <span class="service-block__col-label">What is not included</span>
-                        <ul class="service-block__list">
-                            <li>The full digital and competitor audit</li>
-                            <li>The twelve month plan and task list</li>
-                            <li>Website work of any kind</li>
-                            <li>Ongoing involvement after the handover</li>
-                            <li>Those live in the retainer, and we will tell you honestly if you need them</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-block__outcome">
-                    <span class="service-block__outcome-label">Investment</span>
-                    <p>$1,500. One time. Roughly two weeks from your interview to handover.</p>
-                </div>
-            </div>
-
-            <div class="pricing-box">
-                <span class="pricing-box__label">Anything larger</span>
-                <h2 class="pricing-box__headline">We scope it on the call.</h2>
-                <p class="pricing-box__body">If you need the website built, the full audit, or the whole plan put together, the price depends on how much there is to do, and we cannot know that until we have looked. Some businesses need everything built from nothing. Others already have most of it and need three things fixed in the right order.</p>
-                <p class="pricing-box__body">We look before we speak, come with the right questions, and give you a real number and a date on the call itself. If the honest answer is that you do not need us yet, we will tell you that instead.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PROOF -->
-    <section class="section">
-        <div class="container container--narrow">
-            <p class="label label--navy">Why us</p>
-            <h2 class="section__headline">We did not learn this<br>on someone else.</h2>
-            <p class="section__body">We ran all of it on our own menswear brand, Cardero Clothing, before we sold a day of it to anybody. These numbers are ours, they are real, and we will show you where they come from.</p>
-        </div>
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-item__num">98<span class="stat-item__unit">%</span></span>
-                    <span class="stat-item__label">Revenue growth against the same months the year before</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-item__num">4<span class="stat-item__unit">x</span></span>
-                    <span class="stat-item__label">Search impressions year over year, and eleven positions gained on Google</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-item__num">11</span>
-                    <span class="stat-item__label">Years building the brand this all came from</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ENQUIRY -->
-    <section class="section section--light contact-form-section">
-        <div class="container container--narrow">
-            <p class="label label--navy">Get in touch</p>
-            <h2 class="section__headline">Tell us where you are.</h2>
-            <p class="section__body">We look at your business before we speak, so the call is about you rather than us collecting basics. You get a reply from Derek within one business day, not a sequence. No pitch on the first call.</p>
-
-            <form class="contact-form" id="brandBrainForm" novalidate>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" for="firstName">First Name</label>
-                        <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Johnny" autocomplete="given-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="lastName">Last Name</label>
-                        <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="email">Email Address</label>
-                    <input class="form-input" type="email" id="email" name="email" placeholder="johnny@yourbusiness.com" autocomplete="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="website">Business Website</label>
-                    <input class="form-input" type="text" id="website" name="website" placeholder="yourbusiness.com" autocomplete="url">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="budget">Which are you interested in?</label>
-                    <select class="form-select" id="budget" name="budget" required>
-                        <option value="" disabled selected>Select the closest one</option>
-                        <option value="Retainer">The monthly retainer, if a slot is open</option>
-                        <option value="Brand brain done for you $1500">My brand brain built for me</option>
-                        <option value="Website build">A website built properly</option>
-                        <option value="Everything">Everything, I do not know where to start</option>
-                        <option value="Not sure yet">Not sure yet, I want to talk it through</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="message">What is prompting you to reach out?</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="What you sell, what you have already tried, and what made you fill this in. There are no wrong answers here." required></textarea>
-                </div>
-
-                <div class="form-status" id="formError" role="alert"></div>
-
-                <div class="form-submit-wrap">
-                    <button type="submit" class="btn btn--navy" id="submitBtn">Send Inquiry</button>
-                    <span class="form-submit-note">No pitch. No pressure. One business day.</span>
-                </div>
-
+        <div class="gate-band"><div class="gate reveal">
+            <p class="label label--navy" style="text-align:center;">Start today</p>
+            <h2>Your Brand Brain, built in a day.</h2>
+            <p class="r-body">You can start right now. We hand you the tools, the prompts, and the guiding rails, and you follow them. Within a day, your Brand Brain is built and ready to use. It is created privately on your own computer, powered by AI you never have to wrestle with, and we are with you the whole way. Premium, and genuinely simple.</p>
+            <form class="gate-form" id="gateForm2" novalidate>
+                <input type="text" name="first" placeholder="First name" autocomplete="given-name" aria-label="First name" required>
+                <input type="email" name="email" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
+                <button type="submit">Send me the starter kit</button>
             </form>
+            <p class="gate-note" id="gateNote2">We save your place and email you the starter kit. Your Brand Brain is built on your computer and stays private to you. We never see it.</p>
+            <p class="gate-success" id="gateSuccess2" hidden>You're in. Your starter kit is below, and a copy is on its way to your inbox. You can start building right now.</p>
+        </div></div>
+    </section>
+
+    <!-- SETUP (revealed after the gate) -->
+    <section id="bbSetup" class="section" hidden>
+        <div class="container container--narrow">
+            <p class="label label--navy">Your setup</p>
+            <h2 class="section__headline">Three steps, then you're <em>building.</em></h2>
+            <ol class="setup-steps">
+                <li>Install the Claude desktop app: <a href="https://claude.ai/download" target="_blank" rel="noopener noreferrer" class="setup-link">claude.ai/download</a></li>
+                <li>Create a folder on your computer to house what you build, and name it <strong>"{Your Business} Claude"</strong>.</li>
+                <li>Open the Code tab, choose that folder, then copy the starter prompt below and paste it in. It guides you the rest of the way.</li>
+            </ol>
+            <div class="prompt-box">
+                <div class="prompt-head"><span>Starter prompt</span><button id="copyPrompt" type="button">Copy</button></div>
+                <pre id="starterPrompt">You are my guide for building a Brand Brain for my business, following the Brand Brain Build from Valore. Treat me as smart, but new to this. Work patiently, ONE step at a time, and never dump several steps on me at once.
+
+STEP 0 - PROVE FILE ACCESS
+Confirm you can write files in this folder. Create PROGRESS.md, tell me the full path, and ask me to confirm I can see it. Update PROGRESS.md at the end of every step and any time I say I am stopping.
+
+STEP 1 - SET UP THE BRAND BRAIN
+Create these files in the folder, each with a short heading and the note "UNKNOWN - to be filled":
+  00-rules.md, 01-overview.md, 02-audience.md, 03-positioning.md, 04-voice.md, 05-offers.md, 06-story-and-proof.md, 07-content.md
+Tell me once they exist.
+
+STEP 2 - TAKE IN WHAT ALREADY EXISTS
+Ask me for:
+  a) my website URL
+  b) EVERY social profile I have: Instagram, Facebook, LinkedIn, TikTok, YouTube, X, Google Business Profile, and anything else
+Then read my website and each profile. If you cannot open a link, ask me to paste the key pages or the About text. Study my real words, my offers, my visuals, and my tone.
+
+STEP 3 - GIVE ME YOUR FIRST READ
+Before you ask me anything else, tell me what you can already see from my site and socials: who my brand seems to be, who it seems to be for, what I sell, how I sound, how I am positioned, and where the gaps or inconsistencies are. Be honest. Then ask me what you got right and what you got wrong.
+
+STEP 4 - GO DEEP, ONE QUESTION AT A TIME
+Interview me properly to fill every gap. Cover, at least:
+  - What I actually do, in plain words, and the real outcome I create
+  - Who my best client is, and who I am NOT for (be specific)
+  - My offers and my pricing
+  - My competitors, and why someone should choose me instead
+  - What I want to be known for, and the premium I am moving toward
+  - My story: how this started, what I believe, what I refuse to do
+  - My proof: results, numbers, testimonials, wins
+  - How I talk: words I love, words I hate, my rules
+  - My goals for the next six and twelve months
+  - The content topics I want to own
+Ask ONE question at a time and wait for my answer. Dig deeper when an answer is thin. Never invent anything about my business; if you need a fact I have not given, write UNKNOWN and ask me for it.
+
+STEP 5 - WRITE AS WE GO
+Whenever I tell you something true, write it straight into the correct file and tell me in one line which file you updated. When I correct you, decide whether it is a rule (00-rules.md) or a note about how I talk (04-voice.md), and save it there. Do not wait to be asked.
+
+VOICE - SOUND LIKE ME, NOT LIKE AI
+In 04-voice.md, and in everything you help me write from here on, strip out AI-sounding writing automatically. Never use:
+  - em dashes (use a comma, a period, or a colon)
+  - the word "free" (use "complimentary"), or: value, leverage, innovative, game-changing, cutting-edge, disruptive, synergy, results-driven, seamless, robust, unlock, elevate, world-class
+  - the "X is not Y. It is Z." formula
+  - three short punchy sentences stacked in a row
+  - three clinical adjectives in a row
+  - a tidy summary line at the end of every paragraph
+Write the way a real person talks across a table: start with an observation, let the rhythm vary, build toward the point, and end on a real thought, not a formula.
+
+PHRASES I CAN USE ANY TIME
+Teach me that I can say these at any point, and act on them immediately:
+  "write that to the brand brain", "make that a rule", "that is not how I talk", "save my place", "where was I", and "why".
+
+Start now by confirming you can write files in my folder, and nothing else until I answer.</pre>
+            </div>
+            <div class="helper">
+                <div class="helper-head">
+                    <strong>Set-up helper</strong>
+                    <span>Here for setup and questions only. You build your Brand Brain in your own app with the prompt above, not in this window.</span>
+                </div>
+                <div class="helper-log" id="helperLog"><div class="hb hb-bot">Hi, we're here to get you set up and answer any questions. How can we help?</div></div>
+                <form class="helper-form" id="helperForm"><input id="helperInput" type="text" placeholder="Ask about getting set up..." aria-label="Ask the setup helper"><button type="submit">Ask</button></form>
+            </div>
         </div>
     </section>
 
     <!-- CTA -->
     <section class="section section--navy">
         <div class="container container--narrow">
-            <h2 class="section__headline section__headline--light">Would you rather just talk?</h2>
-            <p class="section__body section__body--light">Book twenty minutes instead. Same conversation, same honesty about whether there is a fit, and the same real number at the end of it.</p>
+            <h2 class="section__headline section__headline--light">Would you rather we built the brand with you?</h2>
+            <p class="section__body section__body--light">The Brand Brain is the way in. When you are ready for the full climb, the Sprint resets your brand to premium and the retainer keeps it moving. Start with a thirty minute conversation.</p>
             <a href="/start/" class="btn btn--cream" target="_blank" rel="noopener noreferrer">Start the Conversation</a>
             <p class="cta-note">No pitch. No pressure. Real clarity.</p>
         </div>
@@ -346,6 +260,7 @@
         <div class="container">
             <nav class="footer__tools" aria-label="Complimentary tools">
                 <span class="footer__tools-label">Tools</span>
+                <a href="/brand-brain/">The Brand Brain</a>
                 <a href="/brand-assessment/">Brand Assessment</a>
                 <a href="/marketing-cost-calculator/">Marketing Cost Calculator</a>
                 <a href="/pricing-readiness/">Pricing Scorecard</a>
@@ -369,72 +284,6 @@
             t.classList.toggle('is-active');
         });
     </script>
-
-    <script>
-    (function () {
-        var API_BASE = 'https://valore-brand-builder-production.up.railway.app';
-        var form = document.getElementById('brandBrainForm');
-        var errBox = document.getElementById('formError');
-        var btn = document.getElementById('submitBtn');
-        if (!form) return;
-
-        function clearErrors() {
-            errBox.textContent = '';
-            errBox.classList.remove('form-status--error');
-            ['firstName', 'lastName', 'email', 'budget', 'message'].forEach(function (n) {
-                if (form[n]) form[n].classList.remove('is-error');
-            });
-        }
-
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            clearErrors();
-
-            var firstName = form.firstName.value.trim();
-            var lastName  = form.lastName.value.trim();
-            var email     = form.email.value.trim();
-            var website   = form.website.value.trim() || 'No website yet';
-            var budget    = form.budget.value;
-            var message   = form.message.value.trim();
-
-            var hasError = false;
-            if (!firstName) { form.firstName.classList.add('is-error'); hasError = true; }
-            if (!lastName)  { form.lastName.classList.add('is-error');  hasError = true; }
-            if (!email || email.indexOf('@') < 1) { form.email.classList.add('is-error'); hasError = true; }
-            if (!budget)    { form.budget.classList.add('is-error');    hasError = true; }
-            if (!message)   { form.message.classList.add('is-error');   hasError = true; }
-            if (hasError) {
-                errBox.textContent = 'A few fields still need filling in.';
-                errBox.classList.add('form-status--error');
-                return;
-            }
-
-            btn.disabled = true;
-            btn.textContent = 'Sending';
-
-            try {
-                var res = await fetch(API_BASE + '/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ firstName, lastName, email, website, budget, message }),
-                });
-
-                if (!res.ok) throw new Error('Server error');
-
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'contact_form_submit', { event_category: 'lead', event_label: budget });
-                }
-
-                window.location.href = '/thank-you/';
-            } catch (err) {
-                btn.disabled = false;
-                btn.textContent = 'Send Inquiry';
-                errBox.textContent = 'That did not send. Email info@valore.agency and we will pick it up from there.';
-                errBox.classList.add('form-status--error');
-            }
-        });
-    })();
-    </script>
-
+    <script src="/js/animations.js" defer></script>
 </body>
 </html>
