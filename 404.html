@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Valore</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/river.css">
+    <style>
+      .nf-wrap{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:7rem 1.5rem 4rem; }
+      .nf-code{ font-size:.8rem; letter-spacing:.3em; text-transform:uppercase; color:#5fd3d0; margin-bottom:1.4rem; }
+      .nf-h1{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:300; font-size:clamp(2.6rem,7vw,5rem); color:#fff4ca; line-height:1.05; margin:0 0 1.2rem; }
+      .nf-h1 em{ font-style:italic; color:#9cf0ec; }
+      .nf-p{ max-width:520px; font-size:1.15rem; color:#9db0c7; line-height:1.7; margin:0 0 2.2rem; }
+      .nf-links{ display:flex; flex-wrap:wrap; gap:1rem 1.6rem; justify-content:center; }
+      .nf-links a{ color:#5fd3d0; text-decoration:none; font-size:1rem; border-bottom:1px solid rgba(95,211,208,.35); padding-bottom:2px; }
+      .nf-links a:hover{ color:#9cf0ec; }
+    </style>
+</head>
+<body class="river">
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo">
+                <span class="nav__logo-name">Valore</span>
+                <span class="nav__logo-sub">Fractional Brand Partner</span>
+            </a>
+            <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+                <a href="/about/" class="nav__link">About</a>
+                <a href="/services/" class="nav__link">Services</a>
+                <a href="/brand-brain/" class="nav__link">Brand Brain</a>
+                <a href="/case-study/" class="nav__link">Case Study</a>
+                <a href="/blog/" class="nav__link">Journal</a>
+            </nav>
+            <div class="nav__actions">
+                <a href="/start/" class="nav__cta" target="_blank" rel="noopener noreferrer">Start the Conversation</a>
+                <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="nf-wrap">
+        <p class="nf-code">404</p>
+        <h1 class="nf-h1">This page drifted<br><em>off course.</em></h1>
+        <p class="nf-p">The link you followed does not lead anywhere, or the page has moved. Let us point you back to the current.</p>
+        <nav class="nf-links" aria-label="Helpful links">
+            <a href="/">Home</a>
+            <a href="/brand-brain/">The Brand Brain</a>
+            <a href="/services/">Services</a>
+            <a href="/blog/">Journal</a>
+            <a href="/start/" target="_blank" rel="noopener noreferrer">Start the Conversation</a>
+        </nav>
+    </main>
+
+    <script>
+        var t = document.getElementById('navToggle');
+        var l = document.getElementById('navLinks');
+        if (t && l) t.addEventListener('click', function(){ var o=l.classList.toggle('is-open'); t.setAttribute('aria-expanded',o); t.classList.toggle('is-active'); });
+    </script>
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>

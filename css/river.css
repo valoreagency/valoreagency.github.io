@@ -457,6 +457,27 @@ body.river .about-photo{ background:rgba(7,28,57,.4); border-color:var(--r-line)
 /* The pull-quote's navy left border is invisible on dark: make it aqua. */
 body.river .about-quote{ border-left-color:var(--r-aqua); }
 
+/* ---------------------------------------------------------------
+   13. MOBILE FIT (Sep 2) — the big display type overflowed narrow
+   screens (clamp minimums too large), pushing content and the nav
+   off-screen. Cap the headline sizes and clip any stray overflow.
+--------------------------------------------------------------- */
+@media(max-width:600px){
+  body.river{ overflow-x:hidden; }
+  body.river .r-hero{ padding-left:1.25rem; padding-right:1.25rem; }
+  body.river .r-hero h1{ font-size:2.05rem; letter-spacing:-.01em; }
+  body.river .r-hero h1 span{ display:block; }
+  body.river .r-hero .sub{ font-size:1.08rem; }
+  body.river .eyebrow{ font-size:.72rem; letter-spacing:.22em; }
+  body.river .through .big{ font-size:2rem; }
+  body.river .r-h2{ font-size:2rem; }
+  body.river .cta h2{ font-size:2rem; }
+  body.river .page-hero__headline{ font-size:2.3rem; }
+  body.river .section__headline{ font-size:1.95rem; }
+  body.river .vw{ font-size:2.3rem; }
+  body.river .offer h3, body.river .rung h3{ font-size:1.7rem; }
+}
+
 @media(prefers-reduced-motion:reduce){
   .river-track .river-current{ animation:none; opacity:.6; }
   body.river .scroll-cue .dot::after{ animation:none; }
