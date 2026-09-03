@@ -63,11 +63,13 @@ const corePages = [
   { loc: `${BASE}/menswear/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/b2bservices/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/b2bservices/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/brand-brain/`, freq: 'monthly', pri: '0.9' },
   { loc: `${BASE}/brand-assessment/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/marketing-cost-calculator/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/pricing-readiness/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/contact/`, freq: 'monthly', pri: '0.6' },
   { loc: `${BASE}/blog/`, freq: 'weekly', pri: '0.7' },
+  { loc: `${BASE}/privacy/`, freq: 'yearly', pri: '0.3' },
 ];
 const today = new Date().toISOString().slice(0, 10);
 
