@@ -94,6 +94,12 @@ body.river .label--light{ color:var(--r-aqua); }
 
 body.river .section__headline{ font-family:var(--r-serif); font-weight:300; color:var(--r-cream); letter-spacing:-.005em; text-wrap:balance; }
 
+/* Wider reading measure (Derek, Sep 4): the 740px narrow container left text
+   in a third of the screen. River pages breathe wider; light tool pages keep
+   their own widths. */
+body.river .container{ max-width:1240px; }
+body.river .container--narrow{ max-width:880px; }
+
 /* Numbered credential rows (thank-you, sprint): style.css colours them for a
    light page; on the dark river they need the river palette or they vanish. */
 body.river .thankyou-credential__num{ color:var(--r-aqua); opacity:.85; }
