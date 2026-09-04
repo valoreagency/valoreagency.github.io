@@ -93,6 +93,12 @@ body.river .label--navy,
 body.river .label--light{ color:var(--r-aqua); }
 
 body.river .section__headline{ font-family:var(--r-serif); font-weight:300; color:var(--r-cream); letter-spacing:-.005em; text-wrap:balance; }
+
+/* Numbered credential rows (thank-you, sprint): style.css colours them for a
+   light page; on the dark river they need the river palette or they vanish. */
+body.river .thankyou-credential__num{ color:var(--r-aqua); opacity:.85; }
+body.river .thankyou-credential__text{ color:var(--r-slate); }
+body.river .thankyou-credential__text strong{ color:var(--r-cream); font-weight:500; }
 body.river .section__headline--light{ color:var(--r-cream); }
 body.river .section__headline em{ font-style:italic; color:var(--r-aqua-bright); }
 body.river .section__body{ color:var(--r-slate); font-size:1.28rem; }
