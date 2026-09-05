@@ -63,6 +63,8 @@ const corePages = [
   { loc: `${BASE}/menswear/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/b2bservices/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/b2bservices/premium-brand-guide/`, freq: 'monthly', pri: '0.8' },
+  { loc: `${BASE}/sprint/`, freq: 'monthly', pri: '0.9' },
+  { loc: `${BASE}/audit/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/brand-brain/`, freq: 'monthly', pri: '0.9' },
   { loc: `${BASE}/brand-assessment/`, freq: 'monthly', pri: '0.8' },
   { loc: `${BASE}/marketing-cost-calculator/`, freq: 'monthly', pri: '0.8' },

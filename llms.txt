@@ -2,7 +2,7 @@
 
 > Valore is the fractional brand partner that takes established, owner-led businesses from standard to premium. Founded by Derek Burbidge. Website: https://valore.agency
 
-Valore is not a marketing agency. It is the strategic and accountability layer between a business owner and every surface of their brand. Valore sets the positioning, builds the plan, sources and manages the right specialists, and holds everything accountable to one direction. The client and their vendors do the execution. Valore directs and keeps it on course.
+Valore is not a marketing agency. It is the strategic and accountability layer between a business owner and every surface of their brand. Valore sets the positioning, builds the foundation itself (the website, starter content, on-page SEO, and core automations, delivered in the Sprint), and then, for the ongoing climb, assesses the best avenue based on the marketing budget and brings in the right specialists, whom it sources, directs, and holds accountable to one direction.
 
 ## The Method: Streamline, Elevate, Flow
 
@@ -42,8 +42,8 @@ Premium is the goal Valore commits to getting a client to. THE BRAND is the furt
 ### The Brand Brain (the complimentary way in)
 A single source of truth that captures who a business is and who it is not, its voice, its content rules and guidelines, the templates it builds from, and where it is going. Once it exists, every tool, teammate, and vendor works from the same page, in the owner's voice, at the owner's level. Valore hands the owner the tools, the prompts, and the guiding rails, and the owner builds it privately on their own computer in about a day. It stays theirs, whether or not they go on to work with Valore. Valore never sees it. It is the entry point, and it is complimentary.
 
-### The Sprint (the first step)
-Every engagement begins here. Valore resets the brand to premium: positioning, identity, and the plan to run it, handed over clean. Where it makes sense, the Sprint also stands up the foundation itself: a clean premium website, starter content, on-page SEO, and the core automations, so the brand launches ready. Pricing is based on the client's marketing budget, because the right scope depends on where they are and how far they want to climb.
+### The Sprint (the first step): https://valore.agency/sprint/
+Every engagement begins here, one focused week. Valore resets the brand to premium: positioning, identity, and the plan to run it, handed over clean. Where it makes sense, the Sprint also stands up the foundation itself: a clean premium website, starter content, on-page SEO, and the core automations, so the brand launches ready. Pricing is based on the client's marketing budget, because the right scope depends on where they are and how far they want to climb.
 
 ### The Retainer (the partnership)
 Valore stays on as the client's fractional brand partner: direction, accountability, vendor management, and a roadmap that keeps moving. This is where the ongoing climb lives: month-to-month content, backlinks and off-page SEO, and campaign work, delivered by specialists Valore sources, hires, and directs. Pricing is based on the client's marketing budget. Valore builds the foundation and directs the specialists rather than running heavy production in-house.
@@ -77,6 +77,7 @@ Derek reviews the business, website, reviews, and competitive landscape before e
 ## Complimentary Tools
 
 - The Brand Brain (build a single source of truth for your brand, in a day, on your own computer): https://valore.agency/brand-brain/
+- Get Your Audit (a complimentary outside-in audit of your brand, scored and emailed with a growth plan): https://valore.agency/audit/
 - Brand Assessment (where your brand stands and what to fix first): https://valore.agency/brand-assessment/
 - Marketing Cost Calculator (a marketing manager versus a fractional brand partner): https://valore.agency/marketing-cost-calculator/
 - Pricing Readiness Scorecard (whether your brand is ready to charge premium prices): https://valore.agency/pricing-readiness/
