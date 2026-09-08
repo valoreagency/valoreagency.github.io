@@ -5,7 +5,7 @@
   <!-- Core pages -->
   <url>
     <loc>https://valore.agency/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,108 +15,138 @@
   </url>
   <url>
     <loc>https://valore.agency/about/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/services/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://valore.agency/process/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/case-study/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/menswear/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/menswear/premium-brand-guide/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/b2bservices/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/b2bservices/premium-brand-guide/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/sprint/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://valore.agency/audit/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/brand-brain/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://valore.agency/brand-assessment/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/marketing-cost-calculator/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/pricing-readiness/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://valore.agency/contact/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://valore.agency/blog/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://valore.agency/privacy/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Blog posts — 119 total, newest first -->
+  <!-- Blog posts — 122 total, newest first -->
+  <url>
+    <loc>https://valore.agency/blog/implement-ai-in-your-business/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Implement AI in Your Business (a Practical Starting Point)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/use-claude-for-your-business/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>How to Use Claude for Your Business (and What It Can Actually Do)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://valore.agency/blog/what-is-a-brand-brain/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://valore.agency/assets/og-image.jpg</image:loc>
+      <image:title>What a Brand Brain Is (and Why Every Business Should Build One)</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://valore.agency/blog/brand-consistency-across-touchpoints/</loc>
     <lastmod>2026-07-30</lastmod>
