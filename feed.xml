@@ -6,7 +6,28 @@
     <atom:link href="https://valore.agency/feed.xml" rel="self" type="application/rss+xml" />
     <description>Ideas on brand strategy, visibility, and what it takes to become THE BRAND in your market.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Sep 2026 17:50:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 17:42:26 GMT</lastBuildDate>
+    <item>
+      <title>AI for Business Owners Who Are Not Technical</title>
+      <link>https://valore.agency/blog/ai-for-non-technical-business-owners/</link>
+      <guid isPermaLink="true">https://valore.agency/blog/ai-for-non-technical-business-owners/</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>You do not need to understand how AI works to use it well. The app handles the technical part. You bring the thing it cannot: judgment about your own business.</description>
+    </item>
+    <item>
+      <title>How to Get AI to Write in Your Voice, Not a Generic One</title>
+      <link>https://valore.agency/blog/get-ai-to-write-in-your-voice/</link>
+      <guid isPermaLink="true">https://valore.agency/blog/get-ai-to-write-in-your-voice/</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Generic AI writing usually means the tool has no record of how you sound. Capture your voice once, properly, and the drafts stop reading like everyone else's.</description>
+    </item>
+    <item>
+      <title>How to Keep Your Brand Consistent When You Use AI</title>
+      <link>https://valore.agency/blog/keep-brand-consistent-with-ai/</link>
+      <guid isPermaLink="true">https://valore.agency/blog/keep-brand-consistent-with-ai/</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>AI works fast, and it will produce off-brand work just as fast. The fix is not more prompting. It is one source of truth that everything you make can point to.</description>
+    </item>
     <item>
       <title>How to Implement AI in Your Business (a Practical Starting Point)</title>
       <link>https://valore.agency/blog/implement-ai-in-your-business/</link>
