@@ -54,7 +54,7 @@ body .nav.nav--scrolled .nav__link:hover{ color:var(--r-cream); }
 body .nav__cta{ display:inline-block; background:var(--r-cream); color:var(--r-navy); border:none; letter-spacing:.06em; text-transform:uppercase; font-weight:600; border-radius:3px; padding:.95rem 2rem; transition:transform .25s, box-shadow .25s, background .25s; }
 body .nav__cta:hover{ transform:translateY(-2px); background:#fff; box-shadow:0 10px 30px rgba(255,244,202,.28); }
 body .nav__hamburger span{ background:var(--r-cream); }
-@media(max-width:900px){
+@media(max-width:1024px){
   body .nav__links{ background:rgba(4,16,31,.96); backdrop-filter:blur(14px); border-bottom:1px solid var(--r-line); }
   body .nav__links .nav__link{ color:#eaf1f8; }
 }

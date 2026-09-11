@@ -1971,3 +1971,35 @@ a.post-related__card:hover {
 .post-figure { margin: 2.6rem auto; max-width: 620px; text-align: center; }
 .post-figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
 .post-figure figcaption { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); opacity: 0.6; margin-top: 0.7rem; }
+
+/* ---------------------------------------------------------------
+   NAV BREAKPOINT (raised 2026-09-11)
+   The nav__inner is capped at 1160px while the hamburger used to
+   appear only at 768px, so between roughly 769px and 900px the
+   links overflowed and collided with the CTA. Every link we add to
+   the nav makes that window wider, which is why it broke twice.
+   The hamburger now takes over at 1024px, leaving real headroom
+   for another nav item. Verified with scripts/linkcheck.cjs.
+--------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+        position: fixed;
+        top: 70px; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 22, 64, 0.99);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 0;
+        overflow-y: auto;
+        z-index: 199;
+    }
+    .nav__links.is-open { display: flex; }
+    .nav__link {
+        padding: 1.125rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        font-size: 1.125rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .nav__actions .nav__cta { display: none; }
+    .nav__hamburger { display: flex; }
+}
