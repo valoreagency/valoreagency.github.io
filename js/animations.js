@@ -369,6 +369,11 @@
   var css = '' +
     '.vx-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(0,22,64,0.62);opacity:0;transition:opacity .3s ease;}' +
     '.vx-overlay.is-open{opacity:1;}' +
+    // The [hidden] attribute is display:none only in the UA stylesheet, so the
+    // .vx-overlay{display:flex} rule above silently beat it and left an invisible
+    // full-screen layer at z-index 1000 swallowing every click on the site.
+    '.vx-overlay[hidden]{display:none!important;}' +
+    '.vx-overlay:not(.is-open){pointer-events:none;}' +
     '.vx-modal{position:relative;max-width:470px;width:100%;background:#002664;border:1px solid rgba(255,244,202,0.18);border-top:3px solid #fff4ca;border-radius:12px;padding:2.9rem 2.5rem 2.4rem;text-align:center;box-shadow:0 34px 90px rgba(0,22,64,0.5);transform:translateY(14px);transition:transform .35s ease;font-family:Inter,Arial,sans-serif;color:#eef1f7;}' +
     '.vx-overlay.is-open .vx-modal{transform:none;}' +
     '.vx-eyebrow{display:block;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:#fff4ca;margin-bottom:0.9rem;}' +
