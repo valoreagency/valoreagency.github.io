@@ -114,6 +114,7 @@
             <p class="section__body">This is not a commitment. It is a conversation. Fill in what you can. We will handle the rest.</p>
 
             <form class="contact-form" id="contactForm" novalidate>
+                    <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true"><label>Company<input type="text" name="company" class="vx-hp" tabindex="-1" autocomplete="off"></label></div>
 
                 <div class="form-grid">
                     <div class="form-group">
@@ -248,7 +249,7 @@
                 var res = await fetch(API_BASE + '/api/contact', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ firstName, lastName, email, website, budget, message }),
+                    body: JSON.stringify(window.__vxSpam ? window.__vxSpam({ firstName, lastName, email, website, budget, message }) : { firstName, lastName, email, website, budget, message }),
                 });
 
                 if (!res.ok) throw new Error('Server error');
@@ -268,5 +269,6 @@
     </script>
 
     <script src="/js/animations.js" defer></script>
+    <script>(function(){var t0=Date.now();window.__vxSpam=function(p){p=p||{};p.formTime=Date.now()-t0;var h=document.querySelector(".vx-hp");if(h)p.company=h.value;return p;};})();</script>
 </body>
 </html>

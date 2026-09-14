@@ -198,6 +198,7 @@
     <section class="section">
         <div class="container">
             <form class="calc" id="calcForm" novalidate>
+                    <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true"><label>Company<input type="text" name="company" class="vx-hp" tabindex="-1" autocomplete="off"></label></div>
 
                 <div class="calc__group">
                     <div class="calc__row">
@@ -400,7 +401,7 @@
             }, lastResult || {});
             gtag('event', 'cost_calculator_lead', { event_category: 'lead_magnet', event_label: 'calculator' });
             if (LEAD_ENDPOINT) {
-                fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => {});
+                fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(window.__vxSpam ? window.__vxSpam(payload) : payload) }).catch(() => {});
             }
             document.getElementById('captureForm').style.display = 'none';
             document.getElementById('captureOk').classList.add('is-visible');
@@ -408,5 +409,6 @@
         });
     </script>
     <script src="/js/animations.js" defer></script>
+    <script>(function(){var t0=Date.now();window.__vxSpam=function(p){p=p||{};p.formTime=Date.now()-t0;var h=document.querySelector(".vx-hp");if(h)p.company=h.value;return p;};})();</script>
 </body>
 </html>

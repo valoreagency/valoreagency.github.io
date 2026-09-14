@@ -211,7 +211,7 @@
                     var res = await fetch(API_BASE + '/api/audit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
+                        body: JSON.stringify(window.__vxSpam ? window.__vxSpam(payload) : payload)
                     });
                     var data = await res.json();
                     if (!res.ok) throw new Error(data.error || 'Something went wrong');
@@ -227,5 +227,6 @@
         })();
     </script>
     <script src="/js/animations.js" defer></script>
+    <script>(function(){var t0=Date.now();window.__vxSpam=function(p){p=p||{};p.formTime=Date.now()-t0;return p;};})();</script>
 </body>
 </html>
