@@ -1,8 +1,9 @@
 import { spawn } from 'node:child_process';
 const EDGE='C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
-const PORT=9334, URL_=process.argv[2]||'https://valore.agency/', W=Number(process.argv[3]||1440);
+// Unique port + profile per run so concurrent checks never collide.
+const PORT=9400+Math.floor(Math.random()*400), PROF="C:/Users/dburb/AppData/Local/Temp/cc-"+process.pid, URL_=process.argv[2]||"https://valore.agency/", W=Number(process.argv[3]||1440);
 const proc=spawn(EDGE,[`--remote-debugging-port=${PORT}`,'--headless=new','--no-first-run',
-  `--window-size=${W},900`,'--user-data-dir=C:/Users/dburb/AppData/Local/Temp/clickcheck-prof','about:blank'],{stdio:'ignore'});
+  `--window-size=${W},900`,String("--user-data-dir="+PROF),'about:blank'],{stdio:'ignore'});
 await new Promise(r=>setTimeout(r,3500));
 const list=await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
 const page=list.find(t=>t.type==='page');
