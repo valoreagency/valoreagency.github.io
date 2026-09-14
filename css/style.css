@@ -160,7 +160,8 @@ img { display: block; max-width: 100%; }
     box-shadow: 0 2px 32px rgba(0,22,64,0.28);
 }
 .nav__inner {
-    max-width: var(--max-w);
+    max-width: 1320px;
+    gap: clamp(2rem, 4vw, 4rem);
     margin: 0 auto;
     padding: 0 2rem;
     height: 70px;
@@ -192,6 +193,7 @@ img { display: block; max-width: 100%; }
     line-height: 1;
 }
 .nav__cta {
+    flex: 0 0 auto;
     font-family: var(--sans);
     font-size: 0.875rem;
     font-weight: 500;
@@ -593,7 +595,8 @@ img { display: block; max-width: 100%; }
 .nav__links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.75rem;
+    flex: 0 1 auto;
 }
 .nav__link {
     font-family: var(--sans);

@@ -14,6 +14,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://valore.agency/assets/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://link.hourglasscrm.com" crossorigin>
+    <link rel="dns-prefetch" href="https://link.hourglasscrm.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -72,6 +74,26 @@
       <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=4943004&fmt=gif" />
     </noscript>
     <!-- End LinkedIn Insight Tag -->
+
+    <style>
+      .cal-wrap{position:relative;min-height:760px;}
+      .cal-skeleton{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+        justify-content:center;gap:1rem;border-radius:8px;
+        background:linear-gradient(110deg,rgba(7,28,57,.45) 8%,rgba(12,40,76,.65) 18%,rgba(7,28,57,.45) 33%);
+        background-size:200% 100%;animation:cal-shimmer 1.6s linear infinite;
+        color:#9db0c7;font-family:'Inter',system-ui,sans-serif;font-size:.95rem;letter-spacing:.04em;
+        transition:opacity .4s ease;}
+      .cal-skeleton__dot{width:34px;height:34px;border-radius:50%;border:2px solid rgba(95,211,208,.25);
+        border-top-color:#5fd3d0;animation:cal-spin .9s linear infinite;}
+      @keyframes cal-shimmer{to{background-position-x:-200%;}}
+      @keyframes cal-spin{to{transform:rotate(360deg);}}
+      .cal-wrap.is-ready .cal-skeleton{opacity:0;pointer-events:none;}
+      .cal-wrap iframe{position:relative;z-index:1;opacity:0;transition:opacity .4s ease;}
+      .cal-wrap.is-ready iframe{opacity:1;}
+      @media (prefers-reduced-motion: reduce){
+        .cal-skeleton,.cal-skeleton__dot{animation:none;}
+      }
+    </style>
 </head>
 <body class="river">
 
@@ -110,8 +132,8 @@
     <!-- BOOKING -->
     <section class="section">
         <div class="container container--narrow">
-            <iframe src="https://link.hourglasscrm.com/widget/booking/z7NGTtfryJzZV9m9TmSZ" allow="payment" style="width:100%;min-height:760px;border:none;overflow:hidden;" scrolling="no" id="z7NGTtfryJzZV9m9TmSZ_1788240302028" title="Book a call with Valore"></iframe>
-            <script src="https://link.hourglasscrm.com/js/form_embed.js" type="text/javascript"></script>
+            <div class="cal-wrap"><div class="cal-skeleton" aria-hidden="true"><div class="cal-skeleton__dot"></div><span>Loading available times…</span></div><iframe src="https://link.hourglasscrm.com/widget/booking/z7NGTtfryJzZV9m9TmSZ" allow="payment" style="width:100%;min-height:760px;border:none;overflow:hidden;" scrolling="no" id="z7NGTtfryJzZV9m9TmSZ_1788240302028" title="Book a call with Valore" loading="eager" fetchpriority="high" onload="this.closest('.cal-wrap').classList.add('is-ready')"></iframe></div>
+            <script src="https://link.hourglasscrm.com/js/form_embed.js" type="text/javascript" defer></script>
         </div>
     </section>
 
@@ -137,5 +159,6 @@
         });
     </script>
 <script src="/js/animations.js" defer></script>
+    <script>setTimeout(function(){document.querySelectorAll(".cal-wrap").forEach(function(w){w.classList.add("is-ready");});},6000);</script>
 </body>
 </html>
