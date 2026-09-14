@@ -495,3 +495,159 @@ body.river .about-quote{ border-left-color:var(--r-aqua); }
   body.river .scroll-cue .dot::after{ animation:none; }
   body.river .reveal{ opacity:1; transform:none; transition:none; }
 }
+
+/* ===============================================================
+   INTERACTIVE TOOLS ON THE RIVER  (added 2026-09-14)
+   Brand Assessment, Marketing Cost Calculator, Pricing Scorecard.
+   These kept their old light design through the re-skin. They now
+   match the site, but form controls need REAL contrast, so the
+   tool UI sits on a solid panel rather than floating over video.
+   Every rule is body.river-scoped so it outranks each page's own
+   inline <style> block without editing three files by hand.
+=============================================================== */
+
+/* The panel: one solid surface the whole tool lives on */
+body.river .quiz,
+body.river .calc{
+  background:rgba(4,16,31,.88);
+  border:1px solid var(--r-line);
+  border-radius:12px;
+  padding:clamp(1.6rem,4vw,2.8rem);
+  box-shadow:0 24px 70px rgba(2,10,24,.45);
+  backdrop-filter:blur(6px);
+}
+
+/* ---- shared type ---- */
+body.river .lead{ color:var(--r-slate); }
+body.river .label{ color:var(--r-aqua); }
+
+/* ---- quiz (assessment + pricing scorecard) ---- */
+body.river .quiz__q{ border-top:1px solid var(--r-line); }
+body.river .quiz__legend{ color:var(--r-cream); font-weight:400; }
+body.river .quiz__num{ color:var(--r-aqua); }
+body.river .quiz__opts{ gap:.7rem; }
+body.river .quiz__opt{
+  border:1px solid rgba(157,176,199,.28);
+  background:rgba(7,28,57,.55);
+  color:#e4ecf5;
+  border-radius:7px;
+}
+body.river .quiz__opt:hover{ border-color:var(--r-aqua); background:rgba(12,40,76,.7); }
+body.river .quiz__opt--checked{
+  border-color:var(--r-aqua);
+  background:rgba(95,211,208,.14);
+  color:#fff;
+}
+body.river .quiz__opt input{ accent-color:var(--r-aqua); }
+body.river .quiz__error{ color:#ff9a9a; }
+
+/* ---- calculator inputs ---- */
+body.river .calc__group{ border-top:1px solid var(--r-line); }
+body.river .calc__label{ color:#e4ecf5; }
+body.river .calc__label small{ color:var(--r-slate); }
+body.river .calc__prefix{ color:var(--r-aqua); }
+body.river .calc__input{
+  background:rgba(2,10,24,.72);
+  border:1px solid rgba(157,176,199,.34);
+  color:var(--r-cream);
+  border-radius:7px;
+}
+body.river .calc__input::placeholder{ color:rgba(157,176,199,.6); }
+body.river .calc__input:focus{
+  border-color:var(--r-aqua);
+  box-shadow:0 0 0 3px rgba(95,211,208,.18);
+  outline:none;
+}
+
+/* ---- results ---- */
+body.river .result__score{ color:var(--r-aqua-bright); }
+body.river .result__of{ color:var(--r-slate); }
+body.river .result__band{ color:var(--r-aqua); }
+body.river .result__weak{
+  background:rgba(7,28,57,.62);
+  border:1px solid var(--r-line);
+  border-radius:10px;
+}
+body.river .result__weak h3{ color:var(--r-cream); }
+body.river .result__weak p,
+body.river .result__weak li{ color:var(--r-slate); }
+
+body.river .result__hero{
+  background:linear-gradient(160deg,rgba(0,38,100,.92),rgba(4,16,31,.92));
+  border:1px solid rgba(95,211,208,.28);
+}
+body.river .result__hero-label{ color:var(--r-aqua); }
+body.river .result__hero-num{ color:var(--r-cream); }
+body.river .result__hero-unit{ color:var(--r-slate); }
+body.river .result__hero-sub{ color:#cfdcea; }
+
+/* ---- comparison cards ---- */
+body.river .compare__card{
+  border:1px solid rgba(157,176,199,.26);
+  background:rgba(7,28,57,.5);
+  border-radius:10px;
+}
+body.river .compare__card--valore{
+  border-color:var(--r-aqua);
+  background:rgba(95,211,208,.1);
+}
+body.river .compare__head{ color:var(--r-aqua); }
+body.river .compare__big{ color:var(--r-cream); }
+body.river .compare__sub{ color:var(--r-slate); }
+body.river .compare__sub a{ color:var(--r-aqua-bright); }
+
+/* ---- budget + reallocation ---- */
+body.river .budget{
+  background:rgba(7,28,57,.62);
+  border:1px solid var(--r-line);
+  border-radius:10px;
+}
+body.river .budget p{ color:var(--r-slate); }
+body.river .budget b{ color:var(--r-cream); }
+body.river .reallocate h3{ color:var(--r-cream); }
+body.river .reallocate p.lead{ color:var(--r-slate); }
+body.river .stat{
+  background:rgba(7,28,57,.55);
+  border:1px solid var(--r-line);
+  border-radius:9px;
+}
+body.river .stat__num{ color:var(--r-aqua-bright); }
+body.river .stat__cap{ color:var(--r-slate); }
+body.river .diversify{ color:var(--r-slate); }
+body.river .diversify b{ color:var(--r-cream); }
+body.river .calc__assumptions{ color:rgba(157,176,199,.75); }
+
+/* ---- email capture block ---- */
+body.river .capture{
+  background:linear-gradient(160deg,rgba(0,38,100,.9),rgba(4,16,31,.94));
+  border:1px solid rgba(95,211,208,.26);
+  border-radius:12px;
+}
+body.river .capture h3{ color:var(--r-cream); }
+body.river .capture p{ color:#cfdcea; }
+body.river .capture__row input{
+  background:rgba(2,10,24,.72);
+  border:1px solid rgba(157,176,199,.34);
+  color:var(--r-cream);
+}
+body.river .capture__row input::placeholder{ color:rgba(157,176,199,.6); }
+body.river .capture__row input:focus{
+  border-color:var(--r-aqua);
+  box-shadow:0 0 0 3px rgba(95,211,208,.18);
+  outline:none;
+}
+body.river .capture__note{ color:rgba(157,176,199,.8); }
+body.river .capture__ok{ color:var(--r-aqua-bright); }
+
+/* The dark-on-dark navy button is invisible here; use the cream CTA */
+body.river .quiz .btn--navy,
+body.river .calc .btn--navy,
+body.river .capture .btn--navy,
+body.river .result .btn--navy{
+  background:var(--r-cream); color:var(--r-navy); border:none;
+}
+
+@media (max-width:600px){
+  body.river .quiz,
+  body.river .calc{ padding:1.4rem 1.1rem; border-radius:10px; }
+}
