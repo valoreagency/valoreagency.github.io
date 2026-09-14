@@ -683,3 +683,18 @@ body.river .quiz__gate-row input:focus{
   outline:none; border-color:var(--r-aqua); box-shadow:0 0 0 3px rgba(95,211,208,.18);
 }
 body.river .quiz__gate .quiz__error{ margin-top:.85rem; }
+
+/* The result wrapper must not render as an empty panel before the result
+   exists. It keeps its layout class for width and centring, but the panel
+   moves onto the result itself once it is revealed. */
+body.river .result-wrap{
+  background:transparent; border:0; box-shadow:none; padding:0; backdrop-filter:none;
+}
+body.river .result.is-visible{
+  background:rgba(4,16,31,.88);
+  border:1px solid var(--r-line);
+  border-radius:12px;
+  padding:clamp(1.6rem,4vw,2.8rem);
+  box-shadow:0 24px 70px rgba(2,10,24,.45);
+  backdrop-filter:blur(6px);
+}
