@@ -11,6 +11,7 @@
   // Reading pages (long-form articles, blog index) get a heavier overlay so
   // text stays easy to read over the living-water background.
   if (document.querySelector('.post-body, .blog-grid')) { document.body.classList.add('reading'); }
+  var __vxT0 = Date.now();
   var API_BASE = 'https://valore-brand-builder-production.up.railway.app';
   var PATH = 'M 500 0 C 500 250, 300 350, 300 600 S 680 950, 680 1200 S 340 1550, 340 1800 S 660 2150, 660 2400 S 420 2750, 420 3000 S 600 3350, 600 3600 S 360 3950, 360 4200 S 620 4550, 620 4800 S 480 5150, 480 5400 S 500 5750, 500 6000';
 
@@ -134,7 +135,9 @@
       try {
         fetch(API_BASE + '/api/lead', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firstName: first, email: email, tool: 'Brand Brain Starter Kit', source: 'brand-brain' })
+          body: JSON.stringify({ firstName: first, email: email, tool: 'Brand Brain Starter Kit', source: 'brand-brain',
+            formTime: Date.now() - __vxT0,
+            company: (document.querySelector('.vx-hp') || {}).value || '' })
         }).catch(function () {});
       } catch (e2) {}
     });
