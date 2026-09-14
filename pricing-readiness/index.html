@@ -174,6 +174,15 @@
                     <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true"><label>Company<input type="text" name="company" class="vx-hp" tabindex="-1" autocomplete="off"></label></div>
                 <div id="questions"></div>
                 <p class="quiz__error" id="quizError">Please answer every question to see your result.</p>
+                <div class="quiz__gate">
+                    <p class="quiz__gate-title">Where should we send your result?</p>
+                    <p class="quiz__gate-sub">Your score appears on screen straight away. We also email you the full breakdown so you have it to work from.</p>
+                    <div class="quiz__gate-row">
+                        <input type="text" id="leadName" name="firstName" placeholder="First name" autocomplete="given-name" required>
+                        <input type="email" id="leadEmail" name="email" placeholder="Email address" autocomplete="email" required>
+                    </div>
+                    <p class="quiz__error" id="gateError">Please add your first name and a valid email.</p>
+                </div>
                 <div style="margin-top: 2rem; text-align: center;">
                     <button type="submit" class="btn btn--navy">See My Result</button>
                 </div>
@@ -192,18 +201,7 @@
                         <a id="weakRead" href="/blog/" class="nav__link" style="color:#002664; text-decoration: underline;">Recommended reading &rarr;</a>
                     </div>
 
-                    <!-- EMAIL CAPTURE (gated full plan) -->
-                    <div class="capture" id="capture">
-                        <h3>Want your full pricing plan?</h3>
-                        <p>Get your result plus the specific moves to make before you raise a single rate, in the right order, for a brand at your stage. Sent straight to your inbox.</p>
-                        <form id="captureForm" class="capture__row">
-                            <input type="text" id="leadName" name="firstName" placeholder="First name" autocomplete="given-name" required>
-                            <input type="email" id="leadEmail" name="email" placeholder="Email address" autocomplete="email" required>
-                            <button type="submit" class="btn btn--cream" style="flex: 0 0 auto;">Send It</button>
-                        </form>
-                        <p class="capture__ok" id="captureOk">Done. Check your inbox shortly. Redirecting you now&hellip;</p>
-                        <p class="capture__note">No spam. Your plan, and nothing you did not ask for.</p>
-                    </div>
+                    <p class="capture__ok is-visible" id="captureOk">Your full breakdown is on its way to your inbox.</p>
 
                     <!-- PRIMARY CTA -->
                     <div class="post-cta-inline" style="margin-top: 2.5rem;">
@@ -346,6 +344,18 @@
           }
           document.getElementById('quizError').classList.remove('is-visible');
 
+          // Name and email are collected before the result is shown.
+          const leadName = document.getElementById('leadName').value.trim();
+          const leadEmail = document.getElementById('leadEmail').value.trim();
+          const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(leadEmail);
+          const gateError = document.getElementById('gateError');
+          if (!leadName || !emailOk) {
+            gateError.classList.add('is-visible');
+            document.getElementById(!leadName ? 'leadName' : 'leadEmail').focus();
+            return;
+          }
+          gateError.classList.remove('is-visible');
+
           const band = BANDS.find(b => total >= b.min && total <= b.max);
           const order = ["Differentiation", "Value", "Clients", "Brand"];
           let weak = order[0];
@@ -361,31 +371,24 @@
           lastResult = { total, band: band.name, weakestArea: weak, themeScores };
           gtag('event', 'pricing_readiness_complete', { event_category: 'lead_magnet', event_label: band.name, value: total });
 
+          const payload = {
+            firstName: leadName,
+            email: leadEmail,
+            source: 'pricing-readiness',
+            score: lastResult ? lastResult.total : null,
+            band: lastResult ? lastResult.band : null
+          };
+          gtag('event', 'pricing_readiness_lead', { event_category: 'lead_magnet', event_label: payload.band });
+          if (LEAD_ENDPOINT) {
+            fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(window.__vxSpam ? window.__vxSpam(payload) : payload) }).catch(() => {});
+          }
+
           const r = document.getElementById('result');
           r.classList.add('is-visible');
           r.focus();
           r.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
 
-        document.getElementById('captureForm').addEventListener('submit', e => {
-          e.preventDefault();
-          const payload = {
-            firstName: document.getElementById('leadName').value.trim(),
-            email: document.getElementById('leadEmail').value.trim(),
-            source: 'pricing-readiness',
-            score: lastResult ? lastResult.total : null,
-            maxScore: 16,
-            band: lastResult ? lastResult.band : null,
-            weakestArea: lastResult ? lastResult.weakestArea : null
-          };
-          gtag('event', 'pricing_readiness_lead', { event_category: 'lead_magnet', event_label: payload.band });
-          if (LEAD_ENDPOINT) {
-            fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(window.__vxSpam ? window.__vxSpam(payload) : payload) }).catch(() => {});
-          }
-          document.getElementById('captureForm').style.display = 'none';
-          document.getElementById('captureOk').classList.add('is-visible');
-          setTimeout(() => { window.location.href = '/thank-you/'; }, 1600);
-        });
     </script>
     <script src="/js/animations.js" defer></script>
     <script>(function(){var t0=Date.now();window.__vxSpam=function(p){p=p||{};p.formTime=Date.now()-t0;var h=document.querySelector(".vx-hp");if(h)p.company=h.value;return p;};})();</script>

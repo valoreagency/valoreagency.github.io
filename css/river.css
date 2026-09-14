@@ -651,3 +651,35 @@ body.river .result .btn--navy{
   body.river .quiz,
   body.river .calc{ padding:1.4rem 1.1rem; border-radius:10px; }
 }
+
+/* Calculator: your-number vs projected, shown as a pair */
+body.river .stat__cap--top{ margin:0 0 .55rem; text-transform:uppercase; letter-spacing:.1em; font-size:.72rem; color:var(--r-aqua); }
+body.river .stat .stat__num{ display:flex; align-items:center; justify-content:center; gap:.5rem; flex-wrap:wrap; font-size:1.55rem; }
+body.river .vs-now{ color:var(--r-slate); opacity:.85; }
+body.river .vs-arrow{ color:var(--r-aqua); font-size:1.1rem; }
+body.river .vs-new{ color:var(--r-aqua-bright); font-weight:500; }
+body.river .stat__cap{ color:var(--r-slate); }
+
+/* Quiz gate: name + email collected before the result is revealed */
+body.river .quiz__gate{
+  margin-top:2.2rem; padding:1.6rem 1.5rem;
+  background:rgba(95,211,208,.07);
+  border:1px solid rgba(95,211,208,.28);
+  border-radius:10px;
+}
+body.river .quiz__gate-title{
+  font-family:var(--r-serif); font-size:1.35rem; font-weight:400;
+  color:var(--r-cream); margin:0 0 .35rem;
+}
+body.river .quiz__gate-sub{ color:var(--r-slate); font-size:.95rem; line-height:1.6; margin:0 0 1.1rem; }
+body.river .quiz__gate-row{ display:flex; flex-wrap:wrap; gap:.7rem; }
+body.river .quiz__gate-row input{
+  flex:1 1 200px; padding:.85rem 1rem; border-radius:7px;
+  background:rgba(2,10,24,.72); border:1px solid rgba(157,176,199,.34);
+  color:var(--r-cream); font-family:'Inter',sans-serif; font-size:1rem;
+}
+body.river .quiz__gate-row input::placeholder{ color:rgba(157,176,199,.6); }
+body.river .quiz__gate-row input:focus{
+  outline:none; border-color:var(--r-aqua); box-shadow:0 0 0 3px rgba(95,211,208,.18);
+}
+body.river .quiz__gate .quiz__error{ margin-top:.85rem; }
