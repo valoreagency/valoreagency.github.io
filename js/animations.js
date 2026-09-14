@@ -19,12 +19,33 @@
   if (!document.querySelector('.water-bg')) {
     var wb = document.createElement('div');
     wb.className = 'water-bg'; wb.setAttribute('aria-hidden', 'true');
-    wb.innerHTML = '<div class="water-fallback"></div>' +
-      '<video class="water-video" autoplay muted loop playsinline preload="auto">' +
-      '<source src="/assets/river-bg.mp4" type="video/mp4"></video>' +
-      '<div class="water-tint"></div>';
+    wb.innerHTML = '<div class="water-fallback"></div><div class="water-tint"></div>';
     document.body.insertBefore(wb, document.body.firstChild);
-    if (reduce) { var vv = wb.querySelector('video'); if (vv) { try { vv.pause(); } catch (e) {} } }
+
+    // The poster frame is already painted by CSS, so the river is visible
+    // immediately. The video is an upgrade on top of it, never a blocker.
+    var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    var thin = !!(conn && (conn.saveData || /(^|-)(2g|slow-2g)$/.test(conn.effectiveType || '')));
+    if (!reduce && !thin) {
+      var startVideo = function () {
+        var small = (window.matchMedia && window.matchMedia('(max-width: 820px)').matches) || window.innerWidth <= 820;
+        var v = document.createElement('video');
+        v.className = 'water-video';
+        v.autoplay = true; v.muted = true; v.loop = true; v.playsInline = true;
+        v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+        v.preload = 'auto';
+        v.addEventListener('canplay', function () { v.classList.add('is-ready'); }, { once: true });
+        v.src = small ? '/assets/river-bg-mobile.mp4' : '/assets/river-bg-opt.mp4';
+        wb.insertBefore(v, wb.querySelector('.water-tint'));
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      };
+      var kick = function () {
+        if (window.requestIdleCallback) window.requestIdleCallback(startVideo, { timeout: 2500 });
+        else setTimeout(startVideo, 600);
+      };
+      if (document.readyState === 'complete') kick();
+      else window.addEventListener('load', kick, { once: true });
+    }
   }
   // River spine
   if (!document.querySelector('.river-track')) {
