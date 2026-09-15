@@ -18,6 +18,17 @@ const ROOT = path.resolve(__dirname, '..');
 const BLOG = path.join(ROOT, 'blog');
 const BASE = 'https://valore.agency';
 
+// The pitch rule, enforced. The daily drip Action runs this script and pushes
+// with nobody reading, so a post that promises a call without an offer stops
+// the build here, before a single file is written.
+const GUARD = require('./claims-guard.cjs');
+const GENERATED = ['sitemap.xml', 'feed.xml', 'blog/index.html', 'scripts/blog-grid.html', 'scripts/blog-schema.html'];
+{
+  // Sources only: the files this script regenerates are checked after it writes them.
+  const found = GUARD.scanRepo(ROOT, { exclude: GENERATED });
+  if (found.length) { GUARD.report(found); process.exit(1); }
+}
+
 const grab = (re, html) => { const m = html.match(re); return m ? m[1].trim() : ''; };
 const decode = s => s.replace(/&amp;/g, '&'); // for sorting/comparison only
 
@@ -232,3 +243,9 @@ const missing = posts.filter(p => !p.date || !p.title || !p.excerpt);
 if (missing.length) console.log('WARN missing fields:', missing.map(m => m.slug).join(', '));
 console.log(`\nSkipped ${emptyStubs.length} empty stub folders (no index.html):`);
 console.log(emptyStubs.join(', '));
+
+// And the outputs, once written, so nothing generated can carry the claim either.
+{
+  const found = GUARD.scanRepo(ROOT, { only: GENERATED });
+  if (found.length) { GUARD.report(found); process.exit(1); }
+}

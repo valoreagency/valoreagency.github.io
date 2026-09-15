@@ -129,6 +129,11 @@ try {
   failures.push({ type: 'NAV GUARD', file: 'css/style.css', detail: e.message });
 }
 
+// The pitch rule: no page, post, feed or generator may promise a call without an offer.
+for (const c of require('./claims-guard.cjs').scanRepo(ROOT)) {
+  failures.push({ type: 'offer-claim', file: c.file, detail: '…' + c.context + '…' });
+}
+
 // ── report ──────────────────────────────────────────────────────────────────
 if (!QUIET) {
   console.log(`\nlinkcheck: ${files.length} html files, ${checked} internal refs checked.`);
