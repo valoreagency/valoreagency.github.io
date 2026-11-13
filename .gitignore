@@ -1,0 +1,2 @@
+# Claude Code local settings can hold pasted secrets (Nov 2026 leak reports). Never commit them.
+.claude/settings.local.json
